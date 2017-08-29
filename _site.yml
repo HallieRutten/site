@@ -3,9 +3,15 @@ navbar:
   title: "Matthew Rudd"
   type: inverse
   left:
-    - text: "Math 101"
+    - text: "Courses"
+      menu:
+      - text: "Math 101"
+        href: http://mbrudd.sewanee.edu
+      - text: "Math 210"
+        href: http://mbrudd.sewanee.edu
+      - text: "Math 334"
+        href: http://mbrudd.sewanee.edu
+    - text: "Research"
       href: http://mbrudd.sewanee.edu
-    - text: "Math 210"
-      href: http://mbrudd.sewanee.edu
-    - text: "Math 334"
+    - text: "c4ideas"
       href: http://mbrudd.sewanee.edu

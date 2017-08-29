@@ -1,0 +1,15 @@
+name: "Math 101"
+navbar:
+  title: "Math 334, Advent 2017"
+  type: inverse
+  left:
+    - text: "Syllabus"
+      href: index.html
+    - text: "Quizzes"
+      href: index.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu
+output:
+  html_document:
+    theme: cerulean

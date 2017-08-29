@@ -1,0 +1,77 @@
+---
+---
+
+<br>
+
+Progress on almost all mathematical problems relies, at various points, on linear
+algebra; the concepts and tools that you will learn in this class are absolutely fundamental.
+Over the course of this semester, you will
+
+- gain a deeper appreciation of systems of linear equations, 
+- learn about vector spaces and linear transformations, and
+- learn to compute and interpret determinants, eigenvalues, and eigenspaces.
+
+To succeed in this course, you must
+
+- stay caught up with the readings and recommended practice problems,
+- work together within the parameters of the Honor Code,
+- talk to me whenever you have questions, and
+- remember the linear algebra mantra,
+
+> <center> ***Eigen do it if I try!*** </center>
+
+### Textbook 
+
+- [Linear Algebra](http://joshua.smcvt.edu/linearalgebra/book.pdf) by Jim Hefferon (3rd edition)
+
+### Times & location
+
+- MWF, 12:00-12:50 a.m., Woods Labs 121
+
+### Office hours & contact info.
+
+I should be available
+
+- 11 a.m. to noon on most days, and 
+- Wednesday and Thursday afternoons.
+
+You are welcome to drop by whenever my office door is open; talk to me to arrange a specific 
+time to meet. My office is Woods Labs 127A, my office phone number is 1820, and my email address 
+is mbrudd(at)sewanee.edu. Remember, though, that it's usually better to talk _in person_
+than to communicate indirectly!
+
+### Grading
+
+To help you stay caught up with the material and practice for exams,
+there will be frequent quizzes. There will be three exams, two during
+the term and a comprehensive final exam at ***9:00 a.m. on Tuesday, December 19^^th^^***. 
+Your scores on these components will contribute to your final grade as follows:
+
+-   In-class exams (2): 20% each
+-   Quizzes: 20%
+-   Final exam: 20%
+-   Best of these: 20%
+
+If you cannot avoid missing a quiz or exam for a ***legitimate*** 
+reason (e.g., being out of town to participate in a University-related activity), 
+you must talk to me ahead of time to reschedule. 
+***Otherwise, make-up quizzes/exams will not be given.***
+
+### Honor Code
+
+As a Sewanee student, you have already sworn to uphold the Honor Code; I
+expect you to comport yourself accordingly. Work with your classmates to
+understand the course material, but submit work that is truly your own.
+You must not consult with other students when taking exams or quizzes.
+In addition to avoiding a guilty conscience, you’ll learn more this way
+anyhow!
+
+### Attendance
+
+Missing class seriously undermines the educational process, so be
+responsible and don’t do it unless absolutely necessary.
+
+### Special needs
+
+Please notify me immediately if you have any documented special needs
+that need to be accommodated.
