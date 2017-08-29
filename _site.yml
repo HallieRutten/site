@@ -1,0 +1,11 @@
+name: "Matthew Rudd"
+navbar:
+  title: "Matthew Rudd"
+  type: inverse
+  left:
+    - text: "Math 101"
+      href: http://mbrudd.sewanee.edu
+    - text: "Math 210"
+      href: http://mbrudd.sewanee.edu
+    - text: "Math 334"
+      href: http://mbrudd.sewanee.edu
