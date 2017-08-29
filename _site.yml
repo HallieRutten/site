@@ -1,17 +1,19 @@
 name: "Matthew Rudd"
 navbar:
-  title: "Matthew Rudd"
   type: inverse
   left:
     - text: "Courses"
       menu:
       - text: "Math 101"
-        href: http://mbrudd.sewanee.edu
+        href: math101/_site/index.html
       - text: "Math 210"
-        href: http://mbrudd.sewanee.edu
+        href: math210/_site/index.html
       - text: "Math 334"
-        href: http://mbrudd.sewanee.edu
+        href: math334/_site/index.html
     - text: "Research"
-      href: http://mbrudd.sewanee.edu
+      href: research.html
     - text: "c4ideas"
-      href: http://mbrudd.sewanee.edu
+      href: c4ideas.html
+output:
+  html_document:
+    theme: cerulean

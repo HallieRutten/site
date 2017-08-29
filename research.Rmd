@@ -1,0 +1,12 @@
+---
+---
+
+<br>
+
+My main research interests are
+
+- nonlinear partial differential equations,
+- statistical modeling, and
+- data science.
+
+

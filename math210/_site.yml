@@ -10,6 +10,3 @@ navbar:
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu
-output:
-  html_document:
-    theme: cerulean
