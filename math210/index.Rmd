@@ -16,9 +16,7 @@ To succeed in this course, you must
 - stay caught up with the readings and recommended practice problems,
 - work together within the parameters of the Honor Code,
 - talk to me whenever you have questions, and
-- remember the linear algebra mantra,
-
-> <center> ***Eigen do it if I try!*** </center>
+- remember the linear algebra mantra, ***Eigen do it if I try!***
 
 ### Textbook 
 
