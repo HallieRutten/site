@@ -2,7 +2,7 @@ name: "Matthew Rudd"
 navbar:
   type: inverse
   left:
-    - text: "Courses"
+    - text: "courses"
       menu:
       - text: "Math 101"
         href: math101/_site/index.html
@@ -10,7 +10,7 @@ navbar:
         href: math210/_site/index.html
       - text: "Math 334"
         href: math334/_site/index.html
-    - text: "Research"
+    - text: "research"
       href: research.html
     - text: "c4ideas"
       href: c4ideas.html
