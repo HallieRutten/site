@@ -16,4 +16,4 @@ navbar:
       href: c4ideas.html
 output:
   html_document:
-    theme: cerulean
+    theme: united
