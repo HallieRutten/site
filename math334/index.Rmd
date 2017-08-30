@@ -62,6 +62,9 @@ Your scores on these components will contribute to your final grade as follows:
 -   Homework: 40%
 -   Final exam: 20%
 
+***This grading scheme may change as we get more or less involved in computational projects, but
+I will let you know of any changes as they happen!***
+
 If you cannot avoid turning in an assignment late or missing an exam for
 a ***legitimate*** reason (e.g., being out of town to participate in a
 University-related activity), you must talk to me ahead of time to reschedule things. 
