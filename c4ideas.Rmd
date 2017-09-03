@@ -3,7 +3,7 @@
 
 <br>
 
-### Sewanee Center for Interdisciplinary Data Exploration and Analysis
+#### Sewanee Center for Interdisciplinary Data Exploration and Analysis
 
 Location: Woods Labs 119
 

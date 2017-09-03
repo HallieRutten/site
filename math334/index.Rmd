@@ -30,15 +30,15 @@ To succeed in this course, you must
 
 If you don't understand something, get help immediately!
 
-### Textbook
+#### Textbook
 
 -   _Partial Differential Equations for Scientists and Engineers_ by Stanley J. Farlow
 
-### Times & locations
+#### Times & locations
 
 -   TuTh, 9:30-10:45 p.m., Woods Labs 217
 
-### Office hours & contact info.
+#### Office hours & contact info.
 
 I should be available
 
@@ -51,7 +51,7 @@ time to meet. My office is Woods Labs 127A, my office phone number is 1820, and 
 is mbrudd(at)sewanee.edu. Remember, though, that it's usually better to talk _in person_
 than to communicate indirectly!
 
-### Grading
+#### Grading
 
 To help you stay caught up with the material and practice for exams,
 there will be regularly assigned homework. There will be three exams, two during
@@ -70,7 +70,7 @@ a ***legitimate*** reason (e.g., being out of town to participate in a
 University-related activity), you must talk to me ahead of time to reschedule things. 
 ***Otherwise, make-up exams will not be given and late work will not be accepted.***
 
-### Honor Code
+#### Honor Code
 
 As a Sewanee student, you have already sworn to uphold the Honor Code; I
 expect you to comport yourself accordingly. Work with your classmates to
@@ -79,12 +79,12 @@ You must not consult with other students when taking exams or quizzes.
 In addition to avoiding a guilty conscience, you?ll learn more this way
 anyhow!
 
-### Attendance
+#### Attendance
 
 Missing class seriously undermines the educational process, so be
 responsible and don't do it unless absolutely necessary.
 
-### Special needs
+#### Special needs
 
 Please notify me immediately if you have any documented special needs
 that need to be accommodated.

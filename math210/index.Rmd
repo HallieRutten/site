@@ -18,15 +18,15 @@ To succeed in this course, you must
 - talk to me whenever you have questions, and
 - remember the linear algebra mantra, ***Eigen do it if I try!***
 
-### Textbook 
+#### Textbook 
 
 - [Linear Algebra](http://joshua.smcvt.edu/linearalgebra/book.pdf) by Jim Hefferon (3rd edition)
 
-### Times & location
+#### Times & location
 
 - MWF, 12:00-12:50 a.m., Woods Labs 121
 
-### Office hours & contact info.
+#### Office hours & contact info.
 
 I should be available
 
@@ -39,7 +39,7 @@ time to meet. My office is Woods Labs 127A, my office phone number is 1820, and 
 is mbrudd(at)sewanee.edu. Remember, though, that it's usually better to talk _in person_
 than to communicate indirectly!
 
-### Grading
+#### Grading
 
 To help you stay caught up with the material and practice for exams,
 there will be frequent quizzes. There will be three exams, two during
@@ -56,7 +56,7 @@ reason (e.g., being out of town to participate in a University-related activity)
 you must talk to me ahead of time to reschedule. 
 ***Otherwise, make-up quizzes/exams will not be given.***
 
-### Honor Code
+#### Honor Code
 
 As a Sewanee student, you have already sworn to uphold the Honor Code; I
 expect you to comport yourself accordingly. Work with your classmates to
@@ -65,12 +65,12 @@ You must not consult with other students when taking exams or quizzes.
 In addition to avoiding a guilty conscience, you’ll learn more this way
 anyhow!
 
-### Attendance
+#### Attendance
 
 Missing class seriously undermines the educational process, so be
 responsible and don’t do it unless absolutely necessary.
 
-### Special needs
+#### Special needs
 
 Please notify me immediately if you have any documented special needs
 that need to be accommodated.

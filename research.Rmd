@@ -3,13 +3,13 @@
 
 <br>
 
-My main research interests are
+#### Research interests
 
-- nonlinear partial differential equations,
-- statistical modeling, and
-- [data science](c4ideas.html).
+- Nonlinear partial differential equations
+- Statistical modeling
+- [Data science](c4ideas.html)
 
-# Publications & work in progress
+#### Publications & work in progress
 
 "Median schemes for polygonal curvature flow," in preparation
 
