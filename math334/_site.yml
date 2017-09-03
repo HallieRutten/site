@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Syllabus"
       href: index.html
-    - text: "Quizzes"
+    - text: "Homework"
       href: index.html
   right:
     - text: "Matthew Rudd"
