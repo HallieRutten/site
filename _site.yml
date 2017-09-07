@@ -14,6 +14,9 @@ navbar:
       href: research.html
     - text: "c4ideas"
       href: c4ideas.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu
 output:
   html_document:
     theme: united
