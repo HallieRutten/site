@@ -10,3 +10,6 @@
     + [With solutions](quiz1soln.pdf)
 * Practice for Quiz 2 (9/6/17)
     + [Without solutions](practice2.pdf)
+* Quiz 2 (9/8/17)
+    + [Without solutions](quiz2.pdf)
+    + [With solutions](quiz2soln.pdf)
