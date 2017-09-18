@@ -1,0 +1,1059 @@
+---
+title: "Course offerings by subject"
+author: "Matthew Rudd"
+output: 
+  html_document:
+    theme: united
+---
+
+The following tables were created from the course schedules that can 
+be [downloaded from the Registrar's website](http://registrar.sewanee.edu/schedule/).
+Please let me know if you notice any mistakes.
+
+**N.B.** 0-credit sections (e.g., labs) were excluded from calculations so that students in a 
+course would not be counted more than once.
+
+***
+
+#### **AMST courses**
+
+| Number|Title                                                              | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    251|Black Masculinity in the United States                             |            0|              0|            0|              0|            1|             28|
+|    333|Junior Seminar                                                     |            0|              0|            1|              6|            0|              0|
+|    351|Toni Morrison                                                      |            0|              0|            0|              0|            1|             15|
+|    370|The Civil War and Reconstruction in the South Carolina Sea Islands |            0|              0|            1|             29|            0|              0|
+|    410|The Muse of War: The U.S. Civil War in Literature and Memory       |            0|              0|            1|             10|            0|              0|
+|    420|Senior Research Seminar                                            |            1|              8|            0|              0|            1|              5|
+
+ *** 
+#### **ANGL courses**
+
+| Number|Title                                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    337|C.S. Lewis: Author, Apologist, and Anglican |            0|              0|            0|              0|            1|              1|
+
+ *** 
+#### **ANTH courses**
+
+| Number|Title                                              | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    104|Introductory Cultural Anthropology                 |            4|             78|            0|              0|            2|             51|
+|    106|Introductory Physical Anthropology and Archaeology |            0|              0|            1|             82|            0|              0|
+|    109|World Prehistory                                   |            0|              0|            0|              0|            1|             37|
+|    298|Ecological Anthropology                            |            0|              0|            1|             20|            0|              0|
+|    301|American Culture                                   |            1|             15|            0|              0|            0|              0|
+|    302|Southern Cultures                                  |            0|              0|            0|              0|            1|             19|
+|    305|Cultures of Latin America                          |            1|             16|            0|              0|            0|              0|
+|    311|Gender and Class in Latin America                  |            1|             18|            0|              0|            0|              0|
+|    314|Colonialism and Culture                            |            0|              0|            1|             18|            0|              0|
+|    318|North American Archaeology                         |            0|              0|            1|             12|            0|              0|
+|    319|Medical Anthropology                               |            0|              0|            1|             18|            0|              0|
+|    341|The Culture and History of Southeast Asia          |            0|              0|            0|              0|            1|             12|
+|    371|The Anthropology of Water                          |            0|              0|            1|             19|            0|              0|
+|    391|Junior Tutorial                                    |            0|              0|            1|              6|            0|              0|
+|    398|Special Topics: Anthropology of the Middle East    |            0|              0|            0|              0|            1|              7|
+|    399|Anthropology of Education                          |            0|              0|            0|              0|            1|              9|
+|    401|Anthropological Field Methods                      |            1|             10|            0|              0|            0|              0|
+|    403|Social Theory                                      |            0|              0|            1|             10|            0|              0|
+
+ *** 
+#### **ARAB courses**
+
+| Number|Title                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Arabic I    |            1|             13|            0|              0|            1|              7|
+|    104|Elementary Arabic II   |            0|              0|            1|              6|            0|              0|
+|    203|Intermediate Arabic    |            1|              8|            0|              0|            1|              4|
+|    204|Intermediate Arabic II |            0|              0|            1|              4|            0|              0|
+
+ *** 
+#### **ARCH courses**
+
+| Number|Title                                         | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    213|Cultural Resource Practicum                   |            2|              8|            0|              0|            0|              0|
+|    332|Archaeological Resource Management and Policy |            0|              0|            0|              0|            1|             15|
+|    350|Special Topics: Digital Archaeology           |            0|              0|            1|              8|            0|              0|
+
+ *** 
+#### **ART courses**
+
+| Number|Title                                                                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Line, Form and Space:  Studies in Drawing, Photography and Sculpture        |            1|             15|            1|             15|            1|             15|
+|    102|Color, Motion, and Time:  Studies in Digital Art, Painting, and Video       |            1|             15|            1|             11|            1|             14|
+|    231|Topics in Electronic and Interactive Art                                    |            0|              0|            1|             15|            0|              0|
+|    242|The Lens and the Landscape:  Documentary Studies and the Environment        |            0|              0|            0|              0|            1|             14|
+|    243|Cutting Time:  Topics in Contemporary Video Production and the Moving Image |            1|             10|            0|              0|            0|              0|
+|    248|Video off the Wall: Topics in Video Installation Art                        |            0|              0|            0|              0|            1|             11|
+|    251|Topics in Contemporary Drawing                                              |            1|             14|            0|              0|            0|              0|
+|    255|Collage and Assemblage:  Combinations of Contemporary Culture               |            0|              0|            1|             14|            0|              0|
+|    263|Intermediate Documentary Projects in Photography                            |            1|             15|            0|              0|            0|              0|
+|    281|Material, Space, and Form:  Topics in Contemporary Sculpture                |            1|             13|            0|              0|            0|              0|
+|    285|Modeling and Casting in Contemporary Sculpture                              |            0|              0|            1|             15|            0|              0|
+|    299|Painting from Life                                                          |            0|              0|            1|             14|            0|              0|
+|    351|Advanced Studio Seminar in Drawing                                          |            0|              0|            0|              0|            1|             12|
+|    361|Advanced Photography                                                        |            0|              0|            1|             15|            0|              0|
+|    381|Advanced Studio Seminar in Sculpture                                        |            0|              0|            0|              0|            1|              5|
+|    391|Properties of Painting                                                      |            1|              8|            0|              0|            0|              0|
+|    420|Seminar in Creativity                                                       |            1|              6|            0|              0|            1|              8|
+|    430|Senior Seminar                                                              |            0|              0|            1|              6|            0|              0|
+
+ *** 
+#### **ARTH courses**
+
+| Number|Title                                    | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Survey of Western Art I                  |            2|             48|            1|             21|            1|             29|
+|    104|Survey of Western Art II                 |            2|             48|            1|             22|            1|             29|
+|    207|The Arts of Asia                         |            0|              0|            0|              0|            2|             31|
+|    252|Imagining the City in the Age of Dante   |            1|             13|            0|              0|            0|              0|
+|    317|Approaches to Art History                |            1|             10|            0|              0|            1|              8|
+|    320|Medieval Art and Architecture            |            0|              0|            0|              0|            1|              8|
+|    325|Italian Renaissance Art and Architecture |            0|              0|            1|             18|            0|              0|
+|    333|French Art                               |            1|             13|            0|              0|            0|              0|
+|    335|Nineteenth-Century Art                   |            0|              0|            1|             15|            0|              0|
+|    338|British Art                              |            0|              0|            0|              0|            1|              9|
+|    340|American Art                             |            0|              0|            0|              0|            1|              6|
+|    345|Modern Art                               |            0|              0|            0|              0|            1|             18|
+|    360|Pop Art                                  |            0|              0|            1|             18|            0|              0|
+|    365|Modern and Postmodern Architecture       |            0|              0|            1|             16|            0|              0|
+|    370|Art in Germany: 1919-1933                |            1|             18|            0|              0|            0|              0|
+
+ *** 
+#### **ASIA courses**
+
+| Number|Title                                                         | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    208|Modern Chinese Literature in Translation                      |            0|              0|            1|             23|            0|              0|
+|    217|Modern Japanese Literature                                    |            0|              0|            0|              0|            1|             13|
+|    220|Japanese Folklore and Mythology                               |            1|             17|            0|              0|            0|              0|
+|    233|The Fantastical World of <em>Anime</em>                       |            0|              0|            1|             25|            0|              0|
+|    237|Gender and Sexuality in Modern Chinese Literature and Culture |            0|              0|            0|              0|            1|             14|
+
+ *** 
+#### **BIBL courses**
+
+| Number|Title                           | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    331|Elementary Biblical Hebrew I    |            1|              0|            0|              0|            0|              0|
+|    332|Elementary Biblical Hebrew II   |            0|              0|            1|              0|            0|              0|
+|    334|Intermediate Biblical Hebrew II |            0|              0|            1|              0|            0|              0|
+
+ *** 
+#### **BIOL courses**
+
+| Number|Title                                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    118|Current Issues in Biology                              |            2|             38|            1|             18|            0|              0|
+|    130|Field Investigations in Biology                        |            4|             75|            4|             79|            4|             80|
+|    133|Introductory Molecular Biology and Genetics            |            3|             69|            3|             65|            3|             85|
+|    180|Principles of Human Nutrition                          |            1|             20|            0|              0|            1|             20|
+|    210|Ecology (Lab)                                          |            0|              0|            1|             16|            0|              0|
+|    211|Biodiversity: Pattern and Process (Lab)                |            1|             16|            0|              0|            0|              0|
+|    213|Evolutionary Biology                                   |            0|              0|            1|             20|            1|             25|
+|    218|Principles of Animal Nutrition and Metabolism          |            0|              0|            1|             20|            0|              0|
+|    220|Reading the Landscape (Lab)                            |            0|              0|            0|              0|            1|             16|
+|    221|Environmental Physiology of Plants (Lab)               |            0|              0|            0|              0|            1|             10|
+|    223|Genetics (Lab)                                         |            0|              0|            0|              0|            1|             15|
+|    229|Biology of Human Reproduction                          |            0|              0|            0|              0|            1|             18|
+|    232|Human Health and the Environment (Lab)                 |            0|              0|            1|             16|            0|              0|
+|    233|Molecular Cell Biology                                 |            1|             16|            1|             32|            1|             29|
+|    241|Rainforests and Coral Reefs                            |            0|              0|            1|             11|            0|              0|
+|    243|Molecular Methods (Lab)                                |            0|              0|            1|             11|            1|             16|
+|    251|Field Study in Belize (Lab)                            |            0|              0|            1|             11|            0|              0|
+|    270|Human Anatomy (Lab)                                    |            0|              0|            1|             16|            1|             15|
+|    275|Histology and Microanatomy                             |            0|              0|            1|              9|            0|              0|
+|    301|Genetics                                               |            1|             22|            0|              0|            1|             17|
+|    307|Mechanistic Biochemistry (Lab)                         |            1|             27|            0|              0|            1|             22|
+|    310|Plant Evolution and Systematics (Lab)                  |            1|              8|            0|              0|            0|              0|
+|    311|Behavioral Ecology (Lab)                               |            1|             15|            0|              0|            1|              6|
+|    314|General and Human Physiology (Lab)                     |            1|             20|            0|              0|            0|              0|
+|    315|Advanced Topics in Ecology and Biodiversity            |            1|             17|            0|              0|            1|             10|
+|    316|Biochemistry of Metabolism and Molecular Biology (Lab) |            0|              0|            1|             12|            0|              0|
+|    320|Cancer Cell Biology                                    |            0|              0|            0|              0|            1|             10|
+|    322|Genes and Behavior                                     |            0|              0|            1|             20|            0|              0|
+|    334|Developmental Biology                                  |            0|              0|            0|              0|            1|              3|
+|    340|Microbiology (Lab)                                     |            1|             16|            0|              0|            0|              0|
+|    388|Epigenetics                                            |            0|              0|            1|              4|            0|              0|
+|    399|Special Topics: Virology                               |            0|              0|            0|              0|            1|             20|
+
+ *** 
+#### **BUSI courses**
+
+| Number|Title                                                      | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    215|Fundamentals of Financial Accounting                       |            2|             57|            1|             30|            2|             21|
+|    216|Fundamentals of Managerial Accounting                      |            0|              0|            1|             14|            0|              0|
+|    217|Marketing Strategy                                         |            1|              9|            1|             14|            0|              0|
+|    385|Special Topics: Collaborative Leadership and Social Change |            1|             15|            0|              0|            0|              0|
+
+ *** 
+#### **CEMT courses**
+
+| Number|Title          | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    361|Climate Ethics |            1|              5|            0|              0|            0|              0|
+
+ *** 
+#### **CHEM courses**
+
+| Number|Title                                                                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    100|Foundations of Chemistry                                                    |            0|              0|            1|             22|            0|              0|
+|    114|Life, Energy, and the Atomic Bomb: How the Science of Metals Shapes Society |            1|             13|            0|              0|            0|              0|
+|    120|General Chemistry (Lab)                                                     |            4|             79|            2|             22|            2|             71|
+|    150|Advanced General Chemistry (Lab)                                            |            2|             28|            0|              0|            1|             19|
+|    201|Organic Chemistry I (Lab)                                                   |            0|              0|            4|             70|            0|              0|
+|    202|Organic Chemistry II (Lab)                                                  |            2|             37|            0|              0|            1|             55|
+|    210|Solution and Solid State Chemistry (Lab)                                    |            0|              0|            2|             25|            0|              0|
+|    301|Junior Seminar                                                              |            0|              0|            1|              7|            0|              0|
+|    307|Mechanistic Biochemistry (Lab)                                              |            1|             27|            0|              0|            1|             22|
+|    308|Inorganic Chemistry (Lab)                                                   |            0|              0|            1|              9|            0|              0|
+|    311|Instrumental Analysis (Lab)                                                 |            1|              8|            0|              0|            1|              8|
+|    316|Biochemistry of Metabolism and Molecular Biology (Lab)                      |            0|              0|            1|             12|            0|              0|
+|    352|Thermodynamics and Kinetics (Lab)                                           |            0|              0|            2|             24|            0|              0|
+|    401|Senior Seminar                                                              |            0|              0|            1|              8|            0|              0|
+|    408|Advanced Topics in Inorganic Chemistry                                      |            0|              0|            0|              0|            1|              5|
+|    417|Advanced Biochemistry                                                       |            0|              0|            1|             11|            0|              0|
+|    422|Quantum Chemistry and Spectroscopy                                          |            1|              5|            0|              0|            1|              3|
+
+ *** 
+#### **CHIN courses**
+
+| Number|Title                 | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Chinese I  |            1|              8|            0|              0|            1|             13|
+|    104|Elementary Chinese II |            0|              0|            1|              7|            0|              0|
+|    203|Intermediate Chinese  |            1|             13|            0|              0|            1|              5|
+|    301|Advanced Chinese      |            0|              0|            1|             10|            0|              0|
+
+ *** 
+#### **CLST courses**
+
+| Number|Title                                                                                   | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Classical Mythology                                                                     |            0|              0|            0|              0|            1|             70|
+|    122|Explorations in Ancient Literature: Odysseus and His Legacy                             |            0|              0|            0|              0|            1|             13|
+|    200|Classical Drama                                                                         |            0|              0|            1|             25|            0|              0|
+|    208|Roman Archaeology                                                                       |            0|              0|            0|              0|            1|             28|
+|    220|Archaeology of Pompeii and Herculaneum                                                  |            1|             25|            0|              0|            0|              0|
+|    350|Women and Gender in Classical Antiquity                                                 |            0|              0|            1|             24|            0|              0|
+|    355|Special Topics -- Metamorphosis:Divine and Human Transformations from Homer to St. Paul |            0|              0|            0|              0|            1|              4|
+
+ *** 
+#### **CSCI courses**
+
+| Number|Title                                              | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Introduction to Computer Science                   |            0|              0|            1|             21|            0|              0|
+|    157|Introduction to Modeling and Programming           |            1|             16|            1|             18|            1|             18|
+|    257|Data Structures                                    |            0|              0|            1|             16|            0|              0|
+|    276|Multimedia Programming and Design                  |            1|             25|            0|              0|            0|              0|
+|    284|Database Design with Web Applications              |            0|              0|            1|             10|            0|              0|
+|    320|Analysis of Algorithms                             |            1|              9|            0|              0|            1|              9|
+|    360|Principles of Interactive Computer Graphics        |            0|              0|            1|             16|            0|              0|
+|    370|Computer Organization                              |            1|              9|            0|              0|            1|              9|
+|    376|Programming Languages                              |            1|             12|            0|              0|            0|              0|
+|    415|Special Topics: Parallel and Distributed Computing |            0|              0|            0|              0|            1|             10|
+|    428|Operating Systems                                  |            0|              0|            1|              5|            0|              0|
+
+ *** 
+#### **DANC courses**
+
+| Number|Title                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    105|Experiencing Dance History and Culture |            1|             12|            0|              0|            0|              0|
+|    116|Beginning Dance Techniques             |            1|              5|            0|              0|            1|             12|
+|    123|Tap I                                  |            0|              0|            1|              4|            0|              0|
+|    204|Ballet II                              |            0|              0|            1|              6|            0|              0|
+|    213|Intermediate Jazz                      |            1|              6|            0|              0|            0|              0|
+|    224|Dance Composition                      |            0|              0|            1|              4|            0|              0|
+|    254|Modern II                              |            0|              0|            0|              0|            1|              8|
+|    304|Ballet III                             |            0|              0|            1|              3|            0|              0|
+|    354|Modern III                             |            0|              0|            0|              0|            1|              8|
+
+ *** 
+#### **ECON courses**
+
+| Number|Title                                                                | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Introduction to Microeconomics                                       |            6|            151|            6|            134|            5|            142|
+|    102|Introduction to Macroeconomics                                       |            3|             75|            4|             96|            4|             96|
+|    305|Microeconomic Theory                                                 |            2|             50|            1|             25|            1|             26|
+|    306|Macroeconomic Theory                                                 |            1|             24|            2|             50|            3|             73|
+|    310|Economic Development                                                 |            1|             19|            0|              0|            1|             20|
+|    312|Health Economics                                                     |            0|              0|            1|             20|            0|              0|
+|    315|Industrial Organization and Public Policy                            |            0|              0|            0|              0|            1|             18|
+|    320|Behavioral Economics                                                 |            0|              0|            1|             20|            1|             18|
+|    326|Growth Theory                                                        |            1|             18|            0|              0|            0|              0|
+|    331|Public Finance and Fiscal Policy                                     |            0|              0|            1|             20|            0|              0|
+|    333|Econometrics                                                         |            1|             21|            0|              0|            1|             23|
+|    335|Environmental Economics                                              |            1|             25|            1|             24|            1|             24|
+|    336|Energy Economics                                                     |            0|              0|            0|              0|            1|             20|
+|    338|The Economics of Food Policy                                         |            1|             20|            0|              0|            1|             20|
+|    340|Introduction to Mathematical Economics                               |            1|             17|            0|              0|            0|              0|
+|    341|Game Theory                                                          |            0|              0|            1|             20|            0|              0|
+|    343|International Trade                                                  |            1|             19|            0|              0|            1|             19|
+|    360|Corporate Finance                                                    |            2|             39|            2|             40|            2|             40|
+|    361|Investments                                                          |            1|             21|            1|             20|            0|              0|
+|    362|Financial Derivatives                                                |            0|              0|            1|             20|            0|              0|
+|    385|Special Topics: The Global Rise in Inequality; Causes & Consequences |            0|              0|            1|             15|            0|              0|
+|    385|Topics: Managerial Economics                                         |            0|              0|            0|              0|            1|             17|
+|    410|Research Seminar                                                     |            0|              0|            2|             20|            0|              0|
+|    411|Policy Seminar                                                       |            0|              0|            3|             42|            0|              0|
+
+ *** 
+#### **EDUC courses**
+
+| Number|Title                                                   | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    161|Introduction to Educational Psychology                  |            2|             36|            0|              0|            2|             34|
+|    201|Instructional Technology: Digital Literacy and Learning |            0|              0|            1|             12|            0|              0|
+|    205|Introduction to Environmental Education                 |            1|             18|            1|             16|            1|             14|
+|    220|Methods of Teaching Writing                             |            1|              4|            0|              0|            1|              7|
+|    226|Teaching Children's Literature                          |            0|              0|            1|             16|            0|              0|
+|    255|Introduction to Special Education                       |            1|              5|            0|              0|            1|              7|
+|    279|History of American Education                           |            0|              0|            1|             13|            0|              0|
+|    299|Teaching English as a Second Language                   |            0|              0|            1|              8|            0|              0|
+|    341|Methods and Materials of Teaching                       |            1|             13|            1|             11|            1|              6|
+|    350|Issues and Innovations in Education                     |            1|              4|            0|              0|            0|              0|
+|    399|Anthropology of Education                               |            0|              0|            0|              0|            1|              9|
+
+ *** 
+#### **ENGL courses**
+
+| Number|Title                                                                        | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Literature and Composition                                                   |           12|            180|            9|            132|           14|            198|
+|    200|Representative Masterpieces                                                  |            3|             36|            1|             14|            1|             17|
+|    203|Roots of Western Literature                                                  |            1|             10|            0|              0|            1|             13|
+|    207|Women in Literature                                                          |            1|             20|            0|              0|            0|              0|
+|    210|Studies in Poetry                                                            |            0|              0|            0|              0|            1|             15|
+|    211|Studies in Fiction                                                           |            0|              0|            1|             15|            1|             21|
+|    212|Studies in Literature: Race and Slavery in the American Literary Imagination |            1|             14|            0|              0|            0|              0|
+|    216|Studies in Literature: American Literary Journalism                          |            0|              0|            1|             14|            0|              0|
+|    301|Anglo-Saxon Language and Literature                                          |            1|              5|            0|              0|            0|              0|
+|    316|The Novel in the Global Age                                                  |            0|              0|            1|             13|            0|              0|
+|    330|The Life and Literature of Tennessee Williams                                |            0|              0|            0|              0|            1|             10|
+|    331|Melville's <em>Moby-Dick</em>                                                |            0|              0|            1|             12|            0|              0|
+|    349|Special Topics: The Literatures of J.R.R. Tolkien                            |            0|              0|            0|              0|            1|             23|
+|    351|Medieval English Literature                                                  |            1|             12|            0|              0|            0|              0|
+|    352|Chaucer                                                                      |            0|              0|            1|              8|            1|              8|
+|    353|English Drama to 1642                                                        |            1|              8|            0|              0|            0|              0|
+|    357|Shakespeare I                                                                |            2|             44|            0|              0|            2|             49|
+|    358|Shakespeare II                                                               |            0|              0|            2|             44|            0|              0|
+|    359|Renaissance Literature I                                                     |            1|             11|            0|              0|            1|             16|
+|    360|Renaissance Literature II                                                    |            0|              0|            1|             15|            0|              0|
+|    362|Milton                                                                       |            0|              0|            0|              0|            1|             14|
+|    365|The Restoration and Eighteenth Century                                       |            0|              0|            0|              0|            1|              4|
+|    367|Origins and Development of the English Novel I                               |            1|             13|            0|              0|            1|             11|
+|    368|Fictions of Empire                                                           |            0|              0|            0|              0|            1|             10|
+|    369|Classicism to Romanticism: the Late 18th Century                             |            1|              5|            0|              0|            0|              0|
+|    370|British Romanticism: the Early 19th Century                                  |            0|              0|            1|             22|            0|              0|
+|    371|Blake                                                                        |            1|              8|            0|              0|            0|              0|
+|    373|Victorian Prose and Poetry                                                   |            1|             14|            0|              0|            1|             20|
+|    374|Origins and Development of the English Novel II                              |            0|              0|            1|             21|            0|              0|
+|    377|American Literature I                                                        |            1|             21|            0|              0|            1|             25|
+|    378|American Literature II                                                       |            0|              0|            1|             22|            0|              0|
+|    379|The American Novel                                                           |            1|             11|            0|              0|            0|              0|
+|    384|Survey of British Literature, 1890-present                                   |            1|              7|            0|              0|            0|              0|
+|    385|Survey of Irish Literature, 1890-present                                     |            0|              0|            0|              0|            1|              7|
+|    390|Modern Drama                                                                 |            0|              0|            1|             19|            0|              0|
+|    393|Faulkner                                                                     |            1|              7|            0|              0|            0|              0|
+|    394|Literature of the American South                                             |            0|              0|            1|             22|            0|              0|
+|    395|African-American Literature                                                  |            0|              0|            0|              0|            1|              9|
+|    396|American Environmental Literature                                            |            0|              0|            1|             20|            0|              0|
+|    397|Contemporary American Fiction                                                |            0|              0|            1|             13|            0|              0|
+|    398|American Poetry Since World War II                                           |            0|              0|            1|             15|            0|              0|
+|    399|World Literature in English                                                  |            1|             16|            0|              0|            0|              0|
+|    401|Literary Criticism                                                           |            0|              0|            0|              0|            1|              7|
+|    452|Honors Tutorial                                                              |            0|              0|            0|              0|            1|              0|
+|    599|Thesis                                                                       |            1|              3|            0|              0|            1|              6|
+
+ *** 
+#### **ENST courses**
+
+| Number|Title                                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    100|Walking the Land                                       |            0|              0|            1|             20|            0|              0|
+|    101|Introduction to Environmental Studies                  |            2|             40|            2|             50|            2|             58|
+|    140|Readings in Island Ecology                             |            0|              0|            1|             12|            0|              0|
+|    211|Sustainability and Global Environmental Change Seminar |            1|             13|            1|             13|            1|             13|
+|    217|Fundamentals of GIS                                    |            1|             15|            1|             16|            1|             15|
+|    235|Freshwater Conservation                                |            1|             16|            0|              0|            0|              0|
+|    250|Environmental and Biological Non-Fiction               |            1|             18|            1|             10|            1|             14|
+|    317|Advanced Applications of GIS                           |            0|              0|            1|             16|            1|              7|
+|    320|Environment and Sustainability Colloquium              |            0|              0|            1|             13|            0|              0|
+|    334|Environmental Policy and Law                           |            1|             20|            0|              0|            1|             28|
+|    336|Environmental Land-Use Policy                          |            0|              0|            1|             18|            0|              0|
+|    400|Environmental Arts and Humanities Capstone             |            0|              0|            1|              5|            0|              0|
+|    421|Environment and Sustainability Capstone                |            0|              0|            1|             12|            0|              0|
+|    431|Practicum in Religion and Environment                  |            1|              1|            1|              0|            1|              1|
+
+ *** 
+#### **ESCI courses**
+
+| Number|Title                              | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    430|Watershed Science Capstone         |            0|              0|            1|              7|            0|              0|
+|    450|Readings in Environmental Sciences |            0|              0|            1|             15|            0|              0|
+
+ *** 
+#### **FILM courses**
+
+| Number|Title                        | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    105|Introduction to World Cinema |            2|             35|            0|              0|            0|              0|
+
+ *** 
+#### **FORS courses**
+
+| Number|Title                                     | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    121|Introduction to Forestry (Lab)            |            2|             43|            0|              0|            2|             44|
+|    204|Forest Wildlife Management                |            0|              0|            0|              0|            1|             27|
+|    211|Dendrology (Lab)                          |            0|              0|            0|              0|            1|             17|
+|    212|Forestry in the Developing World          |            1|             24|            0|              0|            0|              0|
+|    215|Fisheries Ecology and Management (Lab)    |            0|              0|            1|             26|            0|              0|
+|    230|Urban Forest Management                   |            0|              0|            1|             23|            0|              0|
+|    240|Special Topics: Forest Biometrics         |            0|              0|            1|             16|            0|              0|
+|    250|Forests: Food, Medicine, and More         |            1|             26|            0|              0|            0|              0|
+|    270|Water Resource Policy and Law             |            0|              0|            0|              0|            1|             27|
+|    303|Soils (Lab)                               |            1|             29|            0|              0|            0|              0|
+|    312|Silviculture (Lab)                        |            0|              0|            1|             22|            0|              0|
+|    314|Hydrology (Lab)                           |            0|              0|            1|             27|            0|              0|
+|    319|Natural Resource Management and Decisions |            1|             32|            0|              0|            0|              0|
+|    332|Oral Presentations                        |            1|             23|            0|              0|            1|             28|
+
+ *** 
+#### **FREN courses**
+
+| Number|Title                                                                         | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary French I                                                           |            2|             34|            0|              0|            1|             19|
+|    104|Elementary French II                                                          |            2|             21|            2|             25|            1|             11|
+|    203|Intermediate French                                                           |            2|             37|            2|             20|            2|             33|
+|    300|Advanced French                                                               |            2|             30|            2|             26|            2|             32|
+|    301|Discovering Paris                                                             |            0|              0|            1|             19|            0|              0|
+|    313|Writing and Speaking French                                                   |            1|             13|            1|              9|            1|             14|
+|    314|Introduction to Literature, Culture, and History of the French-Speaking World |            1|             13|            1|             15|            1|             12|
+|    403|The Seventeenth Century                                                       |            1|             13|            0|              0|            0|              0|
+|    409|Contemporary Literature                                                       |            0|              0|            1|             19|            0|              0|
+|    415|The History of French Cinema                                                  |            0|              0|            0|              0|            1|             16|
+|    417|Topics of the French-Speaking World                                           |            1|             15|            1|             12|            0|              0|
+|    418|The Art of French-English Translation                                         |            0|              0|            0|              0|            1|              8|
+|    435|Senior Seminar                                                                |            0|              0|            1|              9|            0|              0|
+
+ *** 
+#### **FYRP courses**
+
+| Number|Title                                                                                           | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|First-Year Seminar: Creating Place                                                              |            1|             12|            0|              0|            0|              0|
+|    102|First-Year Seminar                                                                              |            0|              0|            0|              0|            1|             16|
+|    103|First-Year Seminar: Photography of What is Not Seen                                             |            1|             14|            0|              0|            0|              0|
+|    104|First-Year Seminar: The Ecology of Place                                                        |            1|             14|            0|              0|            0|              0|
+|    105|First-Year Seminar: Mountain Music Up and Down Sewanee Mountain                                 |            1|             13|            0|              0|            0|              0|
+|    106|First-Year Seminar: Walking in Place                                                            |            1|             15|            0|              0|            0|              0|
+|    107|First-Year Seminar: Founded to Make Men--a History of Sewanee Manhood                           |            1|             15|            0|              0|            0|              0|
+|    108|First-Year Seminar: Water is Life                                                               |            0|              0|            0|              0|            1|             16|
+|    109|First-Year Seminar: Land and Life                                                               |            0|              0|            0|              0|            1|             16|
+|    110|First-Year Seminar: Clothing, Textiles, and the Identity of Place                               |            0|              0|            0|              0|            1|             15|
+|    111|First-Year Seminar: \"Your Place or Mine?\" The Tension of Place in Narrative and Story-telling |            1|             15|            0|              0|            0|              0|
+|    112|First-Year Seminar: A Landscape for Memory                                                      |            1|             13|            0|              0|            0|              0|
+|    113|First-Year Seminar: Practicing Place                                                            |            1|             15|            0|              0|            1|              0|
+|    114|First-Year Seminar: The Psychology of People in Places                                          |            1|             14|            0|              0|            0|              0|
+|    116|First-Year Seminar: Making a Place for Literary Imagination                                     |            0|              0|            0|              0|            1|             16|
+|    117|First-Year Seminar: Community Narratives of the South Cumberland Plateau                        |            1|             14|            0|              0|            1|              0|
+|    119|First-Year Seminar: Building Place—The Architecture and Art of Sewanee                          |            0|              0|            0|              0|            1|             16|
+
+ *** 
+#### **GEOL courses**
+
+| Number|Title                              | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    121|Physical Geology (Lab)             |            3|             45|            1|             18|            1|             43|
+|    221|Mineralogy (Lab)                   |            0|              0|            0|              0|            1|             14|
+|    225|Sedimentology (Lab)                |            1|             24|            0|              0|            1|             18|
+|    230|Paleoecology                       |            1|             14|            0|              0|            0|              0|
+|    235|Earth Systems and Climate Change   |            0|              0|            0|              0|            1|             44|
+|    303|Soils (Lab)                        |            1|             29|            0|              0|            0|              0|
+|    314|Hydrology (Lab)                    |            0|              0|            1|             27|            0|              0|
+|    315|Watershed Contaminant Hydrology    |            0|              0|            1|              7|            0|              0|
+|    325|Field and Structural Geology (Lab) |            0|              0|            1|             21|            0|              0|
+|    332|Oral Presentations                 |            1|             23|            0|              0|            1|             28|
+
+ *** 
+#### **GREK courses**
+
+| Number|Title               | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Greek I  |            1|             10|            0|              0|            1|              6|
+|    104|Elementary Greek II |            0|              0|            1|              5|            0|              0|
+|    203|Intermediate Greek  |            1|              5|            0|              0|            1|              4|
+|    310|New Testament       |            0|              0|            1|              4|            0|              0|
+|    403|Greek Comedy        |            1|              4|            0|              0|            0|              0|
+
+ *** 
+#### **GRMN courses**
+
+| Number|Title                                                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary German I                                         |            2|             31|            0|              0|            2|             30|
+|    104|Elementary German II                                        |            0|              0|            2|             24|            0|              0|
+|    203|Intermediate German                                         |            2|             29|            0|              0|            2|             28|
+|    300|Advanced German                                             |            0|              0|            1|             10|            0|              0|
+|    302|Survey of German Culture and Literature II                  |            1|              8|            0|              0|            0|              0|
+|    311|German Culture and Composition I                            |            0|              0|            0|              0|            1|              9|
+|    314|Contemporary German Culture                                 |            1|              5|            0|              0|            0|              0|
+|    324|Literature of Berlin                                        |            0|              0|            1|              6|            0|              0|
+|    354|Modern German Civilization                                  |            0|              0|            1|             15|            0|              0|
+|    355|Once Upon a Time: The Literature and Culture of Fairy Tales |            1|             16|            0|              0|            0|              0|
+|    357|German Queer Cinema                                         |            0|              0|            0|              0|            1|             16|
+|    401|Seminar in German and German Studies                        |            1|              3|            0|              0|            0|              0|
+|    404|The Age of Goethe                                           |            0|              0|            1|              8|            0|              0|
+|    409|Twentieth Century German Literature II                      |            0|              0|            0|              0|            1|              6|
+
+ *** 
+#### **HIST courses**
+
+| Number|Title                                                                               | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    111|Religion and Power in the Pre-Modern West                                           |            0|              0|            0|              0|            1|             24|
+|    117|Discovering America, 1400-2000                                                      |            0|              0|            0|              0|            1|             24|
+|    120|Children and Childhood in History                                                   |            0|              0|            1|             25|            1|             29|
+|    121|Consumer Culture and Its Discontents, 17th - 20th Centuries                         |            0|              0|            1|             23|            1|             27|
+|    124|World in the Twentieth Century                                                      |            1|             24|            0|              0|            1|             21|
+|    125|The Age of Discovery:  Encounter of Two Worlds                                      |            1|             24|            0|              0|            1|             21|
+|    126|Into the Heart of Darkness:  Imperialism in the 19th and 20th Centuries             |            0|              0|            0|              0|            1|             28|
+|    127|Atlantic Britons, 1500-1850                                                         |            0|              0|            1|             25|            0|              0|
+|    128|Adventures at Sea: The Indian Ocean in World History                                |            1|             25|            1|             25|            1|             17|
+|    129|Jerusalem: Histories of the Real and Imagined Holy City                             |            1|             25|            0|              0|            0|              0|
+|    130|From Opium to Wal-mart: Interactions of China and the United States                 |            1|             25|            0|              0|            0|              0|
+|    201|History of the United States I                                                      |            1|             25|            0|              0|            1|             23|
+|    202|History of the United States II                                                     |            0|              0|            1|             24|            0|              0|
+|    205|History of England I                                                                |            1|             25|            0|              0|            0|              0|
+|    206|History of Britain and Ireland II                                                   |            0|              0|            1|             23|            0|              0|
+|    207|Russia:  Autocracy, Orthodoxy, Serfdom, Revolution                                  |            1|             21|            0|              0|            0|              0|
+|    208|Russia: Revolution and Repression, War and Cold War, Collapse and Renewal           |            0|              0|            1|             25|            0|              0|
+|    210|Early Modern Cities                                                                 |            1|             25|            0|              0|            0|              0|
+|    211|China: Inside the Great Wall                                                        |            0|              0|            0|              0|            1|             29|
+|    214|Africa Inside Out                                                                   |            1|             13|            0|              0|            0|              0|
+|    215|Southern African History                                                            |            0|              0|            0|              0|            1|             14|
+|    217|Renaissance and Reformation                                                         |            0|              0|            0|              0|            1|             22|
+|    221|History of India and South Asia I                                                   |            1|             19|            0|              0|            1|             13|
+|    222|History of India and South Asia II                                                  |            0|              0|            1|             15|            0|              0|
+|    229|The Many Faces of Sewanee                                                           |            0|              0|            0|              0|            1|             13|
+|    231|African-American History to 1865                                                    |            0|              0|            0|              0|            1|             16|
+|    232|African-American History since 1865                                                 |            1|             23|            0|              0|            0|              0|
+|    235|Introduction to Public History                                                      |            0|              0|            1|             20|            0|              0|
+|    238|Women in U.S. History, 1870 to the Present                                          |            1|             16|            0|              0|            0|              0|
+|    267|Early Modern Germany: Reformation to Revolutions                                    |            0|              0|            1|             24|            0|              0|
+|    270|European Women in War, Revolution, and Terrorism                                    |            0|              0|            0|              0|            1|             27|
+|    271|The French Revolutionary Era, 1789-1814                                             |            1|             20|            0|              0|            0|              0|
+|    272|France Since 1815                                                                   |            0|              0|            1|             24|            0|              0|
+|    283|Environmental History                                                               |            0|              0|            1|             25|            1|              7|
+|    296|History of the Middle East I                                                        |            0|              0|            0|              0|            1|             27|
+|    297|History of the Middle East II                                                       |            0|              0|            1|             26|            0|              0|
+|    304|Medieval Europe II                                                                  |            0|              0|            0|              0|            1|             13|
+|    307|Revolutions and Revolutionaries in the Middle East                                  |            1|             15|            0|              0|            0|              0|
+|    317|African-American Intellectual History                                               |            0|              0|            1|             15|            0|              0|
+|    319|The Arab-Israeli Conflict                                                           |            0|              0|            1|             15|            0|              0|
+|    322|Southern Lives                                                                      |            0|              0|            1|             11|            0|              0|
+|    327|The Old South                                                                       |            0|              0|            1|             25|            0|              0|
+|    330|History of Southern Appalachia                                                      |            1|             15|            0|              0|            0|              0|
+|    336|Hours of Crisis in U.S. History                                                     |            1|             20|            0|              0|            0|              0|
+|    346|History of Socialism                                                                |            1|             16|            0|              0|            0|              0|
+|    347|The American Civil Rights Movement                                                  |            1|             12|            0|              0|            0|              0|
+|    351|A History Written in Blood: The Partition of India                                  |            1|              3|            0|              0|            0|              0|
+|    351|History of Modern India through Cinema and Literature                               |            0|              0|            1|              7|            1|              5|
+|    352|Junior Tutorial                                                                     |            1|             13|            1|             10|            1|              9|
+|    357|Latin American Biographies                                                          |            1|             16|            0|              0|            0|              0|
+|    358|Women in Latin America                                                              |            1|             16|            0|              0|            1|             15|
+|    375|The Outlaw in American Culture                                                      |            0|              0|            1|             16|            0|              0|
+|    378|Sexuality and the Self in Modern Europe                                             |            1|             13|            0|              0|            0|              0|
+|    380|Crimes and Scandals in the Historical Imagination, 18th–20th Centuries              |            0|              0|            0|              0|            1|             14|
+|    382|Global Segregation, Race, and Popular Culture in the United States and South Africa |            0|              0|            1|             14|            0|              0|
+|    393|America's Civil War                                                                 |            0|              0|            0|              0|            1|             29|
+|    397|The Origins and Conduct of World War II                                             |            0|              0|            1|             30|            0|              0|
+|    403|Capitalism in Britain and the United States                                         |            1|             26|            0|              0|            0|              0|
+|    410|Five Centuries of Atlantic Slavery, 1400-1900                                       |            0|              0|            1|             16|            0|              0|
+|    421|The History of Sustainability and Sustainable Development                           |            0|              0|            1|              8|            0|              0|
+|    440|Honors Seminar                                                                      |            1|              0|            1|              3|            0|              0|
+|    452|Senior Research and Writing Seminar                                                 |            1|              0|            0|              0|            2|             21|
+|    471|Health, Medicine and Society in Early Modern Europe, 1400-1800                      |            0|              0|            1|             10|            0|              0|
+
+ *** 
+#### **HUMN courses**
+
+| Number|Title                                                                                             | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Experience, Expression, and Exchange in Western Culture:  Texts and Contexts of the Ancient World |            4|             71|            0|              0|            4|             90|
+|    104|Experience, Expression, and Exchange: Texts and Contexts of the Medieval to Early Modern Worlds   |            0|              0|            4|             61|            0|              0|
+|    204|Experience, Expression, and Exchange: Utopias and Dystopias                                       |            0|              0|            0|              0|            3|             31|
+|    210|Modern Intellectual Traditions: Marx, Nietzsche, Freud                                            |            0|              0|            3|             37|            0|              0|
+|    217|Imitation, Quotation, Appropriation, and Genre                                                    |            0|              0|            0|              0|            3|             33|
+|    225|The Nobel Prize                                                                                   |            3|             49|            0|              0|            0|              0|
+|    233|Investigating Identity                                                                            |            0|              0|            1|             16|            0|              0|
+
+ *** 
+#### **IGDI courses**
+
+| Number|Title                                | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Intergroup Dialogues: Race and Class |            0|              0|            0|              0|            1|             18|
+
+ *** 
+#### **INGS courses**
+
+| Number|Title                                                               | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Geopolitics of Everyday Life                                        |            2|             40|            1|             19|            0|              0|
+|    102|and the World was Round: Sixteenth-Century Roots of Globalization   |            0|              0|            0|              0|            1|             40|
+|    200|Introduction to International and Global Studies                    |            0|              0|            2|             48|            0|              0|
+|    207|Globalization, Popular Culture, and Politics in West Africa         |            1|             20|            0|              0|            0|              0|
+|    208|West and Central Africa in the Atlantic World                       |            0|              0|            0|              0|            1|             15|
+|    209|Mapping from the Margins: Power, Geographic Knowledge, and Struggle |            0|              0|            1|             19|            0|              0|
+|    307|Polish Film                                                         |            1|             18|            0|              0|            0|              0|
+|    308|Body Film:  Representing the Body in Contemporary World Cinema      |            0|              0|            1|             17|            0|              0|
+|    311|Islam and Ecology                                                   |            1|             10|            0|              0|            0|              0|
+|    313|\"Foreigners\" of the Middle East                                   |            0|              0|            0|              0|            1|             13|
+|    315|Borders, Mobilities, and Resistance in the Arab World               |            1|              3|            1|             18|            0|              0|
+|    400|Senior Seminar                                                      |            3|             33|            0|              0|            3|             38|
+
+ *** 
+#### **ITAL courses**
+
+| Number|Title                                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Italian I                                   |            2|             43|            0|              0|            2|             31|
+|    104|Elementary Italian II                                  |            0|              0|            2|             32|            0|              0|
+|    203|Intermediate Italian                                   |            2|             21|            0|              0|            2|             26|
+|    301|Introduction to Italian Literature                     |            0|              0|            1|              6|            0|              0|
+|    350|Special Topics: Antonioni, Cinema, and the Environment |            1|             16|            0|              0|            0|              0|
+|    350|Special Topics: Authority and Dissent in Modern Italy  |            0|              0|            0|              0|            1|             19|
+
+ *** 
+#### **JAPN courses**
+
+| Number|Title                        | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Japanese I        |            1|             12|            0|              0|            1|             14|
+|    104|Elementary Japanese II       |            0|              0|            1|             11|            0|              0|
+|    203|Intermediate Japanese        |            1|              8|            0|              0|            1|              8|
+|    301|Composition and Conversation |            0|              0|            1|              7|            0|              0|
+
+ *** 
+#### **LATN courses**
+
+| Number|Title                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Latin I          |            1|             24|            0|              0|            1|             16|
+|    104|Elementary Latin II         |            0|              0|            1|             20|            0|              0|
+|    113|Accelerated Beginning Latin |            1|              7|            0|              0|            1|              9|
+|    203|Intermediate Latin          |            1|             18|            1|              7|            1|             23|
+|    300|Caesar                      |            0|              0|            0|              0|            1|             11|
+|    303|Catullus                    |            1|             10|            0|              0|            0|              0|
+|    310|The Roman Novel             |            1|              6|            0|              0|            0|              0|
+|    313|Lucretius                   |            0|              0|            0|              0|            1|             11|
+|    406|Roman Philosophers          |            0|              0|            1|              8|            0|              0|
+|    407|Vergil                      |            0|              0|            1|             12|            0|              0|
+
+ *** 
+#### **LIBR courses**
+
+| Number|Title             | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Library Resources |            1|             15|            2|             20|            2|             21|
+
+ *** 
+#### **LING courses**
+
+| Number|Title       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    340|Linguistics |            0|              0|            1|             15|            0|              0|
+
+ *** 
+#### **MATH courses**
+
+| Number|Title                                                      | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    100|Topics in Mathematics: A Liberal Arts Approach to Calculus |            0|              0|            1|             21|            0|              0|
+|    100|Topics in Mathematics: Heart of Mathematics                |            0|              0|            0|              0|            1|             22|
+|    100|Topics in Mathematics: Mathematics in Sports               |            0|              0|            1|             25|            0|              0|
+|    100|Topics in Mathematics: Secret Messages                     |            2|             56|            0|              0|            2|             57|
+|    101|Calculus I                                                 |            5|            126|            3|             74|            5|             97|
+|    102|Calculus II                                                |            3|             73|            1|             21|            3|             46|
+|    207|Multidimensional Calculus                                  |            1|             16|            1|             25|            1|              8|
+|    210|Linear Algebra                                             |            1|             15|            1|             10|            1|             28|
+|    212|Differential Equations                                     |            0|              0|            1|             26|            0|              0|
+|    215|Discrete Mathematical Structures                           |            1|             13|            1|             11|            1|             25|
+|    303|Analysis I                                                 |            1|             20|            0|              0|            0|              0|
+|    305|Abstract Algebra I                                         |            0|              0|            0|              0|            1|             12|
+|    313|Algebraic Number Theory                                    |            1|              9|            0|              0|            0|              0|
+|    314|Topology                                                   |            0|              0|            0|              0|            1|             21|
+|    321|Probability and Statistics I                               |            1|             19|            0|              0|            0|              0|
+|    322|Probability and Statistics II                              |            0|              0|            1|              9|            0|              0|
+|    332|Mathematical Modeling                                      |            0|              0|            1|             15|            0|              0|
+|    334|Partial Differential Equations and Modeling                |            0|              0|            0|              0|            1|              6|
+
+ *** 
+#### **MDST courses**
+
+| Number|Title                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    400|Medieval Colloquium Seminar |            0|              0|            1|              6|            0|              0|
+
+ *** 
+#### **MHUM courses**
+
+| Number|Title                                       | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Biological and Cultural Aspects of Diabetes |            0|              0|            1|             14|            0|              0|
+|    110|Introduction to Sociology and Human Health  |            0|              0|            1|             24|            0|              0|
+
+ *** 
+#### **MUSC courses**
+
+| Number|Title                                                                      | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Music of Western Civilization                                              |            1|             22|            2|             45|            2|             58|
+|    103|Music Fundamentals II: Composing for the Keyboard                          |            1|              2|            1|              4|            1|              2|
+|    104|Music Fundamentals: Keyboard Skills                                        |            1|             14|            1|             14|            1|             14|
+|    143|Move on up a Little Higher: The History of Gospel Music                    |            0|              0|            1|             21|            0|              0|
+|    151|Song, Symphony, Stage: Music in Western Civilization                       |            1|             14|            0|              0|            1|             13|
+|    212|From Court Dances to Sacrificial Dances: Cultural Transformations in Music |            0|              0|            1|              3|            0|              0|
+|    213|From Ragtime to Radiohead: Music in the Era of Recordings                  |            0|              0|            1|             18|            0|              0|
+|    214|Electronic Music: Synthesis & Digital Recording                            |            1|              4|            0|              0|            0|              0|
+|    224|Musics of Latin America                                                    |            0|              0|            1|             11|            0|              0|
+|    233|Toward the Great War: Impressionism and Modernism                          |            1|              8|            0|              0|            0|              0|
+|    235|The Liturgical Music of Johann Sebastian Bach                              |            0|              0|            1|              5|            0|              0|
+|    251|University Choir                                                           |            1|             44|            1|             47|            1|             48|
+|    253|University Orchestra                                                       |            1|             26|            1|             21|            1|             28|
+|    257|University Jazz Ensemble                                                   |            1|              7|            1|              9|            1|             11|
+|    258|University Gospel Choir                                                    |            1|             14|            1|             15|            1|             10|
+|    259|Chamber Ensemble                                                           |            1|              6|            1|              6|            1|              2|
+|    260|Introduction to Part Writing                                               |            1|              8|            0|              0|            1|             15|
+|    263|Live Music Sound Nation: Music and Multi-Media Performance                 |            0|              0|            1|             16|            0|              0|
+|    269|Music of the Birds and Bees: Music and Nature                              |            1|              6|            0|              0|            0|              0|
+|    274|Class Voice                                                                |            0|              0|            0|              0|            1|              0|
+|    276|Applied Broadway Singing                                                   |            1|              7|            1|              4|            0|              0|
+|    278|Applied Fiddle                                                             |            2|              6|            2|              6|            2|              6|
+|    281|Applied Carillon                                                           |            1|              5|            1|              7|            1|              4|
+|    301|Topics in Early Music                                                      |            0|              0|            0|              0|            1|              6|
+|    360|Advanced Chromatic Harmony                                                 |            0|              0|            1|              2|            0|              0|
+|    368|Applied Guitar                                                             |            1|              0|            1|              0|            1|              0|
+|    371|Applied Piano                                                              |            1|              3|            1|              3|            1|              1|
+|    373|Applied Organ                                                              |            1|              0|            1|              0|            1|              0|
+|    375|Applied Voice                                                              |            1|              5|            1|              7|            1|              3|
+|    376|Applied Voice: Contemporary Vocal Styles                                   |            0|              0|            0|              0|            1|              1|
+|    377|Applied Strings                                                            |            2|              6|            2|              5|            2|              7|
+|    379|Applied Winds                                                              |            1|              1|            2|              2|            1|              6|
+|    385|Applied Percussion                                                         |            1|              0|            1|              0|            1|              0|
+|    389|Applied Jazz Piano                                                         |            1|              2|            1|              0|            1|              0|
+|    470|Recital                                                                    |            1|              0|            2|              1|            1|              0|
+
+ *** 
+#### **PHIL courses**
+
+| Number|Title                                                     | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Topics in Philosophy                                      |            0|              0|            1|             21|            2|             36|
+|    101|Topics in Philosophy: God, Death, and the Meaning of Life |            1|             14|            0|              0|            0|              0|
+|    101|Topics in Philosophy: Happiness                           |            1|             15|            0|              0|            0|              0|
+|    101|Topics in Philosophy: Love, Beauty, and Justice           |            1|             14|            0|              0|            1|             19|
+|    190|Informal Logic and Critical Thinking                      |            0|              0|            1|             20|            0|              0|
+|    203|Ancient Philosophy from Homer to Augustine                |            1|             29|            0|              0|            1|             15|
+|    204|Modern Philosophy                                         |            0|              0|            1|             17|            0|              0|
+|    215|Chinese Philosophy                                        |            0|              0|            1|             23|            0|              0|
+|    220|The Self                                                  |            0|              0|            0|              0|            1|             16|
+|    223|Philosophy of Art                                         |            0|              0|            1|             20|            0|              0|
+|    230|Environmental Ethics                                      |            0|              0|            1|             25|            0|              0|
+|    232|Business Ethics                                           |            1|             22|            2|             50|            2|             58|
+|    235|Bioethics                                                 |            0|              0|            0|              0|            1|             18|
+|    235|Medical Ethics                                            |            1|             20|            0|              0|            0|              0|
+|    307|Political Philosophy                                      |            0|              0|            1|             20|            0|              0|
+|    308|Metaphysics                                               |            0|              0|            0|              0|            1|             14|
+|    310|Faith in Philosophy and Literature                        |            1|             25|            0|              0|            0|              0|
+|    312|Modern Logic                                              |            0|              0|            1|             11|            0|              0|
+|    315|Reason, Desire, and the Good                              |            0|              0|            0|              0|            1|             13|
+|    322|20th Century Continental Philosophy                       |            0|              0|            1|             18|            0|              0|
+|    325|Plato                                                     |            0|              0|            0|              0|            1|              6|
+|    337|Philosophy of Science                                     |            1|             14|            0|              0|            0|              0|
+|    340|Kierkegaard                                               |            0|              0|            0|              0|            1|              5|
+|    411|Wittgenstein                                              |            1|             13|            0|              0|            0|              0|
+
+ *** 
+#### **PHYS courses**
+
+| Number|Title                                    | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:----------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|General Physics I (Lab)                  |            3|             59|            0|              0|            1|             42|
+|    102|General Physics II (Lab)                 |            0|              0|            2|             34|            0|              0|
+|    103|Modern Mechanics (Lab)                   |            1|             22|            0|              0|            1|             26|
+|    104|Electric and Magnetic Interactions (Lab) |            0|              0|            1|             20|            0|              0|
+|    106|Foundations of Global Warming            |            1|             52|            0|              0|            0|              0|
+|    149|Survey of Astronomy                      |            1|             10|            2|             27|            1|              9|
+|    201|Optics                                   |            1|             10|            0|              0|            0|              0|
+|    202|Thermodynamics                           |            0|              0|            1|              9|            0|              0|
+|    203|Intermediate Electricity and Magnetism I |            1|              8|            0|              0|            1|             11|
+|    250|Solar System Astronomy (Lab)             |            0|              0|            0|              0|            1|              5|
+|    251|Stellar and Galactic Astronomy (Lab)     |            1|              9|            0|              0|            0|              0|
+|    303|Mechanics                                |            0|              0|            1|             10|            0|              0|
+|    305|Advanced Laboratory                      |            1|              5|            1|              5|            1|              8|
+|    307|Introduction to Modern Physics I         |            0|              0|            0|              0|            1|             12|
+|    312|Junior Seminar                           |            0|              0|            1|              7|            0|              0|
+|    349|Readings in Cosmology                    |            0|              0|            1|              1|            0|              0|
+|    401|Quantum Mechanics                        |            0|              0|            1|              4|            0|              0|
+|    412|Senior Seminar                           |            0|              0|            1|              7|            0|              0|
+|    421|Advanced Electromagnetic Theory          |            1|              3|            0|              0|            1|              2|
+
+ *** 
+#### **POLS courses**
+
+| Number|Title                                                   | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|American Government and Politics                        |            2|             50|            2|             51|            1|             25|
+|    103|Comparative Politics                                    |            2|             44|            2|             40|            1|             23|
+|    105|Introduction to Political Theory                        |            1|             25|            0|              0|            2|             21|
+|    150|World Politics                                          |            1|             24|            1|             23|            1|             25|
+|    161|Multiculturalism and Equality                           |            0|              0|            0|              0|            1|             15|
+|    203|The Presidency                                          |            0|              0|            1|             24|            0|              0|
+|    204|Legislative Process                                     |            1|             22|            0|              0|            1|             18|
+|    210|The Politics of Poverty and Inequality                  |            0|              0|            2|             50|            0|              0|
+|    211|Democracy and Citizenship                               |            0|              0|            1|             24|            0|              0|
+|    212|Campaigns and Elections                                 |            1|             24|            0|              0|            0|              0|
+|    220|International Conflict                                  |            1|             15|            0|              0|            0|              0|
+|    221|Peace and Diplomacy                                     |            2|             49|            0|              0|            0|              0|
+|    223|Public Policy                                           |            1|             24|            1|             25|            2|             47|
+|    227|Africa in World Politics                                |            0|              0|            0|              0|            1|             15|
+|    228|The Politics of the Modern Middle East and North Africa |            0|              0|            1|             25|            0|              0|
+|    235|U.S. Health Policy: National, State, and Local Contexts |            1|             17|            1|             24|            0|              0|
+|    248|China's Environmental Crisis                            |            1|             25|            0|              0|            0|              0|
+|    249|China and the World                                     |            0|              0|            0|              0|            1|             21|
+|    270|Introduction to International Security                  |            0|              0|            0|              0|            1|             25|
+|    280|The Politics of Development and Foreign Aid             |            1|             22|            0|              0|            0|              0|
+|    304|American Political Thought                              |            0|              0|            1|             20|            0|              0|
+|    307|Women in American Politics                              |            0|              0|            1|             13|            0|              0|
+|    313|Environmental Politics and Policy                       |            0|              0|            1|             19|            0|              0|
+|    314|Civil Wars                                              |            0|              0|            1|             20|            0|              0|
+|    315|The Politics of Social Welfare Policy                   |            0|              0|            0|              0|            1|             24|
+|    318|Comparative Politics: South America and Mexico          |            0|              0|            1|             19|            0|              0|
+|    319|Global Gender Issues                                    |            0|              0|            1|             15|            0|              0|
+|    322|United States Foreign Policy                            |            1|             19|            0|              0|            1|             24|
+|    327|The Politics of Transitional and Post-Conflict Justice  |            0|              0|            0|              0|            1|             22|
+|    328|Parties and Interest Groups in the United States        |            1|             20|            0|              0|            1|             25|
+|    336|U.S. Immigration Law and Policy                         |            0|              0|            1|             17|            0|              0|
+|    337|Constitutional Law: Civil Liberties                     |            0|              0|            1|             21|            0|              0|
+|    346|Contemporary Social Movements                           |            1|             18|            0|              0|            0|              0|
+|    351|Modern European Politics                                |            0|              0|            0|              0|            1|             24|
+|    363|Comparative Democratization                             |            1|              7|            0|              0|            0|              0|
+|    365|Global Institutions and Policies                        |            0|              0|            1|             19|            0|              0|
+|    370|International Law in International Relations            |            1|             20|            0|              0|            1|             25|
+|    373|African-American Political Thought                      |            1|             20|            0|              0|            0|              0|
+|    409|Religion and American Politics                          |            1|              5|            0|              0|            1|             13|
+|    411|The Politics of Aids                                    |            0|              0|            0|              0|            1|              8|
+|    412|Terrorism and Global Security                           |            0|              0|            1|             15|            0|              0|
+|    431|Ethnicity and Political Violence                        |            1|             12|            0|              0|            0|              0|
+|    446|Political Simulations                                   |            1|              7|            0|              0|            0|              0|
+
+ *** 
+#### **PSYC courses**
+
+| Number|Title                                                                    | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    100|Introduction to Psychology (Lab)                                         |            4|            101|            5|            124|            3|             87|
+|    101|Principles of Psychology                                                 |            3|             73|            2|             49|            3|             85|
+|    201|Psychology of Personality                                                |            1|             26|            0|              0|            0|              0|
+|    202|Abnormal Behavior                                                        |            2|             50|            2|             49|            1|             41|
+|    203|Social Psychology                                                        |            0|              0|            0|              0|            1|             29|
+|    206|Industrial Psychology                                                    |            0|              0|            1|             25|            0|              0|
+|    208|Cognitive Psychology                                                     |            1|             25|            1|             25|            1|             29|
+|    213|Comparative Sexual Behavior                                              |            1|             25|            0|              0|            1|             29|
+|    217|Motivation and Cognitive Control                                         |            0|              0|            1|             26|            0|              0|
+|    221|Adolescence                                                              |            1|             25|            0|              0|            1|             28|
+|    222|Adult Development and Aging                                              |            0|              0|            1|             25|            0|              0|
+|    223|Positive Psychology                                                      |            1|             23|            0|              0|            1|             27|
+|    224|Developmental Psychopathology                                            |            0|              0|            0|              0|            1|             25|
+|    225|Cognitive Neuroscience                                                   |            1|             16|            0|              0|            0|              0|
+|    226|Psychology of Creativity                                                 |            1|             25|            0|              0|            0|              0|
+|    227|Health Psychology                                                        |            0|              0|            1|             26|            0|              0|
+|    230|Child, Family, and Community Development in Rural Appalachia             |            1|             15|            0|              0|            1|             15|
+|    251|Research Methods and Data Analysis                                       |            2|             38|            2|             40|            1|             20|
+|    254|Introduction to Behavioral Neuroscience                                  |            1|             25|            0|              0|            1|             29|
+|    349|Drugs and Behavior                                                       |            1|             15|            0|              0|            1|              8|
+|    355|Affective Neuroscience (Lab)                                             |            0|              0|            0|              0|            1|             14|
+|    356|Research in Social Psychology (Lab)                                      |            1|             15|            0|              0|            0|              0|
+|    357|Child Development (Lab)                                                  |            1|             16|            0|              0|            1|             15|
+|    358|Cognitive Psychology (Lab)                                               |            0|              0|            1|              9|            1|             15|
+|    359|Advanced Behavioral Neuroscience (Lab)                                   |            0|              0|            1|             13|            0|              0|
+|    408|Seminar in Abnormal Behavior                                             |            0|              0|            1|             14|            0|              0|
+|    411|Judgment and Decision-Making                                             |            1|             15|            1|             17|            0|              0|
+|    413|The Self-Concept and Self-Esteem                                         |            0|              0|            1|             11|            1|             15|
+|    414|The Social Brain                                                         |            0|              0|            1|             11|            0|              0|
+|    415|Relationships and Health                                                 |            0|              0|            0|              0|            1|             15|
+|    416|Attachment Theory: Development, Well-being, and Risk for Psychopathology |            1|             12|            0|              0|            1|             15|
+|    418|Psychology of Happiness and Meaning in Life                              |            0|              0|            1|             15|            0|              0|
+
+ *** 
+#### **RELG courses**
+
+| Number|Title                                                                    | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    111|Introduction to Religion                                                 |            2|             38|            0|              0|            0|              0|
+|    117|Religion and Immigration in the United States                            |            0|              0|            2|             42|            0|              0|
+|    119|American Religious History: Contact, Exchange, Migration                 |            2|             35|            1|             18|            2|             57|
+|    121|The Responsible Self                                                     |            0|              0|            2|             40|            0|              0|
+|    122|Religion and Technology                                                  |            0|              0|            2|             41|            0|              0|
+|    143|Introduction to the Bible I: Old Testament                               |            1|             18|            0|              0|            1|             57|
+|    144|Introduction to the Bible II: New Testament                              |            0|              0|            1|             21|            0|              0|
+|    164|Studying Asian Religions (in the West)                                   |            0|              0|            2|             40|            0|              0|
+|    201|The Spirit and Forms of Anglicanism                                      |            0|              0|            1|             17|            0|              0|
+|    220|Holocaust, Religion, Morality                                            |            1|             18|            0|              0|            1|             28|
+|    243|Gospels                                                                  |            0|              0|            1|             20|            0|              0|
+|    262|Buddhist Traditions                                                      |            0|              0|            0|              0|            1|             26|
+|    301|Methodologies in Religious Studies                                       |            1|              6|            0|              0|            1|              2|
+|    305|Religion and Animals                                                     |            0|              0|            1|             15|            0|              0|
+|    307|Religious Environmentalism                                               |            1|             15|            0|              0|            0|              0|
+|    308|Special Topics in Religious Studies: Food and Spirituality in the U.S.   |            1|             14|            0|              0|            0|              0|
+|    308|Special Topics in Religious Studies: Judaism in the Time of Jesus        |            1|              4|            0|              0|            0|              0|
+|    308|Special Topics in Religious Studies: Thesis Research and Writing Seminar |            1|              9|            0|              0|            0|              0|
+|    312|Matter and Spirit                                                        |            0|              0|            1|             13|            0|              0|
+|    347|Race and Religion in the United States                                   |            0|              0|            1|             14|            0|              0|
+|    348|Business of Religion                                                     |            0|              0|            0|              0|            1|              7|
+
+ *** 
+#### **RHET courses**
+
+| Number|Title                            | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Public Speaking                  |            2|             30|            1|             15|            3|             40|
+|    201|Introduction to Rhetoric         |            0|              0|            1|             31|            0|              0|
+|    311|U.S. Public Address I: 1620-1865 |            0|              0|            0|              0|            1|             22|
+
+ *** 
+#### **RUSN courses**
+
+| Number|Title                                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Russian I                                   |            1|             14|            0|              0|            1|             13|
+|    104|Elementary Russian II                                  |            0|              0|            1|             13|            0|              0|
+|    203|Intermediate Russian                                   |            1|             12|            0|              0|            1|              7|
+|    301|Advanced Russian                                       |            0|              0|            1|             10|            0|              0|
+|    302|Readings in Russian Literature                         |            1|             10|            0|              0|            0|              0|
+|    304|Contemporary Russian in Cultural Context               |            0|              0|            1|              7|            0|              0|
+|    312|Russian Language through Film                          |            0|              0|            0|              0|            1|             15|
+|    340|Reading Russian                                        |            0|              0|            0|              0|            1|              7|
+|    351|19th-Century Russian Literature in English Translation |            1|             12|            0|              0|            0|              0|
+|    352|20th-Century Russian Literature in English Translation |            0|              0|            0|              0|            1|             15|
+|    355|Russian and Soviet Film                                |            1|             18|            0|              0|            0|              0|
+|    356|Nabokov                                                |            1|              9|            0|              0|            0|              0|
+|    362|Dostoevsky in English Translation                      |            0|              0|            1|             17|            0|              0|
+|    364|Putin's Russia and Protest Culture                     |            0|              0|            0|              0|            1|              8|
+
+ *** 
+#### **SAST courses**
+
+| Number|Title                                                                   | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    220|Place, Memory, and Identity                                             |            1|             17|            0|              0|            0|              0|
+|    320|Place-based Research Methods and Heritage Site Interpretation           |            0|              0|            1|             11|            0|              0|
+|    325|Food, Agriculture, and Social Justice in Southern Appalachia and Beyond |            0|              0|            2|             39|            0|              0|
+|    330|History and Politics of Midwifery in the United States                  |            0|              0|            1|             18|            0|              0|
+
+ *** 
+#### **SPAN courses**
+
+| Number|Title                                                                                               | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------------------------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    103|Elementary Spanish I                                                                                |            2|             38|            0|              0|            1|             19|
+|    104|Elementary Spanish II                                                                               |            0|              0|            2|             34|            0|              0|
+|    113|Elementary Spanish: Accelerated Review Course                                                       |            4|             74|            3|             41|            5|             93|
+|    203|Intermediate Spanish                                                                                |            5|             93|            4|             80|            5|            101|
+|    291|Spanish Culture and Civilization through the Visual Arts                                            |            1|             30|            0|              0|            0|              0|
+|    300|Introduction to Hispanic Literature                                                                 |            4|             70|            4|             76|            5|             90|
+|    301|Cultural Survey of Spain I                                                                          |            2|             32|            0|              0|            2|             36|
+|    302|Cultural Survey of Spain II                                                                         |            0|              0|            1|             30|            0|              0|
+|    303|Cultural Survey of Latin America I                                                                  |            2|             26|            0|              0|            2|             31|
+|    304|Cultural Survey of Latin America II                                                                 |            0|              0|            2|             37|            0|              0|
+|    312|Advanced Grammar and Composition                                                                    |            1|             10|            0|              0|            0|              0|
+|    334|The Culture of Chivalry                                                                             |            1|             11|            0|              0|            0|              0|
+|    361|Modern Spanish Literature II                                                                        |            0|              0|            0|              0|            1|             20|
+|    391|Contemporary Spanish and Latin American Cinema                                                      |            1|             21|            0|              0|            0|              0|
+|    392|Audiovisual Cultures in Latin America                                                               |            0|              0|            1|             18|            0|              0|
+|    409|Marvel and Margin in Latin American Culture                                                         |            0|              0|            1|             19|            0|              0|
+|    450|Special Topics: Medieval Spain Through Visual Culture                                               |            1|             14|            0|              0|            0|              0|
+|    450|Special Topics: The Literatures of Galicia, the Basque Country, and Catalunya                       |            1|              4|            0|              0|            0|              0|
+|    450|Topics--Transgressions, Bodies, and Subjectivities: Women & Queer Film Directors in Spanish America |            0|              0|            0|              0|            1|             18|
+|    495|Senior Seminar                                                                                      |            0|              0|            1|             13|            0|              0|
+
+ *** 
+#### **STAT courses**
+
+| Number|Title                 | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:---------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    204|Elementary Statistics |            5|            110|            4|             88|            5|            118|
+|    214|Statistical Modeling  |            0|              0|            1|              9|            0|              0|
+
+ *** 
+#### **THEO courses**
+
+| Number|Title                                 | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    303|Foundations of Christian Spirituality |            1|              1|            0|              0|            0|              0|
+|    360|Creation, Evolution and God           |            1|              1|            0|              0|            0|              0|
+
+ *** 
+#### **THTR courses**
+
+| Number|Title                                                                   | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:-----------------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    101|Introduction to Theatre                                                 |            1|             20|            1|             26|            1|             10|
+|    111|Elements of Production                                                  |            1|             17|            0|              0|            1|             12|
+|    112|Elements of Performance                                                 |            0|              0|            1|              4|            0|              0|
+|    114|Elements of Design                                                      |            0|              0|            1|              9|            0|              0|
+|    131|Fundamentals of Acting                                                  |            0|              0|            0|              0|            1|             12|
+|    202|Stage Make-up for Performance                                           |            0|              0|            1|              7|            0|              0|
+|    221|Theatre History                                                         |            1|             15|            0|              0|            0|              0|
+|    231|The Actor's Way of Work                                                 |            1|              7|            1|             12|            0|              0|
+|    235|Voice and Interpretation                                                |            1|              6|            0|              0|            0|              0|
+|    236|Acting with an Accent                                                   |            0|              0|            0|              0|            1|              4|
+|    240|Costume Technology                                                      |            1|              4|            0|              0|            0|              0|
+|    301|Special Topics in Theatre Design and Technology: Advanced Costume Craft |            0|              0|            1|             12|            0|              0|
+|    323|Aspects of Contemporary Theatre                                         |            0|              0|            1|              4|            0|              0|
+|    340|Acting: Classic American Plays                                          |            0|              0|            1|              2|            0|              0|
+|    342|Scene Design                                                            |            1|              3|            0|              0|            0|              0|
+|    344|Lighting Design                                                         |            0|              0|            0|              0|            1|              5|
+|    347|Scene Painting                                                          |            0|              0|            0|              0|            1|              6|
+|    351|Fundamentals of Stage Direction                                         |            0|              0|            0|              0|            1|              4|
+|    360|Computer Aided Design for Performance                                   |            0|              0|            1|              2|            0|              0|
+|    361|Costume Design                                                          |            0|              0|            1|              7|            0|              0|
+|    370|Design Studio: Model Making for the Theatre                             |            0|              0|            1|              1|            0|              0|
+|    372|Design Studio: Perspective and Rendering for the Theatre                |            1|              3|            0|              0|            0|              0|
+
+ *** 
+#### **WMST courses**
+
+| Number|Title                                                          | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    100|Introduction to Women's and Gender Studies                     |            1|             22|            1|             22|            0|              0|
+|    220|The Politics of Lesbian, Gay, Bisexual, and Transgender Rights |            1|             24|            0|              0|            1|             24|
+|    251|Black Masculinity in the United States                         |            0|              0|            0|              0|            1|             28|
+|    351|Toni Morrison                                                  |            0|              0|            0|              0|            1|             15|
+|    400|Senior Seminar                                                 |            1|              7|            0|              0|            1|              5|
+|    448|Women's and Gender Studies Seminar                             |            0|              0|            1|             19|            0|              0|
+
+ *** 
+#### **WRIT courses**
+
+| Number|Title                                  | A16 sections| A16 enrollment| E17 sections| E17 enrollment| A17 sections| A17 enrollment|
+|------:|:--------------------------------------|------------:|--------------:|------------:|--------------:|------------:|--------------:|
+|    205|Creative Writing: Poetry               |            1|             15|            1|             14|            1|             13|
+|    206|Creative Writing: Fiction              |            1|             15|            1|             15|            1|             15|
+|    207|Creative Writing: Playwriting          |            1|             13|            1|             15|            1|             14|
+|    306|Advanced Creative Writing: Fiction     |            1|              9|            0|              0|            1|             13|
+|    307|Advanced Creative Writing: Playwriting |            0|              0|            1|             10|            0|              0|
+
+ *** 
