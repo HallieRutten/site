@@ -9,3 +9,12 @@
 * Quiz 2 
     + [Without solutions](quiz2.pdf)
     + [With solutions](quiz2soln.pdf)
+* Quiz 3 
+    + [Without solutions](quiz3.pdf)
+    + [With solutions](quiz3soln.pdf)
+* Quiz 4 
+    + [Without solutions](quiz4.pdf)
+    + [With solutions](quiz4soln.pdf)
+* Quiz 5 
+    + [Without solutions](quiz5.pdf)
+    + [With solutions](quiz5soln.pdf)
