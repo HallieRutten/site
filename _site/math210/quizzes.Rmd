@@ -22,3 +22,9 @@
 * Quiz 5
     + [Without solutions](quiz5.pdf)
     + [With solutions](quiz5soln.pdf)
+* Quiz 6
+    + [Without solutions](quiz6.pdf)
+    + [With solutions](quiz6soln.pdf)
+* Quiz 7
+    + [Without solutions](quiz7.pdf)
+    + [With solutions](quiz7soln.pdf)
