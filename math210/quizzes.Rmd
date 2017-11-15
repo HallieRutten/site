@@ -28,3 +28,6 @@
 * Quiz 7
     + [Without solutions](quiz7.pdf)
     + [With solutions](quiz7soln.pdf)
+* Quiz 8
+    + [Without solutions](quiz8.pdf)
+    + [With solutions](quiz8soln.pdf)

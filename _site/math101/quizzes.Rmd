@@ -27,3 +27,6 @@
 * Quiz 8 
     + [Without solutions](quiz8.pdf)
     + [With solutions](quiz8soln.pdf)
+* Quiz 9
+    + [Without solutions](quiz9.pdf)
+    + [With solutions](quiz9soln.pdf)
