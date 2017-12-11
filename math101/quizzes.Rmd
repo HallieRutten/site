@@ -30,3 +30,6 @@
 * Quiz 9
     + [Without solutions](quiz9.pdf)
     + [With solutions](quiz9soln.pdf)
+* Quiz 10
+    + [Without solutions](quiz10.pdf)
+    + [With solutions](quiz10soln.pdf)
