@@ -4,12 +4,10 @@ navbar:
   left:
     - text: "courses"
       menu:
-      - text: "Math 101"
-        href: math101/_site/index.html
-      - text: "Math 210"
-        href: math210/_site/index.html
-      - text: "Math 334"
-        href: math334/_site/index.html
+      - text: "Math 212"
+        href: math212/_site/index.html
+      - text: "Stat 204"
+        href: stat204/_site/index.html
     - text: "research"
       href: research.html
     - text: "c4ideas"
