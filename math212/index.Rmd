@@ -3,87 +3,55 @@
 
 <br>
 
-Two basic questions arise repeatedly in quantitative disciplines: how does 
-this or that change over time, and how much of it is there? Calculus provides 
-powerful tools for answering these questions: derivatives measure change, and 
-integrals measure quantity.  As simple as that sounds to us today, it is important 
-to recognize that these are precisely the tools that made modern science and 
-technology possible!
-
-Of the three main topics covered in single-variable calculus, we will focus on 
-***differentiation***; integration and infinite series are the subjects of Math 102.  After 
-this course, you should be able to 
-
-- compute derivatives of all kinds of functions and
-- use derivatives to solve all kinds of interesting problems. 
+Many mathematical and scientific problems involve some changing scalar quantity;
+understanding this scalar quantity often depends on solving a differential equation.
+When time is the only independent variable, this is an *ordinary differential equation*,
+for which there is a standard arsenal of tools. We will explore these methods over the course
+of the semester, and we will apply them to lots of concrete examples. 
 
 To succeed in this course, you must
 
--   stay caught up with the readings and recommended practice problems,
+-   stay caught up with the readings and assignments,
 -   work together within the parameters of the Honor Code, and
 -   talk to me whenever you have questions.
 
-_**If you don't understand something, get help immediately!**_
+If you don't understand something, get help immediately!
 
-#### Textbook 
+#### Textbook {#textbooks}
 
--   _Calculus_, Hughes-Hallett et al. (6th edition)
+-   [*Ordinary Differential Equations*](http://store.doverpublications.com/0486649407.html) by
+    Tenenbaum and Pollard
 
 #### Times & location
 
--   MWF, 10:00-10:50 a.m., Woods Labs 123
+-   Tuesdays and Thursdays, 11:00-12:15, Woods Labs 121
 
 #### Office hours & contact info.
 
-I should be available
-
-- 11 a.m. to noon on most days, 
-- Wednesday afternoons from 1-2,  and 
-- Thursday afternoons from 1:30-2:30.
-
-You are welcome to drop by whenever my office door is open; talk to me to arrange a specific 
-time to meet. My office is Woods Labs 127A, my office phone number is 1820, and my email address 
-is mbrudd(at)sewanee.edu. Remember, though, that it's usually better to talk _in person_
-than to communicate indirectly!
+Drop by whenever my office door is open, or talk to me to arrange a
+specific time to meet. My office is Woods Labs 127A, my email
+address is mbrudd (at) sewanee.edu, and my office phone number is 1820.
+Remember, though, that it's usually better to talk ***in person*** than to
+communicate by email or phone!
 
 #### Grading
 
 To help you stay caught up with the material and practice for exams,
-there will be frequent quizzes. There will be three exams, two during
-the term and a comprehensive final exam at _**9:00 a.m. on Monday, December 18^^th^^**_. 
-Your scores on these components will contribute to your final grade as follows:
+there will be frequent quizzes and homework. There will be three exams, two 
+during the semester and a comprehensive final exam at **9:00 a.m. on Friday, May 4***. 
+Your scores on these components will contribute to your final
+grade as follows:
 
 -   In-class exams (2): 20% each
--   Quizzes: 20%
+-   Quizzes & homework: 20%
 -   Final exam: 20%
 -   Best of these: 20%
 
-If you cannot avoid missing a quiz or exam for a ***legitimate*** 
-reason (e.g., being out of town to participate in a University-related activity), 
-you must talk to me ahead of time to reschedule. 
-***Otherwise, make-up quizzes/exams will not be given.***
-
-#### Course goals    
-
-As a course that satisfies the University’s mathematics requirement for graduation, Math 101 
-has broader pedagogical goals than merely learning a few specific topics.  This course aims 
-to help you 
-
-- ***Understand mathematical theory.***  Calculus is not just a collection of techniques to be 
-memorized and applied at appropriate times.  I hope to convince you that calculus boils down to 
-a few fundamental ideas that, if understood well, obviate the need for any rote memorization.  
-
-- ***Write clearly and precisely.***  You should strive to communicate clearly in all of your 
-submitted work.  Some problems will have solutions that consist of a string of calculations, but 
-the steps must proceed logically and completely; simply writing down the answer will not
-communicate your solution clearly.  
-
-- ***Model real world problems.***  Real world problems will motivate lots of our examples, which 
-we will solve and discuss in class. 
-
-- ***Generalize and apply results.***  We will often use a few simple ideas to build powerful 
-tools, and we will use some basic examples to clarify and catalog lots of problems that might look 
-forbidding at first glance. 
+If you cannot avoid missing a quiz or exam for a ***legitimate*** reason
+(e.g., being out of town to participate in a University-related
+activity), you must talk to me ***ahead of time*** to get permission to
+submit your work late. ***Otherwise, make-up quizzes/exams will not be
+given.***
 
 #### Honor Code
 

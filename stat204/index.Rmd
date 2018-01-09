@@ -3,8 +3,17 @@
 
 <br>
 
-The basic goal of this course is to help you become more statistically
-literate. To that end, we will follow a systematic method for 
+The basic goal of this course is to increase your statistical competence. 
+To that end, we will use data to investigate some prototypical 
+research problems, keeping the central questions of statistics in mind as we go:
+
+- Are the observed differences just due to chance, or is there a ***real*** difference?
+- If there is a real difference, 
+    + how big is it? 
+    + what caused it? 
+    + what does it mean?
+
+To answer these questions, we will follow a systematic method for 
 statistical investigations:
 
 - ask a research question,
@@ -13,18 +22,10 @@ statistical investigations:
 - draw inferences from the data, and
 - formulate conclusions.
 
-As we carry out this program and investigate different research problems, pay attention 
-to the central questions of statistics:
+At the end of this course, you should be able to apply this approach to your own
+research problems to obtain meaningful insights. You must therefore
 
-- Are the observed differences just due to chance, or is there a *real* difference?
-- If there is a real difference, 
-  + how big is it? 
-  + what caused it? 
-  + what does it mean?
-
-To succeed in this course, you must
-
--   stay caught up with the readings and exercises,
+-   stay caught up with the readings and assignments,
 -   work together within the parameters of the Honor Code, and
 -   talk to me whenever you have questions.
 
@@ -35,7 +36,7 @@ If you don't understand something, get help immediately!
 -   [*Introduction to Statistical Investigations*](http://bcs.wiley.com/he-bcs/Books?action=index&itemId=1118172140&bcsId=10008) by
     Tintle et al. (4th edition)
 
-#### Times & locations
+#### Times & location
 
 -   Tuesdays and Thursdays, 1:30-2:45 p.m., Woods Labs 134
 
@@ -44,19 +45,19 @@ If you don't understand something, get help immediately!
 Drop by whenever my office door is open, or talk to me to arrange a
 specific time to meet. My office is Woods Labs 127A, my email
 address is mbrudd (at) sewanee.edu, and my office phone number is 1820.
-Remember, though, that it's usually better to talk *in person* than to
+Remember, though, that it's usually better to talk ***in person*** than to
 communicate by email or phone!
 
 #### Grading
 
 To help you stay caught up with the material and practice for exams,
-there will be frequent quizzes. There will be three exams, two during
-the term and a comprehensive final exam at ***2:00 p.m. on Friday, July
-14***. Your scores on these components will contribute to your final
+there will be frequent quizzes and homework. There will be three exams, two 
+during the semester and a comprehensive final exam at ***2:00 p.m. on Monday, May 7***. 
+Your scores on these components will contribute to your final
 grade as follows:
 
 -   In-class exams (2): 20% each
--   Quizzes: 20%
+-   Quizzes & homework: 20%
 -   Final exam: 20%
 -   Best of these: 20%
 
