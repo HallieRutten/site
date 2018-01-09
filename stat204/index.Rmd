@@ -3,9 +3,9 @@
 
 <br>
 
-The basic goal of this course is to increase your statistical competence. 
-To that end, we will use data to investigate some prototypical 
-research problems, keeping the central questions of statistics in mind as we go:
+The fundamental objective of this course is to build your statistical competence. 
+To that end, we will investigate a variety of research problems, 
+keeping the central questions of statistics in mind as we go:
 
 - Are the observed differences just due to chance, or is there a ***real*** difference?
 - If there is a real difference, 
@@ -13,17 +13,12 @@ research problems, keeping the central questions of statistics in mind as we go:
     + what caused it? 
     + what does it mean?
 
-To answer these questions, we will follow a systematic method for 
-statistical investigations:
-
-- ask a research question,
-- collect data to answer the question,
-- explore the data,
-- draw inferences from the data, and
-- formulate conclusions.
-
-At the end of this course, you should be able to apply this approach to your own
-research problems to obtain meaningful insights. You must therefore
+Making sense of these questions is one of our tasks; another is to
+cultivate a systematic approach to data-driven research. After taking 
+this course, you should be able to apply a step-by-step process of
+problem identification, data collection, and data analysis to obtain
+meaningful, defensible insights into your own research questions.
+You must therefore
 
 -   stay caught up with the readings and assignments,
 -   work together within the parameters of the Honor Code, and

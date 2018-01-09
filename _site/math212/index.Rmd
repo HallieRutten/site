@@ -3,11 +3,12 @@
 
 <br>
 
-Many mathematical and scientific problems involve some changing scalar quantity;
-understanding this scalar quantity often depends on solving a differential equation.
-When time is the only independent variable, this is an *ordinary differential equation*,
-for which there is a standard arsenal of tools. We will explore these methods over the course
-of the semester, and we will apply them to lots of concrete examples. 
+Most mathematical and scientific problems involve some changing quantities that may or may not 
+affect one another; understanding these quantities often depends on assembling and solving some 
+related differential equations. In the simplest cases, time is the only independent variable and the 
+relevant models are ordinary differential equations (ODEs), for which there is a standard arsenal 
+of tools. This course will teach you to use these methods and thereby gain insight 
+into the problems from which ODEs arise.
 
 To succeed in this course, you must
 
@@ -31,14 +32,14 @@ If you don't understand something, get help immediately!
 Drop by whenever my office door is open, or talk to me to arrange a
 specific time to meet. My office is Woods Labs 127A, my email
 address is mbrudd (at) sewanee.edu, and my office phone number is 1820.
-Remember, though, that it's usually better to talk ***in person*** than to
+Remember, though, that it's usually better to talk **in person** than to
 communicate by email or phone!
 
 #### Grading
 
 To help you stay caught up with the material and practice for exams,
 there will be frequent quizzes and homework. There will be three exams, two 
-during the semester and a comprehensive final exam at **9:00 a.m. on Friday, May 4***. 
+during the semester and a comprehensive final exam at **9:00 a.m. on Friday, May 4**. 
 Your scores on these components will contribute to your final
 grade as follows:
 
