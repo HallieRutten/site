@@ -1,8 +1,0 @@
----
----
-
-<br>
-
-* Quiz 1 (9/4/17)
-    + [Without solutions](quiz1.pdf)
-    + [With solutions](quiz1soln.pdf)
