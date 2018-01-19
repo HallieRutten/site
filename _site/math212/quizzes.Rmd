@@ -1,8 +1,0 @@
----
----
-
-<br>
-
-* Quiz 1 
-    + [Without solutions](quiz1.pdf)
-    + [With solutions](quiz1soln.pdf)
