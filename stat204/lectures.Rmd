@@ -4,3 +4,4 @@
 <br>
 
 * [Preliminaries](lectures/Preliminaries.html) (1/16)
+* [Chance models](lectures/ChanceModels.html) (1/23)
