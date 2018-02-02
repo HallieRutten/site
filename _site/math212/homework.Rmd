@@ -8,3 +8,5 @@
     + [Solutions](hw1soln.pdf)
 * Problem Set #2 -- due 1/30/18
     + [Problems](hw2.pdf)
+* Problem Set #3 -- due 2/6/18
+    + [Problems](hw3.pdf)
