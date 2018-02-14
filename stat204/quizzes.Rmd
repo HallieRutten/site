@@ -1,0 +1,11 @@
+---
+---
+
+<br>
+
+* Quiz #1 
+    + [Without solutions](quizzes/quiz1.pdf)
+    + [With solutions](quizzes/quiz1soln.pdf)
+* Quiz #2 
+    + [Without solutions](quizzes/quiz2.pdf)
+    + [With solutions](quizzes/quiz2soln.pdf)

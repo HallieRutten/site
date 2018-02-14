@@ -14,3 +14,4 @@
     + [Solutions](hw3soln.pdf)
 * Problem Set #4 -- due 2/13/18
     + [Problems](hw4.pdf)
+    + [Solutions](hw4soln.pdf)
