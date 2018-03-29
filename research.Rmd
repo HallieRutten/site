@@ -7,7 +7,7 @@
 
 - Nonlinear partial differential equations
 - Statistical modeling
-- [Data science](c4ideas.html)
+- Data science
 
 #### Publications & work in progress
 

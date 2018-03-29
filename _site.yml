@@ -10,8 +10,6 @@ navbar:
         href: stat204/_site/index.html
     - text: "research"
       href: research.html
-    - text: "c4ideas"
-      href: c4ideas.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu
