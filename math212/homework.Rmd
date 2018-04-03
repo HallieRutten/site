@@ -18,3 +18,8 @@
 * Problem Set #5 -- due 2/27/18
     + [Problems](hw5.pdf)
     + [Solutions](hw5soln.pdf)
+* Problem Set #6 -- due 3/6/18
+    + [Problems](hw6.pdf)
+    + [Solutions](hw6soln.pdf)
+* Problem Set #7 -- due 4/5/18
+    + [Problems](hw7.pdf)

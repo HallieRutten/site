@@ -9,3 +9,6 @@
 * Quiz #2 
     + [Without solutions](quizzes/quiz2.pdf)
     + [With solutions](quizzes/quiz2soln.pdf)
+* Quiz #3
+    + [Without solutions](quizzes/quiz3.pdf)
+    + [With solutions](quizzes/quiz3soln.pdf)
