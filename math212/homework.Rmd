@@ -23,3 +23,4 @@
     + [Solutions](hw6soln.pdf)
 * Problem Set #7 -- due 4/5/18
     + [Problems](hw7.pdf)
+    + [Solutions](hw7soln.pdf)
