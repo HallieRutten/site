@@ -24,3 +24,9 @@
 * Problem Set #7 -- due 4/5/18
     + [Problems](hw7.pdf)
     + [Solutions](hw7soln.pdf)
+* Exam #2 -- due 4/10/18
+    + [Problems](exam2.pdf)
+    + [Solutions](exam2soln.pdf)
+* Problem Set #8 -- due 4/24/18
+    + [Problems](hw8.pdf)
+    + [Solutions](hw8soln.pdf)
