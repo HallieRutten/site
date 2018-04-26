@@ -12,3 +12,12 @@
 * Quiz #3
     + [Without solutions](quizzes/quiz3.pdf)
     + [With solutions](quizzes/quiz3soln.pdf)
+* Quiz #4 
+    + [Without solutions](quizzes/quiz4.pdf)
+    + [With solutions](quizzes/quiz4soln.pdf)
+* Quiz #5 
+    + [Without solutions](quizzes/quiz5.pdf)
+    + [With solutions](quizzes/quiz5soln.pdf)
+* Quiz #6
+    + [Without solutions](quizzes/quiz6.pdf)
+    + [With solutions](quizzes/quiz6soln.pdf)
