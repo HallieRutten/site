@@ -21,3 +21,10 @@
 * Quiz #6
     + [Without solutions](quizzes/quiz6.pdf)
     + [With solutions](quizzes/quiz6soln.pdf)
+* Exam #1
+    + [Version a](quizzes/exam1a.pdf)
+    + [Version b](quizzes/exam1b.pdf.pdf)
+* Exam #2
+    + [Without solutions](quizzes/exam2.pdf)
+    + [With solutions](quizzes/exam2soln.pdf)
+
