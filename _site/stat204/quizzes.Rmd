@@ -23,7 +23,9 @@
     + [With solutions](quizzes/quiz6soln.pdf)
 * Exam #1
     + [Version a](quizzes/exam1a.pdf)
+    + [Version a solutions](quizzes/exam1asoln.pdf)
     + [Version b](quizzes/exam1b.pdf.pdf)
+    + [Version b solutions](quizzes/exam1bsoln.pdf.pdf)
 * Exam #2
     + [Without solutions](quizzes/exam2.pdf)
     + [With solutions](quizzes/exam2soln.pdf)
