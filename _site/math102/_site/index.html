@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>index.utf8.md</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/united.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Math 102, Advent 2018</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Syllabus</a>
+</li>
+<li>
+  <a href="homework.html">Homework</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="http://mbrudd.sewanee.edu">Matthew Rudd</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<p>Two basic questions arise repeatedly in quantitative disciplines: how does this or that change over time, and how much of it is there? Calculus provides powerful tools for answering these questions: derivatives measure change, and integrals measure quantity. As simple as that sounds to us today, it is important to recognize that these are precisely the tools that made modern science and technology possible!</p>
+<p>Of the three main topics covered in single-variable calculus, we will focus on <strong><em>integration and infinite series</em></strong>; understanding differentiation (as covered in Math 101, for example) is a prerequisite. After this course, you should be able to</p>
+<ul>
+<li>evaluate integrals of all kinds of functions,</li>
+<li>use integration to solve some elementary differential equations, and</li>
+<li>work with power series.</li>
+</ul>
+<p>To succeed in this course, you must</p>
+<ul>
+<li>stay caught up with the readings and recommended practice problems,</li>
+<li>work together within the parameters of the Honor Code, and</li>
+<li>talk to me whenever you have questions.</li>
+</ul>
+<p><strong><em>If you don’t understand something, get help immediately!</em></strong></p>
+<div id="textbook" class="section level4">
+<h4>Textbook</h4>
+<ul>
+<li><em>Calculus</em>, Hughes-Hallett et al. (6th edition)</li>
+</ul>
+</div>
+<div id="times-location" class="section level4">
+<h4>Times &amp; location</h4>
+<ul>
+<li>Tuesdays &amp; Thursdays, 9:30-10:45 p.m., Woods Labs 121</li>
+</ul>
+</div>
+<div id="office-hours-contact-info." class="section level4">
+<h4>Office hours &amp; contact info.</h4>
+<p>I should be available on <strong><em>Wednesdays from noon-2</em></strong> and on <strong><em>Tuesday &amp; Thursday afternoons from 3:00-4:00</em></strong>. You are also welcome to drop by whenever my office door is open; talk to me to arrange a specific time to meet. My office is Woods Labs 127A, my office phone number is 1820, and my email address is mbrudd(at)sewanee.edu. Remember, though, that it’s usually better to talk <em>in person</em> than to communicate indirectly!</p>
+</div>
+<div id="grading" class="section level4">
+<h4>Grading</h4>
+<p>To help you stay caught up with the material and practice for exams, there will be frequent homework quizzes. There will be three exams, two during the term and a comprehensive final exam at <strong><em>2:00 p.m. on Sunday, December 16<sup>th</sup></em></strong>. Your scores on these components will contribute to your final grade as follows:</p>
+<ul>
+<li>In-class exams (2): 20% each</li>
+<li>Homework quizzes: 20%</li>
+<li>Final exam: 20%</li>
+<li>Best of these: 20%</li>
+</ul>
+<p>If you cannot avoid missing a quiz or exam for a <strong><em>legitimate</em></strong> reason (e.g., being out of town to participate in a University-related activity), you must talk to me ahead of time to reschedule. <strong><em>Otherwise, make-up quizzes/exams will not be given.</em></strong></p>
+</div>
+<div id="course-goals" class="section level4">
+<h4>Course goals</h4>
+<p>As a course that satisfies the University’s G5Q requirement for graduation, Math 102 has broader pedagogical goals than merely learning a few specific topics. This course aims to help you</p>
+<ul>
+<li><p><strong><em>Understand mathematical theory.</em></strong> Calculus is not just a collection of techniques to be memorized and applied at appropriate times. I hope to convince you that calculus boils down to a few fundamental ideas that, if understood well, obviate the need for any rote memorization.</p></li>
+<li><p><strong><em>Write clearly and precisely.</em></strong> You should strive to communicate clearly in all of your submitted work. Some problems will have solutions that consist of a string of calculations, but the steps must proceed logically and completely; simply writing down the answer will not communicate your solution clearly.</p></li>
+<li><p><strong><em>Model real world problems.</em></strong> Real world problems will motivate lots of our examples, which we will solve and discuss in class.</p></li>
+<li><p><strong><em>Generalize and apply results.</em></strong> We will often use a few simple ideas to build powerful tools, and we will use some basic examples to clarify and catalog lots of problems that might look forbidding at first glance.</p></li>
+</ul>
+</div>
+<div id="honor-code" class="section level4">
+<h4>Honor Code</h4>
+<p>As a Sewanee student, you have already sworn to uphold the Honor Code; I expect you to comport yourself accordingly. Work with your classmates to understand the course material, but submit work that is truly your own. You must not consult with other students when taking exams or quizzes. In addition to avoiding a guilty conscience, you’ll learn more this way anyhow!</p>
+</div>
+<div id="attendance" class="section level4">
+<h4>Attendance</h4>
+<p>Missing class seriously undermines the educational process, so be responsible and don’t do it unless absolutely necessary.</p>
+</div>
+<div id="special-needs" class="section level4">
+<h4>Special needs</h4>
+<p>Please notify me immediately if you have any documented special needs that need to be accommodated. The University’s ADA statement may be helpful in this regard:</p>
+<p><em>The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University. Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services and the instructor, as early in the semester as possible. If you have already requested accommodations, it is your responsibility to present your instructor with a copy of your academic accommodations letter from Student Accessibility Services which is located in the University Wellness Center (931.598.1270). Accommodations will not be provided without this documentation, and accommodations cannot be applied retroactively. Additional information about disability accommodations can be found <a href="http://sewanee.edu/student-life/university-wellness-center/">online</a>.</em></p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

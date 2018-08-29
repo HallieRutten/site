@@ -1,9 +1,0 @@
----
----
-
-<br>
-
-* [Preliminaries](lectures/Preliminaries.html) (1/16)
-* [Chance models](lectures/ChanceModels.html) (1/23)
-* [Regression](lectures/Regression.html) (4/19)
-* [Logistic Regression](lectures/LogisticRegression.html) (4/26)

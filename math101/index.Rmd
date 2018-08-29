@@ -1,0 +1,102 @@
+---
+---
+
+<br>
+
+Two basic questions arise repeatedly in quantitative disciplines: how does 
+this or that change over time, and how much of it is there? Calculus provides 
+powerful tools for answering these questions: derivatives measure change, and 
+integrals measure quantity.  As simple as that sounds to us today, it is important 
+to recognize that these are precisely the tools that made modern science and 
+technology possible!
+
+Of the three main topics covered in single-variable calculus, we will focus on 
+***differentiation***; integration and infinite series are the subjects of Math 102.  After 
+this course, you should be able to 
+
+- compute derivatives of all kinds of functions and
+- use derivatives to solve all kinds of interesting problems. 
+
+To succeed in this course, you must
+
+-   stay caught up with the readings and recommended practice problems,
+-   work together within the parameters of the Honor Code, and
+-   talk to me whenever you have questions.
+
+***If you don't understand something, get help immediately!***
+
+#### Textbook 
+
+-   _Calculus_, Hughes-Hallett et al. (6th edition)
+
+#### Times & location
+
+-   Tuesdays & Thursdays, 1:30-2:45 p.m., Woods Labs 121
+
+#### Office hours & contact info.
+
+I should be available on ***Wednesdays from noon-2*** and on ***Tuesday & Thursday afternoons from 3:00-4:00***. 
+You are also welcome to drop by whenever my office door is open; talk to me to arrange a specific 
+time to meet. My office is Woods Labs 127A, my office phone number is 1820, and my email address 
+is mbrudd(at)sewanee.edu. Remember, though, that it's usually better to talk _in person_
+than to communicate indirectly!
+
+#### Grading
+
+To help you stay caught up with the material and practice for exams,
+there will be frequent homework quizzes. There will be three exams, two during
+the term and a comprehensive final exam at ***2:00 p.m. on Friday, December 14^th^***. 
+Your scores on these components will contribute to your final grade as follows:
+
+-   In-class exams (2): 20% each
+-   Homework quizzes: 20%
+-   Final exam: 20%
+-   Best of these: 20%
+
+If you cannot avoid missing a quiz or exam for a ***legitimate*** 
+reason (e.g., being out of town to participate in a University-related activity), 
+you must talk to me ahead of time to reschedule. 
+***Otherwise, make-up quizzes/exams will not be given.***
+
+#### Course goals    
+
+As a course that satisfies the University’s G5Q requirement for graduation, Math 101 
+has broader pedagogical goals than merely learning a few specific topics.  This course aims 
+to help you 
+
+- ***Understand mathematical theory.***  Calculus is not just a collection of techniques to be 
+memorized and applied at appropriate times.  I hope to convince you that calculus boils down to 
+a few fundamental ideas that, if understood well, obviate the need for any rote memorization.  
+
+- ***Write clearly and precisely.***  You should strive to communicate clearly in all of your 
+submitted work.  Some problems will have solutions that consist of a string of calculations, but 
+the steps must proceed logically and completely; simply writing down the answer will not
+communicate your solution clearly.  
+
+- ***Model real world problems.***  Real world problems will motivate lots of our examples, which 
+we will solve and discuss in class. 
+
+- ***Generalize and apply results.***  We will often use a few simple ideas to build powerful 
+tools, and we will use some basic examples to clarify and catalog lots of problems that might look 
+forbidding at first glance. 
+
+#### Honor Code
+
+As a Sewanee student, you have already sworn to uphold the Honor Code; I
+expect you to comport yourself accordingly. Work with your classmates to
+understand the course material, but submit work that is truly your own.
+You must not consult with other students when taking exams or quizzes.
+In addition to avoiding a guilty conscience, you’ll learn more this way
+anyhow!
+
+#### Attendance
+
+Missing class seriously undermines the educational process, so be
+responsible and don’t do it unless absolutely necessary.
+
+#### Special needs
+
+Please notify me immediately if you have any documented special needs
+that need to be accommodated. The University's ADA statement may be helpful in this regard:
+
+_The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University. Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services and the instructor, as early in the semester as possible. If you have already requested accommodations, it is your responsibility to present your instructor with a copy of your academic accommodations letter from Student Accessibility Services which is located in the University Wellness Center (931.598.1270). Accommodations will not be provided without this documentation, and accommodations cannot be applied retroactively. Additional information about disability accommodations can be found [online](http://sewanee.edu/student-life/university-wellness-center/)._

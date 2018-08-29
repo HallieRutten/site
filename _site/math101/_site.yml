@@ -1,0 +1,15 @@
+name: "Math 101"
+navbar:
+  title: "Math 101, Advent 2018"
+  type: inverse
+  left:
+    - text: "Syllabus"
+      href: index.html
+    - text: "Homework"
+      href: homework.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu
+output:
+  html_document:
+    theme: united
