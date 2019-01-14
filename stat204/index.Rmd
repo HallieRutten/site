@@ -28,7 +28,7 @@ If you don't understand something, get help immediately!
 
 #### Textbook 
 
--   [*Introduction to Statistical Investigations*](http://bcs.wiley.com/he-bcs/Books?action=index&itemId=1118172140&bcsId=10008) by
+-   [*Introduction to Statistical Investigations*](http://www.isi-stats.com/isi/) by
     Tintle et al. (4th edition)
 
 #### Times & location
