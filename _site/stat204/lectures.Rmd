@@ -4,3 +4,4 @@
 <br>
 
 - [Chance models](lectures/ChanceModels.html)
+- [Normal distributions & z-scores](lectures/NormalApprox.html)
