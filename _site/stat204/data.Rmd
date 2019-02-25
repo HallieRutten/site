@@ -3,4 +3,4 @@
 
 <br>
 
-Data will be posted here later!
+- [European life expectancies](data/europe)
