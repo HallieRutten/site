@@ -5,3 +5,6 @@
 
 - [Chance models](lectures/ChanceModels.html)
 - [Normal distributions & z-scores](lectures/NormalApprox.html)
+- [Sample surveys](lectures/surveys.pdf)
+- [The biggest public health experiment ever](lectures/salk.pdf)
+- [Controlled experiments](lectures/rct.pdf)
