@@ -3,4 +3,13 @@
 
 <br>
 
+<h4>Exam 1</h4>
+
 - [European life expectancies](data/europe)
+
+<p>
+<h4>Exam 2</h4>
+
+- [Brain wave measurements](data/brain)
+- [Deer counts](data/deer)
+
