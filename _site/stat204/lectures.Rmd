@@ -8,3 +8,4 @@
 - [Sample surveys](lectures/surveys.pdf)
 - [The biggest public health experiment ever](lectures/salk.pdf)
 - [Controlled experiments](lectures/rct.pdf)
+- [Regression](lectures/Regression.html)
