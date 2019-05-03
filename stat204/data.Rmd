@@ -13,3 +13,8 @@
 - [Brain wave measurements](data/brain)
 - [Deer counts](data/deer)
 
+<p>
+<h4>Final Exam</h4>
+
+- [Weight loss measurements](data/weight_loss)
+
