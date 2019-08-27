@@ -1,0 +1,13 @@
+name: "Math 210"
+navbar:
+  title: "Math 210, Advent 2019"
+  type: inverse
+  left:
+    - text: "Syllabus"
+      href: index.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu/
+output:
+  html_document:
+    theme: united
