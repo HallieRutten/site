@@ -28,15 +28,15 @@ To succeed in this course, you must
 
 #### Textbook 
 
-You do not need to buy a textbook for this course, but we will refer to _Calculus_ by Gilbert Strang 
-as needed. A PDF of this book is 
+You do not need to buy a textbook for this course, but we will refer to _Calculus_ by 
+Gilbert Strang as needed; a PDF of this book is 
 [freely available online](http://ocw.mit.edu/ans7870/resources/Strang/Edited/Calculus/Calculus.pdf), 
-as are [additional related resources](https://ocw.mit.edu/resources/res-18-001-calculus-online-textbook-spring-2005/index.htm). A copy of _Calculus_ by Hughes, Hallett, et al., could also be a useful reference if you 
+as are [additional related resources](https://ocw.mit.edu/resources/res-18-001-calculus-online-textbook-spring-2005/index.htm). _Calculus_ by Hughes, Hallett, et al., could also be a useful reference if you 
 have access to a copy.
 
 #### Times & location
 
--   MWF 10:00-10:50 a.m., Woods Labs 113
+-   MWF 10:00-10:50 a.m., Woods Labs 121
 
 #### Office hours & contact info.
 
@@ -49,8 +49,9 @@ to talk _in person_ than to communicate indirectly!
 #### Grading
 
 To help you stay caught up with the material and practice for exams,
-there will be frequent homework quizzes. There will be three exams, two during
-the term and a comprehensive final exam at ***9:00 a.m. on Saturday, December 14^th^***. 
+***there will be frequent homework quizzes, usually given at the end of class on Fridays***. 
+There will be three exams, two during the semester and a comprehensive final exam 
+at ***9:00 a.m. on Saturday, December 14^th^***. 
 Your scores on these components will contribute to your final grade as follows:
 
 -   In-class exams (2): 20% each
@@ -105,3 +106,4 @@ Please notify me immediately if you have any documented special needs
 that need to be accommodated. The University's ADA statement may be helpful in this regard:
 
 _The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University. Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services and the instructor, as early in the semester as possible. If you have already requested accommodations, it is your responsibility to present your instructor with a copy of your academic accommodations letter from Student Accessibility Services which is located in the University Wellness Center (931.598.1270). Accommodations will not be provided without this documentation, and accommodations cannot be applied retroactively. Additional information about disability accommodations can be found online at http://sewanee.edu/student-life/university-wellness-center/ ._
+
