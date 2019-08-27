@@ -10,4 +10,4 @@ navbar:
       href: http://mbrudd.sewanee.edu/
 output:
   html_document:
-    theme: united
+    theme: readable
