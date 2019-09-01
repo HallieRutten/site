@@ -5,6 +5,8 @@ navbar:
   left:
     - text: "Syllabus"
       href: index.html
+    - text: "Quizzes"
+      href: quizzes.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/
