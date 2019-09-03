@@ -1,0 +1,6 @@
+---
+---
+
+<br>
+
+- [Orthogonality of eigenfunctions](notes/ortho.pdf)
