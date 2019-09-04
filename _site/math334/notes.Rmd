@@ -4,3 +4,5 @@
 <br>
 
 - [Orthogonality of eigenfunctions](notes/ortho.pdf)
+- [Partial sums of Fourier series](notes/fourier.pdf)
+
