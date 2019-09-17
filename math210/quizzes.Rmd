@@ -7,3 +7,5 @@
 - [Quiz 1 Solutions](quizzes/quiz1soln.pdf)
 - [Quiz 2](quizzes/quiz2.pdf)
 - [Quiz 2 Solutions](quizzes/quiz2soln.pdf)
+- [Quiz 3](quizzes/quiz3.pdf)
+- [Quiz 3 Solutions](quizzes/quiz3soln.pdf)
