@@ -6,3 +6,4 @@
 - [Problem Set 1](hw/hw1.pdf)
 - Problem Set 2: [Problems](hw/hw2.pdf) [Answers](hw/hw2answers.pdf)
 - Problem Set 3: [Problems](hw/hw3.pdf) [Answers](hw/hw3answers.pdf)
+- More [trig substitution problems](hw/trigsub.pdf)
