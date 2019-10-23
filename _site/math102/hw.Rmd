@@ -10,3 +10,4 @@
 - [Problem Set 4](hw/hw4.pdf)
 - [Problem Set 5](hw/hw5.pdf)
 - Problem Set 6: [Problems](hw/hw6.pdf) [Answers](hw/hw6answers.pdf)
+- Problem Set 7: [Problems](hw/hw7.pdf) [Answers](hw/hw7answers.pdf)
