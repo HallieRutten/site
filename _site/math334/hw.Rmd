@@ -1,7 +1,0 @@
----
----
-
-<br>
-
-- [Problem Set 1](hw/hw1.pdf)
-- [Problem Set 2](hw/hw2.pdf)

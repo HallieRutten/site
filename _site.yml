@@ -4,14 +4,10 @@ navbar:
   left:
     - text: "courses"
       menu:
-      - text: "Math 102, Calculus 2"
-        href: math102/_site/index.html
-      - text: "Math 210, Linear Algebra"
-        href: math210/_site/index.html
-      - text: "Math 334, PDEs"
-        href: math334/_site/index.html
-    - text: "research"
-      href: research.html
+      - text: "Math 212, Differential Equations"
+        href: math212/_site/index.html
+      - text: "Stat 204, Elementary Statistics"
+        href: stat204/_site/index.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu
