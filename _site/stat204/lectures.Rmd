@@ -1,0 +1,6 @@
+---
+---
+
+<br>
+
+- [Collecting data](lectures/CollectingData.html)
