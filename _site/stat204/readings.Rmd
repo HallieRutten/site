@@ -1,0 +1,10 @@
+---
+---
+
+<br>
+
+Here are two excerpts from Freedman's excellent [Statistics](https://wwnorton.com/books/Statistics/) textbook:
+
+- [Controlled experiments](readings/experiments.pdf)
+- [Observational studies](readings/studies.pdf)
+
