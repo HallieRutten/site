@@ -8,3 +8,8 @@ Here are two excerpts from Freedman's excellent [Statistics](https://wwnorton.co
 - [Controlled experiments](readings/experiments.pdf)
 - [Observational studies](readings/studies.pdf)
 
+Resources on data visualization:
+
+- Start with [ModernDive's introduction to the tidyverse](https://moderndive.com/2-viz.html)
+- [R for Data Science](https://r4ds.had.co.nz/) by G. Grolemund and H. Wickham
+- [Data Visualization](https://socviz.co/) by K. Healy
