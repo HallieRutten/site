@@ -1,0 +1,8 @@
+---
+---
+
+<br>
+
+- Separable equations: [problems](problems/separable.pdf) [answers](problems/separableanswers.pdf)
+
+ 

@@ -7,6 +7,8 @@ navbar:
       href: index.html
     - text: "Quizzes"
       href: quizzes.html
+    - text: "Problems"
+      href: problems.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/
