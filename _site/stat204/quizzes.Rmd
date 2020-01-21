@@ -2,3 +2,6 @@
 ---
 
 <br>
+
+- Quiz 1 &nbsp; &nbsp; [Without answers](quizzes/quiz1.pdf) &nbsp; &nbsp; [With answers](quizzes/quiz1answers.pdf)
+
