@@ -3,6 +3,7 @@
 
 <br>
 
-- Separable equations: [problems](problems/separable.pdf) [answers](problems/separableanswers.pdf)
+- Separable equations &nbsp; [problems](problems/separable.pdf) &nbsp; [answers](problems/separableanswers.pdf)
+- First order linear equations &nbsp; [problems](problems/intfactor.pdf) &nbsp; [answers](problems/separableanswers.pdf)
 
- 
+
