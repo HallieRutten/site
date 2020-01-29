@@ -5,5 +5,5 @@
 
 - Separable equations &nbsp; [problems](problems/separable.pdf) &nbsp; [answers](problems/separableanswers.pdf)
 - First order linear equations &nbsp; [problems](problems/intfactor.pdf) &nbsp; [answers](problems/separableanswers.pdf)
-
+- Exact equations &nbsp; [problems](problems/exact.pdf) &nbsp; [answers](problems/exactanswers.pdf)
 
