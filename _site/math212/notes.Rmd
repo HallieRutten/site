@@ -4,3 +4,4 @@
 <br>
 
 - [Laplace transforms](notes/LaplaceTransforms.pdf) 
+- [Step functions](notes/step-functions.pdf) 

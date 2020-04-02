@@ -6,4 +6,6 @@
 - [Collecting data](lectures/CollectingData.html)
 - [Relationships between quantitative variables](lectures/Regression.html)
 - [Visualizations with ggplot](lectures/visualization.html)
-- z-tests and t-tests: &nbsp; [Morning class](lectures/z-t-am.pdf) &nbsp; [Afternoon class](lectures/z-t-pm.pdf)
+- z-tests and t-tests : &nbsp; [Morning class](lectures/z-t-am.pdf) &nbsp; [Afternoon class](lectures/z-t-pm.pdf)
+- [t-Distributions](lectures/tDistributions.html)
+- t-procedures (6.2) : &nbsp; [Morning class](lectures/t-procedures-AM.pdf) &nbsp; [Afternoon class](lectures/t-procedures-PM.pdf)
