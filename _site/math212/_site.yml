@@ -11,6 +11,8 @@ navbar:
       href: problems.html
     - text: "Notes"
       href: notes.html
+    - text: "Exams"
+      href: exams.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/
