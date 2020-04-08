@@ -11,6 +11,8 @@ navbar:
       href: quizzes.html
     - text: "Readings"
       href: readings.html 
+    - text: "Exams"
+      href: exams.html 
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/
