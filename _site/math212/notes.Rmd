@@ -5,3 +5,5 @@
 
 - [Laplace transforms](notes/LaplaceTransforms.pdf) 
 - [Step functions](notes/step-functions.pdf) 
+- [Power series solutions, part 1](notes/powerseries1.pdf) 
+- [Power series solutions, part 2](notes/powerseries2.pdf) 

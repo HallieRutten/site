@@ -9,3 +9,5 @@
 - z-tests and t-tests : &nbsp; [Morning class](lectures/z-t-am.pdf) &nbsp; [Afternoon class](lectures/z-t-pm.pdf)
 - [t-Distributions](lectures/tDistributions.html)
 - t-procedures (6.2) : &nbsp; [Morning class](lectures/t-procedures-AM.pdf) &nbsp; [Afternoon class](lectures/t-procedures-PM.pdf)
+- Chi-square Goodness-of-Fit : &nbsp; [Morning class](lectures/GoF-AM.pdf) &nbsp; [Afternoon class](lectures/GoF-PM.pdf)
+- Chi-square Goodness-of-Fit & Independence : &nbsp; [Morning class](lectures/chisq-AM.pdf) &nbsp; [Afternoon class](lectures/chisq-PM.pdf)
