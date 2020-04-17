@@ -7,3 +7,5 @@
 - [Step functions](notes/step-functions.pdf) 
 - [Power series solutions, part 1](notes/powerseries1.pdf) 
 - [Power series solutions, part 2](notes/powerseries2.pdf) 
+- [Exam 2 review problems](notes/exam2review.pdf) 
+- [Chebyshev's equation & intro to systems](notes/chebyshev-systems.pdf) 
