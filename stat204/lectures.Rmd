@@ -14,3 +14,5 @@
 - More on Chi-square tests : &nbsp; [Morning class](lectures/chisq2-AM.pdf) &nbsp; [Afternoon class](lectures/chisq2-PM.pdf)
 - ANOVA examples : &nbsp; [Morning class](lectures/anova1-AM.pdf) &nbsp; [Afternoon class](lectures/anova1-PM.pdf)
 - [ANOVA definition](lectures/anova-defn.pdf) 
+- More ANOVA examples : &nbsp; [Morning class](lectures/anova2-AM.pdf) &nbsp; [Afternoon class](lectures/anova2-PM.pdf)
+- Regression & inference : &nbsp; [Morning class](lectures/regressionAM.pdf) &nbsp; [Afternoon class](lectures/regressionPM.pdf)
