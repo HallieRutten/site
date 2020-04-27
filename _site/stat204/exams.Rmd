@@ -4,4 +4,5 @@
 <br>
 
 - [Exam 2](exams/exam2.pdf) 
+- [Final Exam](exams/final.pdf) 
 
