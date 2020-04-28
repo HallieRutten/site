@@ -11,3 +11,4 @@
 - [Chebyshev's equation & intro to systems](notes/chebyshev-systems.pdf) 
 - [Linear systems, part 1](notes/linearsystems1.pdf) 
 - [Linear systems, part 2](notes/linearsystems2.pdf) 
+- [Final review](notes/finalreview.pdf) 
