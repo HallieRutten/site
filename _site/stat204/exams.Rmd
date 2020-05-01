@@ -3,6 +3,6 @@
 
 <br>
 
-- [Exam 2](exams/exam2.pdf) 
+- [Exam 2](exams/exam2.pdf) &nbsp; &nbsp; [Exam 2 answers](exams/exam2solns.pdf) 
 - [Final Exam](exams/final.pdf) 
 
