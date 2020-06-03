@@ -1,8 +1,0 @@
----
----
-
-<br>
-
-- Quiz 1 &nbsp; [Without answers](quizzes/quiz1.pdf) &nbsp; [With answers](quizzes/quiz1answers.pdf)
-- Quiz 2 &nbsp; [Without answers](quizzes/quiz2.pdf) &nbsp; [With answers](quizzes/quiz2answers.pdf)
-- Quiz 3 &nbsp; [Without answers](quizzes/quiz3.pdf) &nbsp; [With answers](quizzes/quiz3answers.pdf)

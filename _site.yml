@@ -4,8 +4,6 @@ navbar:
   left:
     - text: "courses"
       menu:
-      - text: "Math 212, Differential Equations"
-        href: math212/_site/index.html
       - text: "Stat 204, Elementary Statistics"
         href: stat204/_site/index.html
   right:
