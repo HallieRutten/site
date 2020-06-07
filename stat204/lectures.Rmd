@@ -1,0 +1,6 @@
+---
+---
+
+<br>
+
+- [Data](lectures/data.html)
