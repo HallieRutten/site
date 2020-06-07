@@ -3,4 +3,4 @@
 
 <br>
 
-- [Data](lectures/data.html)
+- [Data](lectures/Data.html)
