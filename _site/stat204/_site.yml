@@ -9,6 +9,8 @@ navbar:
       href: lectures.html
     - text: "Readings"
       href: readings.html
+    - text: "Homework"
+      href: homework.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/
