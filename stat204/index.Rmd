@@ -28,6 +28,14 @@ If you don't understand something, get help immediately!
 
 -   [*Statistics: Unlocking the Power of Data*](http://www.lock5stat.com) by Lock (2nd edition) 
 
+#### Software 
+
+We will use various technologies to analyze and visualize data:
+
+- [StatKey](http://www.lock5stat.com/StatKey/index.html)
+- Google Sheets
+- An online version of [RStudio](http://r.sewanee.edu/) available to Sewanee students
+
 #### Times & location
 
 -   Section A: Monday through Friday, 10:00-11:15 a.m., online
