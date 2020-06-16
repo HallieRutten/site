@@ -10,4 +10,6 @@
   - Problems 3, 6, and 7 from [this exercise set](homework/exerciseA.pdf) 
 - For Friday, June 19
   - Section 2.1 : 2.20, 2.24, 2.30
-
+  - Section 2.2 : 2.56, 2.64, 2.69, 2.70
+  - Section 2.3 : 2.106, 2.110, 2.118
+  - Section 2.4 : 2.142, 2.148
