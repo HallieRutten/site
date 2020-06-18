@@ -4,3 +4,4 @@
 <br>
 
 - [Data](lectures/Data.html)
+- [Relationships between quantitative variables](lectures/Regression.html)
