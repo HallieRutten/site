@@ -5,3 +5,5 @@
 
 - [Data](lectures/Data.html)
 - [Relationships between quantitative variables](lectures/Regression.html)
+- [Pearson's heights dataset](lectures/heights.csv) (discussed in slides)
+- [the famous Iris dataset](lectures/iris.csv) (for problem 2.195)
