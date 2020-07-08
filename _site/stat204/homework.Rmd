@@ -28,3 +28,7 @@ title: "Homework"
 - For Wednesday, July 15
   - Section 5.1 : 5.24, 5.26
   - Section 6.1-HT : 6.56, 6.58
+  - Section 6.2-D : 6.68, 6.72
+  - Section 6.2-HT : 6.124, 6.126
+
+
