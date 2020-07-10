@@ -10,3 +10,4 @@ title: "Lectures"
 - [the famous Iris dataset](lectures/iris.csv) (for problem 2.195)
 - [Ecological correlations](lectures/eco.pdf)
 - [FootballBrain control data](lectures/FootballBrainControl.csv) (for problem 3.87)
+- [ANOVA definition](lectures/anova-defn.pdf)
