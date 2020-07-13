@@ -35,7 +35,6 @@ We will use various technologies to analyze and visualize data:
 
 - [StatKey](http://www.lock5stat.com/StatKey/index.html)
 - Google Sheets
-- An online version of [RStudio](http://r.sewanee.edu/) available to Sewanee students
 
 #### Times & location
 
