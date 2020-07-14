@@ -11,3 +11,4 @@ title: "Lectures"
 - [Ecological correlations](lectures/eco.pdf)
 - [FootballBrain control data](lectures/FootballBrainControl.csv) (for problem 3.87)
 - [ANOVA definition](lectures/anova-defn.pdf)
+- [Hypothesis tests & test statistics](lectures/hyptests.pdf)
