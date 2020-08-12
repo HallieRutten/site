@@ -31,29 +31,23 @@ If you don't understand something, get help immediately!
 
 #### Software 
 
-We will use various technologies to analyze and visualize data:
+We will use the following to analyze and visualize data:
 
 - [StatKey](http://www.lock5stat.com/StatKey/index.html)
 - Google Sheets
 
 #### Times & location
 
--   Section A: Monday through Friday, 10:00-11:15 a.m., online
+-   Section A: Monday through Friday, 12:00-12:50 p.m. CST, online
+-   Section B: Monday through Friday, 1:00-1:50 p.m. CST, online
 
 #### Grading
 
-To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed on Fridays; ***you will be responsible for leading the 
-discussion of one problem every Friday***. There will be an exam every other week, for a total of 3 exams, 
-and your scores on these components will contribute to your final grade as follows:
-
--   Homework: 20%
--   Exams (3): 20% each
--   Best of these: 20%
+TBD 
 
 #### Exam meetings
 
-- Click [here](http://calendly.com/mbrudd) to schedule your meeting for Exam 1
+TBD 
 
 #### Honor Code
 

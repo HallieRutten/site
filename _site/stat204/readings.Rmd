@@ -4,8 +4,3 @@ title: "Readings"
 
 <br>
 
-- [Washrooms](https://www.nytimes.com/2010/09/14/us/14hands.html)
-- [The Salk field trial](readings/salk-trial.pdf)
-- [Controlled experiments](readings/experiments.pdf)
-- [Observational studies](readings/studies.pdf)
-- [Sample surveys](readings/surveys.pdf)

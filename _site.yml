@@ -6,6 +6,8 @@ navbar:
       menu:
       - text: "Stat 204, Elementary Statistics"
         href: stat204/_site/index.html
+      - text: "Math 313, Algebraic Number Theory"
+        href: math313/_site/index.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu
