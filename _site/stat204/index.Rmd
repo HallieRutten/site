@@ -43,11 +43,14 @@ We will use the following to analyze and visualize data:
 
 #### Grading
 
-TBD 
+To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
+and discussed on Fridays; ***students will be responsible for leading the 
+discussion of problems on Fridays***. There will be 2 exams, 
+and your scores on these components will contribute to your final grade as follows:
 
-#### Exam meetings
-
-TBD 
+-   Homework: 25%
+-   Exams (2): 25% each
+-   Best of these: 25%
 
 #### Honor Code
 
