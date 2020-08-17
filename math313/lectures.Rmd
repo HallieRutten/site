@@ -4,3 +4,4 @@ title: "Lectures"
 
 <br>
 
+- Two sums : &nbsp; [LaTeX source](lectures/twosums.tex) &nbsp; [PDF](lectures/twosums.pdf)
