@@ -4,3 +4,5 @@ title: "Homework"
 
 <br>
 
+- For Friday, August 21
+  - Problems 1.1 : 1(c), 1(d), 1(e), 7, 9, 10(a), 10(b), 11
