@@ -5,5 +5,6 @@ title: "Lectures"
 <br>
 
 - Two sums : &nbsp; [LaTeX source](lectures/twosums.tex) &nbsp; [PDF](lectures/twosums.pdf)
-- [The binomial theorem](lectures/binomthm.pdf)
+- 8/21/20 &nbsp; [The binomial theorem](lectures/binomthm.pdf)
+- 8/24/20 &nbsp; [Euclid's division lemma](lectures/divlemma.df)
 
