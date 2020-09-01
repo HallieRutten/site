@@ -11,3 +11,7 @@ title: "Homework"
   - Section 1.3 : 1.93, 1.102, 1.105
   - Problems 3, 6, and 7 from [this exercise set](homework/exerciseA.pdf) 
   - Section 2.1 : 2.20, 2.24, 2.30
+- For Friday, September 4
+  - Section 2.2 : 2.56, 2.64, 2.69, 2.70
+  - Section 2.3 : 2.110, 2.112, 2.115, 2.118
+  - Section 2.4 : 2.142, 2.148
