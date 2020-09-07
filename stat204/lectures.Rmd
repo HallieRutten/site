@@ -6,3 +6,5 @@ title: "Lectures"
 
 - [Data](lectures/Data.html)
 - [z-scores, percentiles, and the 68-95-99.7 rule](lectures/zscores-percentiles.pdf)
+- [Relationships between quantitative variables](lectures/Regression.html)
+
