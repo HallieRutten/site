@@ -5,3 +5,4 @@ title: "Lectures"
 <br>
 
 - [Data](lectures/Data.html)
+- [z-scores, percentiles, and the 68-95-99.7 rule](lectures/zscores-percentiles.pdf)
