@@ -16,3 +16,7 @@ title: "Homework"
   - Problems 2.4 : 2, 4, 6 
   - Problems 2.5 : 2, 3, 5 
   - [Solutions](homework/hw3.pdf)
+- For Friday, September 11
+  - Problems 3.1: 8, 10
+  - Problems 3.2: 12
+  - Problems 4.2: 4, 5, 8, 15, 16

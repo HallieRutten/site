@@ -15,3 +15,6 @@ title: "Homework"
   - Section 2.2 : 2.56, 2.64, 2.69, 2.70
   - Section 2.3 : 2.110, 2.112, 2.115, 2.118
   - Section 2.4 : 2.142, 2.148
+- For Friday, September 11
+  - Section 2.5 : 2.186, 2.188, 2.190, 2.198
+  - Section 2.6 : 2.212, 2.214, 2.222
