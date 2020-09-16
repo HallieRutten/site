@@ -5,8 +5,11 @@ title: "Lectures"
 <br>
 
 - Two sums : &nbsp; [LaTeX source](lectures/twosums.tex) &nbsp; [PDF](lectures/twosums.pdf)
-- 8/21/20 &nbsp; [The binomial theorem](lectures/binomthm.pdf)
-- 8/24/20 &nbsp; [Euclid's division lemma](lectures/divlemma.pdf)
-- 9/4/20 &nbsp; [The Euclidean algorithm](lectures/euclidean-algorithm.pdf)
-- 9/7/20 &nbsp; [Gauss and the Prime Number Theorem](lectures/gauss-pnt.pdf)
-
+- [The binomial theorem](lectures/binomthm.pdf)
+- [Euclid's division lemma](lectures/divlemma.pdf)
+- [The Euclidean algorithm](lectures/euclidean-algorithm.pdf)
+- [Gauss and the Prime Number Theorem](lectures/gauss-pnt.pdf)
+- [Primes](lectures/primes.pdf)
+- [The sum of the reciprocals of the primes diverges](lectures/prime-reciprocals.pdf)
+- [Linear congruences, part 1](lectures/congruences1.pdf)
+- [Linear congruences, part 2](lectures/congruences2.pdf)

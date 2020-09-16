@@ -20,6 +20,7 @@ title: "Homework"
   - Problems 3.1: 8, 10
   - Problems 3.2: 12
   - Problems 4.2: 4, 5, 8, 15, 16
+  - [Solutions](homework/hw4.pdf)
 - For Friday, September 18
   - Problems 4.3: 3, 8, 9, 12, 25
-  - Problems 4.4: 1, 2
+  - Problems 4.4: 1, 2, 4
