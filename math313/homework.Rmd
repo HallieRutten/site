@@ -24,3 +24,5 @@ title: "Homework"
 - For Friday, September 18
   - Problems 4.3: 3, 8, 9, 12, 25
   - Problems 4.4: 1, 2, 4
+  - [Solutions](homework/hw5.pdf)
+
