@@ -28,3 +28,4 @@ title: "Homework"
 - For Friday, September 25
   - Problems 5.2: 3, 7, 12
   - Problems 5.3: 1, 5, 7, 9
+  - [Solutions](homework/hw6.pdf)
