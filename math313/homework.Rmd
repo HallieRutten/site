@@ -29,3 +29,6 @@ title: "Homework"
   - Problems 5.2: 3, 7, 12
   - Problems 5.3: 1, 5, 7, 9
   - [Solutions](homework/hw6.pdf)
+- For Friday, October 9
+  - Problems 6.1: 6, 7, 8, 21
+  - Problems 6.2: 2, 3, 4, 7
