@@ -27,6 +27,9 @@ title: "Homework"
   - Section 4.1 : 4.18, 4.30, 4.38
   - Section 4.2 : 4.66, 4.68, 4.74
   - Section 4.3 : 4.110, 4.114
+- Exam 1 :
+  - [Questions only](homework/exam1.pdf)
+  - [Questions with short answers](homework/exam1soln.pdf)
 - For Friday, October 9
   - Section 5.1 : 5.24, 5.26, 5.30, 5.31, 5.32
   - Section 5.2 : 5.44, 5.48, 5.52, 5.56
