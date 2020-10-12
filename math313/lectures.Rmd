@@ -15,3 +15,5 @@ title: "Lectures"
 - [Linear congruences, part 2](lectures/congruences2.pdf)
 - [Fermat's Little Theorem & Wilson's Theorem, part 1](lectures/fermat-wilson.pdf)
 - [Fermat's Little Theorem & Wilson's Theorem, part 2](lectures/fermat-wilson2.pdf)
+- [Arithmetic functions](lectures/arithmetics.pdf)
+
