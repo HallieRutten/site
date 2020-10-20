@@ -37,4 +37,5 @@ title: "Homework"
   - Problems 7.2: 10, 11, 13
   - Problems 7.3: 9, 10, 12 
   - Problems 7.4: 1, 4 
+  - [Solutions](homework/hw8.pdf)
 
