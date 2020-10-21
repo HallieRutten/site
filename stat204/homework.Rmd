@@ -38,3 +38,6 @@ title: "Homework"
   - Section 6.1-HT : 6.54, 6.58 
   - Section 6.2-CI : 6.92, 6.94, 6.96
   - Section 6.2-HT : 6.122, 6.124, 6.126
+- For Friday, October 23
+  - Section 7.1 : 7.16, 7.18, 7.20, 7.26
+  - Section 7.2 : 7.40, 7.42, 7.44, 7.56
