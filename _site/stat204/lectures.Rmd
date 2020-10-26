@@ -8,4 +8,5 @@ title: "Lectures"
 - [z-scores, percentiles, and the 68-95-99.7 rule](lectures/zscores-percentiles.pdf)
 - [Relationships between quantitative variables](lectures/Regression.html)
 - [Pearson's heights dataset](lectures/heights.csv) (discussed in slides)
-- [the famous Iris dataset](lectures/iris.csv) (for problem 2.195)
+- [ANOVA: the F-statistic](lectures/anova-defn.pdf)
+
