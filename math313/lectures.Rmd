@@ -17,4 +17,5 @@ title: "Lectures"
 - [Fermat's Little Theorem & Wilson's Theorem, part 2](lectures/fermat-wilson2.pdf)
 - [Arithmetic functions](lectures/arithmetics.pdf)
 - [Euler's Theorem](lectures/euler.pdf)
+- [Primitive roots, part 1](lectures/primitive-roots.pdf)
 

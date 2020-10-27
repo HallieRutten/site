@@ -41,3 +41,7 @@ title: "Homework"
 - For Friday, October 23 
   - Problems 8.1: 4, 6 
   - Problems 8.2: 3, 4, 5, 9, 10
+  - [Solutions](homework/hw9.pdf)
+- For Friday, October 30 
+  - Problems 8.3: 1, 8, 10 
+  - Problems 8.4: 2, 6, 12, 15 
