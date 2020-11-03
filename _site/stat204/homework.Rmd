@@ -44,3 +44,7 @@ title: "Homework"
 - For Friday, October 30
   - Section 8.1 : 8.8, 8.16, 8.24, 8.36, 8.38
   - Section 8.2 : 8.54, 8.56
+- For Friday, November 6
+  - Section 6.4-HT : 6.218, 6.220, 6.224
+  - Section 8.2: 8.54, 8.58, 8.59
+  - Section 9.1 : 9.18, 9.21, 9.26, 9.28

@@ -18,4 +18,4 @@ title: "Lectures"
 - [Arithmetic functions](lectures/arithmetics.pdf)
 - [Euler's Theorem](lectures/euler.pdf)
 - [Primitive roots, part 1](lectures/primitive-roots.pdf)
-
+- [Primitive roots, part 2](lectures/primitive-roots2.pdf)
