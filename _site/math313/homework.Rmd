@@ -49,4 +49,7 @@ title: "Homework"
 - For Friday, November 6 
   - Problems 9.1: 3, 5, 11
   - Problems 9.2: 3, 4, 7, 12 
+- For Friday, November 13 
+  - Problems 9.3: 4, 5, 9, 14, 15
+  - Problems 9.4: 3, 4 
 
