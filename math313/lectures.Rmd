@@ -19,3 +19,6 @@ title: "Lectures"
 - [Euler's Theorem](lectures/euler.pdf)
 - [Primitive roots, part 1](lectures/primitive-roots.pdf)
 - [Primitive roots, part 2](lectures/primitive-roots2.pdf)
+- [Quadratic congruences, part 1](lectures/quadratic1.pdf)
+- [Quadratic congruences, part 2](lectures/quadratic2.pdf)
+
