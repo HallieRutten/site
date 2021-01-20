@@ -4,41 +4,15 @@ title: "Syllabus"
 
 <br>
 
-The fundamental objective of this course is to build your statistical competence. 
-To that end, we will investigate various examples and data sets, 
-keeping the central questions of statistics in mind as we go:
-
-- Are the observed differences just due to chance, or is there a ***real*** difference?
-- If there is a real difference, 
-    + how big is it? 
-    + what caused it? 
-    + what does it mean?
-
-Making sense of these questions is one of our goals; another is cultivating a systematic approach 
-to data-driven research. After taking this course, you should be able to analyze data for yourself 
-to obtain meaningful, defensible insights into whatever interests you.
-You must therefore
-
--   stay caught up with the readings and assignments,
--   work together within the parameters of the Honor Code, and
--   talk to me whenever you have questions.
-
-If you don't understand something, get help immediately!
 
 #### Textbook 
 
--   [*Statistics: Unlocking the Power of Data*](http://www.lock5stat.com) by Lock (2nd edition) 
+-   _Elementary Differential Equations and Boundary Value Problems_ by Boyce and DiPrima 
 
-#### Software 
-
-We will use the following to analyze and visualize data:
-
-- [StatKey](http://www.lock5stat.com/StatKey/index.html)
-- Google Sheets
 
 #### Times & location
 
--   TuTh, 9:30 a.m.-10:45 a.m. CST, online
+-   TuTh, 11:00 a.m.-12:15 p.m. CST, online
 
 #### Grading
 

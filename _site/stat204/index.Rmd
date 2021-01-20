@@ -38,14 +38,13 @@ We will use the following to analyze and visualize data:
 
 #### Times & location
 
--   Section A: Monday through Friday, 12:00-12:50 p.m. CST, online
--   Section B: Monday through Friday, 1:00-1:50 p.m. CST, online
+-   TuTh, 9:30 a.m.-10:45 a.m. CST, online
 
 #### Grading
 
 To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed on Fridays; ***students will be responsible for leading the 
-discussion of problems on Fridays***. There will be 2 exams, 
+and discussed on Thursdays; ***students will be responsible for leading the 
+discussion of problems on Thursdays***. There will be 2 exams, 
 and your scores on these components will contribute to your final grade as follows:
 
 -   Homework: 25%

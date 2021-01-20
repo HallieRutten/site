@@ -13,7 +13,7 @@
 
 <title>Homework</title>
 
-<script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
@@ -23,6 +23,17 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -268,7 +279,7 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Stat 204, Advent 2020</a>
+      <a class="navbar-brand" href="index.html">Stat 204, Easter 2020</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -304,77 +315,6 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<ul>
-<li>For Friday, August 21
-<ul>
-<li>Section 1.1 : 1.14, 1.18, 1.23</li>
-<li>Section 1.2 : 1.54, 1.55, 1.56</li>
-</ul></li>
-<li>For Friday, August 28
-<ul>
-<li>Section 1.3 : 1.93, 1.102, 1.105</li>
-<li>Problems 3, 6, and 7 from <a href="homework/exerciseA.pdf">this exercise set</a></li>
-<li>Section 2.1 : 2.20, 2.24, 2.30</li>
-</ul></li>
-<li>For Friday, September 4
-<ul>
-<li>Section 2.2 : 2.56, 2.64, 2.69, 2.70</li>
-<li>Section 2.3 : 2.110, 2.112, 2.115, 2.118</li>
-<li>Section 2.4 : 2.142, 2.148</li>
-</ul></li>
-<li>For Friday, September 11
-<ul>
-<li>Section 2.5 : 2.186, 2.188, 2.190, 2.198</li>
-<li>Section 2.6 : 2.212, 2.214, 2.222</li>
-</ul></li>
-<li>For Friday, September 18
-<ul>
-<li>Section 3.1 : 3.24, 3.26, 3.30</li>
-<li>Section 3.2 : 3.58, 3.60, 3.66</li>
-<li>Section 3.3 : 3.88, 3.90, 3.102</li>
-</ul></li>
-<li>For Friday, September 25
-<ul>
-<li>Section 3.4 : 3.128, 3.130</li>
-<li>Section 4.1 : 4.18, 4.30, 4.38</li>
-<li>Section 4.2 : 4.66, 4.68, 4.74</li>
-<li>Section 4.3 : 4.110, 4.114</li>
-</ul></li>
-<li>Exam 1 :
-<ul>
-<li><a href="homework/exam1.pdf">Questions only</a></li>
-<li><a href="homework/exam1soln.pdf">Questions with short answers</a></li>
-</ul></li>
-<li>For Friday, October 9
-<ul>
-<li>Section 5.1 : 5.24, 5.26, 5.30, 5.31, 5.32</li>
-<li>Section 5.2 : 5.44, 5.48, 5.52, 5.56</li>
-</ul></li>
-<li>For Friday, October 16
-<ul>
-<li>Section 6.1-CI : 6.23, 6.24<br />
-</li>
-<li>Section 6.1-HT : 6.54, 6.58</li>
-<li>Section 6.2-CI : 6.92, 6.94, 6.96</li>
-<li>Section 6.2-HT : 6.122, 6.124, 6.126</li>
-</ul></li>
-<li>For Friday, October 23
-<ul>
-<li>Section 7.1 : 7.16, 7.18, 7.20, 7.26</li>
-<li>Section 7.2 : 7.40, 7.42, 7.44, 7.56</li>
-</ul></li>
-<li>For Friday, October 30
-<ul>
-<li>Section 8.1 : 8.8, 8.16, 8.24, 8.36, 8.38</li>
-<li>Section 8.2 : 8.54, 8.56</li>
-</ul></li>
-<li>For Friday, November 6
-<ul>
-<li>Section 6.4-HT : 6.218, 6.220, 6.224</li>
-<li>Section 8.2: 8.54, 8.58, 8.59</li>
-<li>Section 9.1 : 9.18, 9.21, 9.26, 9.28</li>
-</ul></li>
-</ul>
 
 
 
@@ -385,7 +325,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
