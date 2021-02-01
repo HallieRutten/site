@@ -43,9 +43,9 @@ We will use the following to analyze and visualize data:
 #### Grading
 
 To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed on Thursdays; ***students will be responsible for leading the 
-discussion of problems on Thursdays***. There will be 2 exams, 
-and your scores on these components will contribute to your final grade as follows:
+and discussed at the beginning of each class; ***students will be responsible for leading the 
+discussion of homework problems***. There will be 2 exams, and your scores on these components will contribute 
+to your final grade as follows:
 
 -   Homework: 25%
 -   Exams (2): 25% each
@@ -57,13 +57,13 @@ As a Sewanee student, you have already sworn to uphold the Honor Code; I
 expect you to comport yourself accordingly. Work with your classmates to
 understand the course material, but submit work that is truly your own.
 You must not consult with other students when taking exams or quizzes.
-In addition to avoiding a guilty conscience, you?ll learn more this way
+In addition to avoiding a guilty conscience, you'll learn more this way
 anyhow!
 
 #### Attendance
 
 Missing class seriously undermines the educational process, so be
-responsible and don?t do it unless absolutely necessary.
+responsible and don't do it unless absolutely necessary.
 
 #### Special needs
 
