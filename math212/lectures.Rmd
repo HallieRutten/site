@@ -5,3 +5,4 @@ title: "Lectures"
 <br>
 
 - [Introduction to ODEs; Direction fields](lectures/intro.pdf)
+- [Desmos slope field example](https://www.desmos.com/calculator/tmi3vk4r84)
