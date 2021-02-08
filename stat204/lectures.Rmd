@@ -5,3 +5,4 @@ title: "Lectures"
 <br>
 
 - [Data](lectures/Data.html)
+- [Polio timeline](https://www.historyofvaccines.org/timeline/polio)
