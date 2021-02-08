@@ -9,4 +9,4 @@ title: "Readings"
 - [Controlled experiments](readings/experiments.pdf)
 - [Observational studies](readings/studies.pdf)
 - [Sample surveys](readings/surveys.pdf)
-- [The nocebo effect](https://www.health.harvard.edu/newsletter_article/The_nocebo_response)
+- [The nocebo effect](readings/nocebo.pdf)
