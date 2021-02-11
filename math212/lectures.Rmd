@@ -8,4 +8,5 @@ title: "Lectures"
 - [Desmos slope field example](https://www.desmos.com/calculator/tmi3vk4r84)
 - [Newton's Law of Cooling; integrating ODEs](lectures/newton.pdf)
 - [RC circuits](lectures/RC.pdf)
+- [Integrating factors](lectures/mu.pdf)
 
