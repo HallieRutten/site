@@ -10,3 +10,4 @@ title: "Readings"
 - [Observational studies](readings/studies.pdf)
 - [Sample surveys](readings/surveys.pdf)
 - [The nocebo effect](readings/nocebo.pdf)
+- [Who decides which COVID-19 patients get ventilators?](https://www.theatlantic.com/magazine/archive/2021/01/covid-ethics-committee/617261/)
