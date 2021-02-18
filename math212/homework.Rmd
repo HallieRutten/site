@@ -9,3 +9,4 @@ title: "Homework"
   - Section 1.2 : 2, 10, [14](homework/pond.pdf)
 - Chapter 2
   - Section 2.1 : 3, 4, 8, 9, 12, 18, 20
+  - Section 2.2 : 2, 6, 10, 13

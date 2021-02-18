@@ -9,4 +9,5 @@ title: "Lectures"
 - [Newton's Law of Cooling; integrating ODEs](lectures/newton.pdf)
 - [RC circuits](lectures/RC.pdf)
 - [Integrating factors](lectures/mu.pdf)
-
+- [Integrating factors; Separable ODEs](lectures/intfactor-separable.pdf)
+- [Tabular integration](lectures/tabular.pdf)
