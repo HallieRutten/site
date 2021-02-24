@@ -11,3 +11,4 @@ title: "Lectures"
 - [Integrating factors](lectures/mu.pdf)
 - [Integrating factors; Separable ODEs](lectures/intfactor-separable.pdf)
 - [Tabular integration](lectures/tabular.pdf)
+- [Separable ODEs; nonlinear effects](lectures/separable-nonlinear.pdf)
