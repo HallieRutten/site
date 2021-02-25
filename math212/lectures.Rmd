@@ -12,3 +12,4 @@ title: "Lectures"
 - [Integrating factors; Separable ODEs](lectures/intfactor-separable.pdf)
 - [Tabular integration](lectures/tabular.pdf)
 - [Separable ODEs; nonlinear effects](lectures/separable-nonlinear.pdf)
+- [Autonomous models; 2nd-order linear ODEs](lectures/models-2nd-order.pdf)
