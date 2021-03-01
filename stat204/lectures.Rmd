@@ -6,3 +6,4 @@ title: "Lectures"
 
 - [Data](lectures/Data.html)
 - [Polio timeline](https://www.historyofvaccines.org/timeline/polio)
+- [Relationships between quantitative variables](lectures/Regression.html)
