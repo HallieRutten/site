@@ -283,8 +283,8 @@ incremental: true
 
 * The slope of the regression line has the same sign as the correlation; the slope shows 
 how the response changes when  changes.
-* The _**coefficient of determination**_ measures the percentage of variation in _y_ explained by 
-linear regression; use it for assessment.
+* The _**coefficient of determination**_ measures the predictive power of the regression equation versus the overall 
+average 
 * Plotting residuals is another useful assessment; there should be no discernible pattern.
 
 Caveats
