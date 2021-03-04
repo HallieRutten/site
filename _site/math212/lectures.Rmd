@@ -14,3 +14,4 @@ title: "Lectures"
 - [Separable ODEs; nonlinear effects](lectures/separable-nonlinear.pdf)
 - [Autonomous models; 2nd-order linear ODEs](lectures/models-2nd-order.pdf)
 - [2.5 homework; complex conjugate characteristic values](lectures/popmodels-complex.pdf)
+- [Complex roots; oscillators; repeated roots](lectures/oscillators.pdf)
