@@ -15,3 +15,4 @@ title: "Lectures"
 - [Autonomous models; 2nd-order linear ODEs](lectures/models-2nd-order.pdf)
 - [2.5 homework; complex conjugate characteristic values](lectures/popmodels-complex.pdf)
 - [Complex roots; oscillators; repeated roots](lectures/oscillators.pdf)
+- [More on complex roots and repeated roots; variation of parameters, part 1](lectures/complex-repeated-vp.pdf)
