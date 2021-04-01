@@ -21,3 +21,5 @@ title: "Homework"
   - Section 3.3 : 29, 30 &nbsp; (3/18/21) 
   - Section 3.4 : 31, 34 &nbsp; (3/18/21) 
   - Section 3.6 : 12, 13 &nbsp; (3/18/21) 
+- Chapter 5
+  - Section 5.2 : 7, 9, 12, 13 &nbsp; (4/6/21)
