@@ -19,3 +19,4 @@ title: "Lectures"
 - [Variation of parameters](lectures/variation.pdf)
 - [Euler equations](lectures/euler.pdf)
 - [Series solutions](lectures/series.pdf)
+- [Linear systems in the plane](lectures/linear-systems.pdf)
