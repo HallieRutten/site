@@ -19,5 +19,6 @@ title: "Lectures"
 - [Variation of parameters](lectures/variation.pdf)
 - [Euler equations](lectures/euler.pdf)
 - [Series solutions](lectures/series.pdf)
-- [Linear systems in the plane: distinct real eigenvalues)](lectures/linear-systems.pdf)
+- [Linear systems in the plane: distinct real eigenvalues](lectures/linear-systems.pdf)
 - [Linear systems in the plane: complex conjugate eigenvalues](lectures/linear-systems2.pdf)
+- [More on complex eigenvalues; repeated eigenvalues](lectures/complex-eigenvalues.pdf)
