@@ -29,3 +29,6 @@ title: "Homework"
   - Section 4.4 : 4.132, 4.144, 4.152 &nbsp; (4/13/21)
 - Chapter 5
   - Section 5.1 : 5.26, 5.28, 5.32 &nbsp; (4/13/21)
+  - Section 5.2 : 5.42, 5.45, 5.47 &nbsp; (4/20/21)
+- Chapter 6
+  - Section 6.2-D : 6.64, 6.68, 6.72  &nbsp; (4/20/21)
