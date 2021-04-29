@@ -36,3 +36,4 @@ title: "Homework"
   - Section 6.2-HT : 6.122, 6.126 &nbsp; (4/27/21)
 - Chapter 7
   - Section 7.1 : 7.15, 7.16, 7.18 &nbsp; (4/27/21)
+  - Section 7.2 : 7.40, 7.42, 7.56 &nbsp; (5/4/21)
