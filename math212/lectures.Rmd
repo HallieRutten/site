@@ -23,3 +23,6 @@ title: "Lectures"
 - [Linear systems in the plane: complex conjugate eigenvalues](lectures/linear-systems2.pdf)
 - [More on complex eigenvalues; repeated eigenvalues](lectures/complex-eigenvalues.pdf)
 - [Linearization of nonlinear systems](lectures/linearization.pdf)
+- [Laplace transforms, part 1](lectures/laplace1.pdf)
+- [Table of Laplace transforms](lectures/transforms.pdf)
+- [Laplace transforms, part 2](lectures/laplace2.pdf)
