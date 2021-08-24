@@ -1,12 +1,10 @@
-name: "Math 212"
+name: "Math 314"
 navbar:
-  title: "Math 212, Easter 2020"
+  title: "Math 314, Advent 2021"
   type: inverse
   left:
     - text: "Syllabus"
       href: index.html
-    - text: "Lectures"
-      href: lectures.html
     - text: "Homework"
       href: homework.html
   right:

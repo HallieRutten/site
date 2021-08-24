@@ -7,17 +7,17 @@ title: "Syllabus"
 
 #### Textbook 
 
--   _Elementary Differential Equations and Boundary Value Problems_ by Boyce and DiPrima 
+- _Topology_, 2nd edition, by James Munkres 
 
 
 #### Times & location
 
--   TuTh, 11:00 a.m.-12:15 p.m. CST, online
+-   TuTh, 1:30 p.m.-2:45 p.m. CST, Woods Labs 123 
 
 #### Grading
 
 To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed at the beginning of each class; ***students will be responsible for leading the 
+and discussed on Thursdays; ***students will be responsible for leading the 
 discussion of homework problems***. There will be 2 exams, and your scores on these components will contribute 
 to your final grade as follows:
 
