@@ -13,13 +13,22 @@
 
 <title>Syllabus</title>
 
-<script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -34,11 +43,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -51,32 +55,6 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
 
@@ -87,10 +65,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -107,40 +81,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 66px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h2 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h3 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h4 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h5 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
-.section h6 {
-  padding-top: 71px;
-  margin-top: -71px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -168,7 +115,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -180,7 +127,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -191,10 +138,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -206,7 +166,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -278,18 +237,12 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Stat 204, Easter 2020</a>
+      <a class="navbar-brand" href="index.html">Stat 204, Advent 2021</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">Syllabus</a>
-</li>
-<li>
-  <a href="lectures.html">Lectures</a>
-</li>
-<li>
-  <a href="readings.html">Readings</a>
 </li>
 <li>
   <a href="homework.html">Homework</a>
@@ -304,7 +257,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -314,17 +267,8 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<p>The fundamental objective of this course is to build your statistical competence. To that end, we will investigate various examples and data sets, keeping the central questions of statistics in mind as we go:</p>
-<ul>
-<li>Are the observed differences just due to chance, or is there a <strong><em>real</em></strong> difference?</li>
-<li>If there is a real difference,
-<ul>
-<li>how big is it?</li>
-<li>what caused it?</li>
-<li>what does it mean?</li>
-</ul></li>
-</ul>
-<p>Making sense of these questions is one of our goals; another is cultivating a systematic approach to data-driven research. After taking this course, you should be able to analyze data for yourself to obtain meaningful, defensible insights into whatever interests you. You must therefore</p>
+<p>We are constantly bombarded by data and by claims <em>about</em> data – it has never been more important to be able to distinguish between the sensible claims and the preposterous ones. Data literacy and statistical competence are therefore essential skills, and this course aims to help you develop them. Instead of working with contrived datasets, we’ll tackle some messy real-world data head on, and you’ll learn the tools you need to answer realistic questions. These skills will help you in future courses, in your jobs, and in your lives as citizens of a complicated world.</p>
+<p>After taking this course, you should be able to analyze data for yourself to obtain meaningful, defensible insights into whatever interests you. You must therefore</p>
 <ul>
 <li>stay caught up with the readings and assignments,</li>
 <li>work together within the parameters of the Honor Code, and</li>
@@ -334,30 +278,34 @@ $(document).ready(function () {
 <div id="textbook" class="section level4">
 <h4>Textbook</h4>
 <ul>
-<li><a href="http://www.lock5stat.com"><em>Statistics: Unlocking the Power of Data</em></a> by Lock (2nd edition)</li>
+<li><a href="https://us.sagepub.com/en-us/nam/statistics-with-r/book253567"><em>Statistics With R</em></a> by Jenine K. Harris</li>
 </ul>
 </div>
 <div id="software" class="section level4">
 <h4>Software</h4>
 <p>We will use the following to analyze and visualize data:</p>
 <ul>
-<li><a href="http://www.lock5stat.com/StatKey/index.html">StatKey</a></li>
+<li><a href="https://cran.r-project.org/">R</a> and <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a></li>
 <li>Google Sheets</li>
 </ul>
 </div>
 <div id="times-location" class="section level4">
 <h4>Times &amp; location</h4>
 <ul>
-<li>TuTh, 9:30 a.m.-10:45 a.m. CST, online</li>
+<li>Tuesdays and Thursdays, Woods Labs 216
+<ul>
+<li>Section C: 9:30 a.m.-10:45 a.m. CST</li>
+<li>Section D: 11:00 a.m.-12:15 p.m. CST</li>
+</ul></li>
 </ul>
 </div>
-<div id="grading" class="section level4">
-<h4>Grading</h4>
-<p>To help you stay caught up with the material and practice for exams, homework will be assigned regularly and discussed at the beginning of each class; <strong><em>students will be responsible for leading the discussion of homework problems</em></strong>. There will be 2 exams, and your scores on these components will contribute to your final grade as follows:</p>
+<div id="homework-exams-and-grading" class="section level4">
+<h4>Homework, exams, and grading</h4>
+<p>To help you stay caught up with the material and practice for exams, homework will be assigned regularly and discussed in class; <strong><em>students will be responsible for leading the discussion of homework problems</em></strong>. There will be 2 exams, and your scores on these components will contribute to your final grade as follows:</p>
 <ul>
 <li>Homework: 25%</li>
+<li>In-class assignments: 25%</li>
 <li>Exams (2): 25% each</li>
-<li>Best of these: 25%</li>
 </ul>
 </div>
 <div id="honor-code" class="section level4">
@@ -401,7 +349,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

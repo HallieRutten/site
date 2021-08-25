@@ -4,52 +4,50 @@ title: "Syllabus"
 
 <br>
 
-The fundamental objective of this course is to build your statistical competence. 
-To that end, we will investigate various examples and data sets, 
-keeping the central questions of statistics in mind as we go:
+We are constantly bombarded by data and by claims _about_ data -- it has never been more important
+to be able to distinguish between the sensible claims and the preposterous ones. Data literacy 
+and statistical competence are therefore essential skills, and this course aims to help you develop them.
+Instead of working with contrived datasets, we'll tackle some messy real-world data head on, and you'll
+learn the tools you need to answer realistic questions. These skills will help you in future courses, in your 
+jobs, and in your lives as citizens of a complicated world.
 
-- Are the observed differences just due to chance, or is there a ***real*** difference?
-- If there is a real difference, 
-    + how big is it? 
-    + what caused it? 
-    + what does it mean?
-
-Making sense of these questions is one of our goals; another is cultivating a systematic approach 
-to data-driven research. After taking this course, you should be able to analyze data for yourself 
+After taking this course, you should be able to analyze data for yourself 
 to obtain meaningful, defensible insights into whatever interests you.
 You must therefore
 
--   stay caught up with the readings and assignments,
--   work together within the parameters of the Honor Code, and
--   talk to me whenever you have questions.
+- stay caught up with the readings and assignments,
+- work together within the parameters of the Honor Code, and
+- talk to me whenever you have questions.
 
 If you don't understand something, get help immediately!
 
 #### Textbook 
 
--   [*Statistics: Unlocking the Power of Data*](http://www.lock5stat.com) by Lock (2nd edition) 
+- [*Statistics With R*](https://us.sagepub.com/en-us/nam/statistics-with-r/book253567) by Jenine K. Harris
 
 #### Software 
 
 We will use the following to analyze and visualize data:
 
-- [StatKey](http://www.lock5stat.com/StatKey/index.html)
+- [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/)
 - Google Sheets
 
 #### Times & location
 
--   TuTh, 9:30 a.m.-10:45 a.m. CST, online
+- Tuesdays and Thursdays, Woods Labs 216
+  - Section C: 9:30 a.m.-10:45 a.m. CST
+  - Section D: 11:00 a.m.-12:15 p.m. CST
 
-#### Grading
+#### Homework, exams, and grading
 
 To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed at the beginning of each class; ***students will be responsible for leading the 
+and discussed in class; ***students will be responsible for leading the 
 discussion of homework problems***. There will be 2 exams, and your scores on these components will contribute 
 to your final grade as follows:
 
--   Homework: 25%
--   Exams (2): 25% each
--   Best of these: 25%
+- Homework: 25%
+- In-class assignments: 25%
+- Exams (2): 25% each
 
 #### Honor Code
 

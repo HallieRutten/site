@@ -1,14 +1,10 @@
 name: "Stat 204"
 navbar:
-  title: "Stat 204, Easter 2020"
+  title: "Stat 204, Advent 2021"
   type: inverse
   left:
     - text: "Syllabus"
       href: index.html
-    - text: "Lectures"
-      href: lectures.html
-    - text: "Readings"
-      href: readings.html
     - text: "Homework"
       href: homework.html
   right:

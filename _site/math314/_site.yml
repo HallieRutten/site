@@ -1,6 +1,6 @@
-name: "Stat 204"
+name: "Math 314"
 navbar:
-  title: "Stat 204, Advent 2021"
+  title: "Math 314, Advent 2021"
   type: inverse
   left:
     - text: "Syllabus"
