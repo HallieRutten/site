@@ -9,11 +9,16 @@ to be able to distinguish between the sensible claims and the preposterous ones.
 and statistical competence are therefore essential skills, and this course aims to help you develop them.
 Instead of working with contrived datasets, we'll tackle some messy real-world data head on, and you'll
 learn the tools you need to answer realistic questions. These skills will help you in future courses, in your 
-jobs, and in your lives as citizens of a complicated world.
+jobs, and in your lives as citizens of a complicated world. After taking this course, you should be able to 
+analyze data for yourself to obtain meaningful insights and to make decisions that you can defend. 
 
-After taking this course, you should be able to analyze data for yourself 
-to obtain meaningful, defensible insights into whatever interests you.
-You must therefore
+We will work through chapters 1 through 9 of the book, devoting 3 classes to each chapter: 
+
+- I will mostly lecture for the first class on each chapter, 
+- you will present homework and we'll discuss the rest of the chapter in the second class, and 
+- you will work in pairs on a mini-project in the third class. 
+
+To get the most out of this experience and contribute your share, you must
 
 - stay caught up with the readings and assignments,
 - work together within the parameters of the Honor Code, and
@@ -32,6 +37,9 @@ We will use the following to analyze and visualize data:
 - [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/)
 - Google Sheets
 
+We will also use Zoom to share screens in class and to accommodate anyone who needs to 
+quarantine: [Zoom link](https://sewanee-edu.zoom.us/j/87370700567)
+
 #### Times & location
 
 - Tuesdays and Thursdays, Woods Labs 216
@@ -40,13 +48,12 @@ We will use the following to analyze and visualize data:
 
 #### Homework, exams, and grading
 
-To help you stay caught up with the material and practice for exams, homework will be assigned regularly 
-and discussed in class; ***students will be responsible for leading the 
-discussion of homework problems***. There will be 2 exams, and your scores on these components will contribute 
-to your final grade as follows:
+To help all of you develop your data analysis skills, gain experience communicating technical results, and practice for exams, 
+you will present your work regularly and pair up with other students on in-class mini-projects. There will be 2 exams, 
+and your scores on these components will contribute to your final grade as follows:
 
 - Homework: 25%
-- In-class assignments: 25%
+- In-class projects: 25%
 - Exams (2): 25% each
 
 #### Honor Code
@@ -66,6 +73,8 @@ responsible and don't do it unless absolutely necessary.
 #### Special needs
 
 Please notify me immediately if you have any documented special needs
-that need to be accommodated. The University's ADA statement may be helpful in this regard:
+that need to be accommodated. The University's official ADA statement may be helpful in this regard:
 
-_The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University. Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services and the instructor, as early in the semester as possible. If you have already requested accommodations, it is your responsibility to present your instructor with a copy of your academic accommodations letter from Student Accessibility Services which is located in the University Wellness Center (931.598.1270). Accommodations will not be provided without this documentation, and accommodations cannot be applied retroactively. Additional information about disability accommodations can be found online at http://sewanee.edu/student-life/university-wellness-center/ ._
+_The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University._
+
+_Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services (SAS) as early in the semester as possible. If approved for accommodations, the student has the responsibility to present their instructors with a copy of the official letter of academic accommodations. Please note: Accommodation letters should be dated for the current term; accommodations will not be provided without a current accommodation letter; and accommodations cannot be applied retroactively. SAS is located in the Office of the Dean of Students (931.598.1229). Additional information about accommodations can be found [here](https://new.sewanee.edu/campus-life/playing/wellness-commons/university-wellness-center/student-accessibility-services/). Students who have questions about physical accessibility should inform their instructors so that we can ensure an accessible, safe, and effective environment._
