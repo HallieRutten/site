@@ -28,7 +28,7 @@ If you don't understand something, get help immediately!
 
 #### Textbook 
 
-- [*Statistics With R*](https://us.sagepub.com/en-us/nam/statistics-with-r/book253567) by Jenine K. Harris
+- [*Statistics With R*](https://edge.sagepub.com/harris1e) by Jenine K. Harris
 
 #### Software 
 
