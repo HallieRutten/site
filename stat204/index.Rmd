@@ -38,7 +38,10 @@ We will use the following to analyze and visualize data:
 - Google Sheets
 
 We will also use Zoom to share screens in class and to accommodate anyone who needs to 
-quarantine: [Zoom link](https://sewanee-edu.zoom.us/j/87370700567)
+quarantine: 
+
+- [Zoom link](https://sewanee-edu.zoom.us/j/87370700567) 
+- meeting ID: 873 7070 0567 
 
 #### Times & location
 
