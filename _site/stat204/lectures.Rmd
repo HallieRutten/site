@@ -3,3 +3,7 @@ title: "Lectures"
 ---
 
 <br>
+
+- Chapter 1
+  - [The General Social Survey](https://gss.norc.org/)
+  - [Timeline of cannabis laws](https://en.wikipedia.org/wiki/Timeline_of_cannabis_laws_in_the_United_States)
