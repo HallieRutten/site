@@ -4,6 +4,9 @@ title: "Homework"
 
 <br>
 
-- Chapter 1
-  - Install [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/) (8/31/21)
-  - Write an R script that... (8/31/21)
+- For Tuesday, 8/31/21 :
+  - Download the [datasets for the book](https://edge.sagepub.com/harris1e/student-resources/datasets-and-r-code) 
+  - Download and install [R](https://cran.r-project.org/)
+  - Download and install [RStudio](https://www.rstudio.com/products/rstudio/download/) (do this AFTER installing R!)
+  - Start working through Chapter 1
+  - Load the marijuana legalization dataset into Excel or Google Sheets, explore it, and try making bar charts like those shown in Chapter 1

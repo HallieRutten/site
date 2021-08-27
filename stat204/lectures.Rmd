@@ -4,12 +4,13 @@ title: "Lectures"
 
 <br>
 
-- Chapter 1
+- Some cherry-picked cautionary examples
   - [Some famous spreadsheet fails](https://www.webexpenses.com/us/2020/10/financial-fails-business-risks-spreadsheets/)
   - [Dishonesty and replication failure](https://statmodeling.stat.columbia.edu/2021/08/19/a-scandal-in-tedhemia-noted-study-in-psychology-first-fails-to-replicate-but-is-still-promoted-by-npr-then-crumbles-with-striking-evidence-of-data-fraud/)
   - [Fraud at the Food and Brand Lab](https://www.theatlantic.com/health/archive/2018/09/what-is-food-science/571105/)
   - [The reproducibility crisis](https://www.theatlantic.com/science/archive/2018/11/psychologys-replication-crisis-real/576223/)
   - [Economists make mistakes, too](https://www.nytimes.com/2013/04/19/opinion/krugman-the-excel-depression.html)
+- Chapter 1
   - [The General Social Survey](https://gss.norc.org/)
   - [Timeline of cannabis laws](https://en.wikipedia.org/wiki/Timeline_of_cannabis_laws_in_the_United_States)
   
