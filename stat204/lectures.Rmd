@@ -13,4 +13,5 @@ title: "Lectures"
 - Chapter 1
   - [The General Social Survey](https://gss.norc.org/)
   - [Timeline of cannabis laws](https://en.wikipedia.org/wiki/Timeline_of_cannabis_laws_in_the_United_States)
-  
+  - [NHANES 2013-2014 Drug Use](https://wwwn.cdc.gov/Nchs/Nhanes/2013-2014/DUQ_H.htm#Codebook)
+  - [NHANES 2013-2014 Demographic Variables](https://wwwn.cdc.gov/nchs/nhanes/2013-2014/demo_h.htm#Codebook)
