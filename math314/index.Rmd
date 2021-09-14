@@ -17,8 +17,8 @@ title: "Syllabus"
 #### Homework, exams, and grading
 
 To help you learn the material, gain experience communicating mathematics, and practice for exams, 
-homework problems will be assigned regularly and discussed on Thursdays. ***Students will workshop their 
-solutions to the homework problems on Thursdays and will type up solutions every week in $\LaTeX$;*** we'll discuss 
+homework problems will be assigned and discussed regularly. ***Students will workshop their 
+solutions to the homework problems in class and will type up solutions collectively every week in $\LaTeX$;*** we'll discuss 
 procedural details in class. There will be 2 exams, and your scores on these components will contribute 
 to your final grade as follows:
 

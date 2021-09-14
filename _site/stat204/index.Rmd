@@ -12,11 +12,11 @@ learn the tools you need to answer realistic questions. These skills will help y
 jobs, and in your lives as citizens of a complicated world. After taking this course, you should be able to 
 analyze data for yourself to obtain meaningful insights and to make decisions that you can defend. 
 
-We will work through chapters 1 through 9 of the book, devoting 3 classes to each chapter: 
+We will work through chapters 1 through 9 of the book, devoting several classes to each chapter: 
 
 - I will mostly lecture for the first class on each chapter, 
-- you will present homework and we'll discuss the rest of the chapter in the second class, and 
-- you will work in pairs on a mini-project in the third class. 
+- you will present homework and we'll discuss the rest of the chapter in the intermediate classes, and 
+- you will work in pairs on a mini-project in the final class. 
 
 To get the most out of this experience and contribute your share, you must
 
