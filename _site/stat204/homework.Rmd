@@ -32,3 +32,14 @@ Write an R script that
   - makes a data frame whose first column lists the names of your cats and dogs and whose second column lists their ages
   
 </details>
+
+<details>
+<summary>
+For Tuesday, 9/21/21
+</summary>
+<br>
+
+- Do **Achievement 2** on page 70: clean the data for the `HADMAM` variable, using the codebook as needed, and create a frequency table for it
+- Do an extended version of **Achievement 3** on page 91: compute the measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, IQR) for the `X_AGE80` variable, then create a histogram to visualize `X_AGE80`
+  
+</details>

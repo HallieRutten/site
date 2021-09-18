@@ -15,7 +15,9 @@ title: "Lectures"
   - [Timeline of cannabis laws](https://en.wikipedia.org/wiki/Timeline_of_cannabis_laws_in_the_United_States)
   - [NHANES 2013-2014 Drug Use](https://wwwn.cdc.gov/Nchs/Nhanes/2013-2014/DUQ_H.htm#Codebook)
   - [NHANES 2013-2014 Demographic Variables](https://wwwn.cdc.gov/nchs/nhanes/2013-2014/demo_h.htm#Codebook)
+  - scripts from class: &nbsp; [Section C](lectures/gss2016C.R) &nbsp; [Section D](lectures/gss2016D.R)
 - Chapter 2
   - [Gender and health (WHO)](https://www.who.int/health-topics/gender#tab=tab_1)
   - [The Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html)
   - [Breast cancer screening in transgender patients](https://pubmed.ncbi.nlm.nih.gov/28828563/)
+  - scripts from class: &nbsp; [Section C](lectures/trans_ch2C.R) &nbsp; [Section D](lectures/trans_ch2D.R)
