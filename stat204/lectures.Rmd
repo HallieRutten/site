@@ -21,3 +21,8 @@ title: "Lectures"
   - [The Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html)
   - [Breast cancer screening in transgender patients](https://pubmed.ncbi.nlm.nih.gov/28828563/)
   - scripts from class: &nbsp; [Section C](lectures/trans_ch2C.R) &nbsp; [Section D](lectures/trans_ch2D.R)
+- Chapter 4
+  - [County Health Rankings & Roadmaps](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation)
+  - [CDC WONDER: Causes of Death in the U.S.](https://wonder.cdc.gov/ucd-icd10.html)
+  - [Kaiser Family Foundation report (Smith et al.)](https://www.kff.org/report-section/implementing-coverage-and-payment-initiatives-benefits-and-pharmacy/)
+  - [amfAR opioid database](https://opioid.amfar.org)
