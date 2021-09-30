@@ -26,3 +26,5 @@ title: "Lectures"
   - [CDC WONDER: Causes of Death in the U.S.](https://wonder.cdc.gov/ucd-icd10.html)
   - [Kaiser Family Foundation report (Smith et al.)](https://www.kff.org/report-section/implementing-coverage-and-payment-initiatives-benefits-and-pharmacy/)
   - [amfAR opioid database](https://opioid.amfar.org)
+  - scripts from class: &nbsp; [Section C](lectures/chap4C.R) &nbsp; [Section D](lectures/chap4D.R)
+
