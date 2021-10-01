@@ -43,3 +43,17 @@ For Tuesday, 9/21/21
 - Do an extended version of **Achievement 3** on page 91: compute the measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, IQR) for the `X_AGE80` variable, then create a histogram to visualize `X_AGE80`
   
 </details>
+
+<details>
+<summary>
+For Tuesday, 10/5/21
+</summary>
+<br>
+
+Write an R script to do 
+
+- **Achievement 2** on pages 241 and 242,
+- **Achievement 3** on page 249, and
+- **Achievement 4** on page 250.
+
+</details>
