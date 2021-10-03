@@ -36,4 +36,73 @@ ggplot( pdmp_sample , aes(x=n_states, y=probs)) +
 
 opioid.policy.kff <- read_csv("pdmp_2017_kff_ch4.csv")
 opioid.policy.kff <- opioid.policy.kff %>% rename( State = "...1" )
-CreateTableOne(data = opioid.policy.kff)
+CreateTableOne(data = opioid.policy.kff %>% select(-State) )
+opioid.policy.kff <- opioid.policy.kff %>%
+  mutate_all(as.factor)
+summary( opioid.policy.kff )
+
+# chance of 15 or more states having PDMPs in a sample of size 25
+pbinom( 14, size=25, prob=.63, lower.tail = FALSE)
+# graphically:
+pdmp_probs <- data.frame(successes = 0:25, probs=dbinom(0:25, size=25, prob=.63))
+ggplot( pdmp_probs, aes( x = successes, y=probs )) + geom_col()
+pdmp_probs <- pdmp_probs %>%
+  mutate( More = if_else( successes > 14, "> 14", "<= 14"))
+ggplot( pdmp_probs, aes( x=successes, y=probs, fill=More)) + geom_col()
+
+# take one sample of size 25 and see what happens:
+opioid.policy.kff %>% 
+  select(`Required Use of Prescription Drug Monitoring Programs`) %>%
+  sample_n( size=25 ) %>%
+  summary()
+
+dist.mat <- read.csv("opioid_dist_to_facility_2017_ch4.csv")
+
+ggplot( dist.mat, aes(x=VALUE)) + geom_histogram()
+dist.mat %>% 
+  select(VALUE) %>%
+  summarize( Average = mean(VALUE),
+             SD = sd( VALUE ),
+             Median = median(VALUE),
+             IQR = IQR(VALUE) )
+
+# percentage of counties with facility more than 50 miles away:
+dist.mat <- dist.mat %>%
+  mutate( Far = if_else( VALUE > 50, 1, 0)) 
+
+dist.mat %>%
+  summarize( PercentFar = 100*mean(Far))
+
+ggplot( dist.mat, aes(x=VALUE^(1/3))) + geom_histogram()
+
+# the standard normal distribution:
+ggplot() + stat_function(fun=dnorm) + xlim(-4,4)
+
+# chnnce of being less than or equal to 1:
+pnorm( 1 ) 
+# graphically:
+ggplot() + 
+  stat_function(fun=dnorm) + 
+  stat_function(fun=dnorm, geom="area", fill="tomato", xlim=c(-4,1) ) + 
+  xlim(-4,4)
+
+pnorm(1) - pnorm(-1) 
+pnorm(3) - pnorm(-3) 
+
+# chnnce of being between -2 and 2:
+pnorm( 2 ) - pnorm( -2 ) 
+# graphically:
+ggplot() + 
+  stat_function(fun=dnorm) + 
+  stat_function(fun=dnorm, geom="area", fill="green", xlim=c(-2,2) ) + 
+  xlim(-4,4)
+
+dist.mat <- dist.mat %>%
+  mutate( miles.cube.root = VALUE^(1/3))
+
+dist.mat %>% 
+  select(miles.cube.root ) %>%
+  summarize( Average = mean(miles.cube.root),
+             SD = sd(miles.cube.root), 
+             z1 = Average - SD,
+             z2 = Average + SD )
