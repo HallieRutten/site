@@ -124,8 +124,8 @@ counties.500 %>%
   summarize( Average = mean(distance),
              SD = sd(distance), 
              SE = SD/sqrt(length(distance)),
-             lower.ci = Average - 1.96*SE,   ## NEW CODE!!
-             upper.ci = Average + 1.96*SE)   ## NEW CODE!!
+             lower.ci = Average - 2*SE,   ## NEW CODE!!
+             upper.ci = Average + 2*SE)   ## NEW CODE!!
 
 samples.20 <- bind_rows(replicate(n = 20, 
                                   dist.mat.cleaned %>% sample_n(size = 500, replace = FALSE), 

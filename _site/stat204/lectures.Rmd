@@ -16,15 +16,18 @@ title: "Lectures"
   - [NHANES 2013-2014 Drug Use](https://wwwn.cdc.gov/Nchs/Nhanes/2013-2014/DUQ_H.htm#Codebook)
   - [NHANES 2013-2014 Demographic Variables](https://wwwn.cdc.gov/nchs/nhanes/2013-2014/demo_h.htm#Codebook)
   - scripts from class: &nbsp; [Section C](lectures/gss2016C.R) &nbsp; [Section D](lectures/gss2016D.R)
+  - [mini-project](lectures/chap1project.R) (coder exercises)
 - Chapter 2
   - [Gender and health (WHO)](https://www.who.int/health-topics/gender#tab=tab_1)
   - [The Behavioral Risk Factor Surveillance System](https://www.cdc.gov/brfss/index.html)
   - [Breast cancer screening in transgender patients](https://pubmed.ncbi.nlm.nih.gov/28828563/)
   - scripts from class: &nbsp; [Section C](lectures/trans_ch2C.R) &nbsp; [Section D](lectures/trans_ch2D.R)
+  - [mini-project](lectures/chap2project.R) (coder exercises)
 - Chapter 4
   - [County Health Rankings & Roadmaps](https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation)
   - [CDC WONDER: Causes of Death in the U.S.](https://wonder.cdc.gov/ucd-icd10.html)
   - [Kaiser Family Foundation report (Smith et al.)](https://www.kff.org/report-section/implementing-coverage-and-payment-initiatives-benefits-and-pharmacy/)
   - [amfAR opioid database](https://opioid.amfar.org)
   - scripts from class: &nbsp; [Section C](lectures/chap4C.R) &nbsp; [Section D](lectures/chap4D.R)
+  - [mini-project](lectures/chap4project.R) (coder exercises)
 
