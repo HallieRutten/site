@@ -111,6 +111,9 @@ req.graph <- vote.cleaned %>%
 
 grid.arrange(ease.graph, req.graph, nrow = 2)
 
+# Cross-tabulation with expected counts and chi-square results:
+CrossTable( x=vote.cleaned$ease.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE)
+
 # Chi-square distributions
 ###########################
 
