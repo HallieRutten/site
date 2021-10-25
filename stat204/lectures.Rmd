@@ -30,6 +30,10 @@ title: "Lectures"
   - [amfAR opioid database](https://opioid.amfar.org)
   - scripts from class: &nbsp; [Section C](lectures/chap4C.R) &nbsp; [Section D](lectures/chap4D.R)
   - [mini-project](lectures/chap4project.R) (coder exercises)
+- Midterm exam
+  - [Exam (PDF)](lectures/midterm.pdf)
+  - [Data (CSV)](lectures/midterm.csv)
+  - [Solutions (R script)](lectures/midterm.R)
 - Chapter 5
   - [Brennan Center: Voting Laws Roundup, October 2021](https://www.brennancenter.org/our-work/research-reports/voting-laws-roundup-october-2021)
   - [Pew Research Center: Public Supports Aim of Making It ‘Easy’ for All Citizens to Vote](https://www.pewresearch.org/politics/2017/06/28/public-supports-aim-of-making-it-easy-for-all-citizens-to-vote/)

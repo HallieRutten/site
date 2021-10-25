@@ -8,13 +8,6 @@ library(gridExtra)
 # load the voting data (use read_sav() to handle SPSS format)
 vote <- read_sav(file = "pew_apr_19-23_2017_weekly_ch5.sav")
 
-# select variables of interest
-vote.cleaned <- vote %>%
-  select(pew1a, pew1b, race, sex, mstatus, ownhome, employ, polparty)
-
-# check data
-summary(object = vote.cleaned)
-
 # select variables of interest and clean them
 vote.cleaned <- vote %>%
   select(pew1a, pew1b, race, sex, mstatus, ownhome, employ, polparty) %>%
@@ -50,7 +43,8 @@ vote.cleaned <- vote %>%
                                  `1` = 'Owned',
                                  `2` = 'Rented',
                                  `8` = NA_character_,
-                                 `9` = NA_character_))
+                                 `9` = NA_character_)) 
+
 # check recoding
 summary(object = vote.cleaned)
 
