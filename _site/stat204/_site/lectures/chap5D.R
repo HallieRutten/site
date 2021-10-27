@@ -43,7 +43,8 @@ vote.cleaned <- vote %>%
                                  `1` = 'Owned',
                                  `2` = 'Rented',
                                  `8` = NA_character_,
-                                 `9` = NA_character_)) 
+                                 `9` = NA_character_)) %>%
+  mutate_all( as.factor )
 
 # check recoding
 summary(object = vote.cleaned)
@@ -95,6 +96,7 @@ ease.graph <- vote.cleaned %>%
   labs(x = "", y = "Percent within group") +
   theme(axis.text.x = element_blank())
 
+ease.graph
 # graph the relationship between required voting and race eth
 req.graph <- vote.cleaned %>%
   drop_na(require.vote) %>%
@@ -108,14 +110,26 @@ req.graph <- vote.cleaned %>%
   theme_minimal() +
   scale_fill_manual(values = c("gray", "#7463AC"), name = "Opinion on voting") +
   labs(x = "Race-ethnicity group", y = "Percent within group")
+req.graph
 
 grid.arrange(ease.graph, req.graph, nrow = 2)
 
 # Cross-tabulation with expected counts and chi-square results:
-CrossTable( x=vote.cleaned$ease.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE)
+CrossTable( x=vote.cleaned$ease.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE, sresid = TRUE)
 
 # Chi-square distributions
 ###########################
+
+ggplot() + stat_function(fun=dchisq, args=list(df=3)) + xlim(0,10)
+ggplot() + stat_function(fun=dchisq, args=list(df=3)) + xlim(0,30)
+
+chisq.test( x=vote.cleaned$ease.vote, y=vote.cleaned$race ) 
+pchisq( q=28.952, df=3, lower.tail=FALSE)
+
+chi1 <- ggplot() + stat_function(fun=dchisq, args=list(df=2)) + xlim(0,50)
+chi2 <- ggplot() + stat_function(fun=dchisq, args=list(df=10)) + xlim(0,50)
+chi3 <- ggplot() + stat_function(fun=dchisq, args=list(df=20)) + xlim(0,50)
+grid.arrange(chi1,chi2,chi3)
 
 # Hypothesis testing
 #####################

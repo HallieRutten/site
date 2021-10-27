@@ -39,8 +39,10 @@ For Tuesday, 9/21/21
 </summary>
 <br>
 
-- Do **Achievement 2** on page 70: clean the data for the `HADMAM` variable, using the codebook as needed, and create a frequency table for it
-- Do an extended version of **Achievement 3** on page 91: compute the measures of central tendency (mean, median, and mode) and measures of variability (standard deviation, IQR) for the `X_AGE80` variable, then create a histogram to visualize `X_AGE80`
+- Do **Achievement 2** on page 70: clean the data for the `HADMAM` variable, using the codebook as needed, 
+and create a frequency table for it.
+- Do an extended version of **Achievement 3** on page 91: compute the measures of central tendency (mean, median, and mode) 
+and measures of variability (standard deviation, IQR) for the `X_AGE80` variable, then create a histogram to visualize `X_AGE80`.
   
 </details>
 
@@ -55,5 +57,21 @@ Write an R script to do
 - **Achievement 2** on pages 241 and 242,
 - **Achievement 3** on page 249, and
 - **Achievement 4** on page 250.
+
+</details>
+
+<details>
+<summary>
+For Thursday, 10/28/21
+</summary>
+<br>
+
+Write an R script with comments to do 
+
+- **5.4.4 Achievement 1** on page 291 and
+- **5.5.5 Achievement 2** on page 294.
+
+Also, be prepared to answer **5.8.6 Achievement 5** on page 302, **5.9.3 Achievement 6** on page 316, and 
+chapter exercises **Q1**, **Q2**, **Q3**, and **Q4** on page 327.
 
 </details>

@@ -43,7 +43,8 @@ vote.cleaned <- vote %>%
                                  `1` = 'Owned',
                                  `2` = 'Rented',
                                  `8` = NA_character_,
-                                 `9` = NA_character_)) 
+                                 `9` = NA_character_)) %>%
+  mutate_all( as.factor )
 
 # check recoding
 summary(object = vote.cleaned)
@@ -112,10 +113,24 @@ req.graph <- vote.cleaned %>%
 grid.arrange(ease.graph, req.graph, nrow = 2)
 
 # Cross-tabulation with expected counts and chi-square results:
-CrossTable( x=vote.cleaned$ease.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE)
+CrossTable( x=vote.cleaned$ease.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE, sresid = TRUE)
+CrossTable( x=vote.cleaned$require.vote, y=vote.cleaned$race, expected = TRUE, chisq = TRUE)
 
 # Chi-square distributions
 ###########################
+
+ggplot() + stat_function(fun=dchisq, args=list(df=3)) + xlim(0,10)
+ggplot() + stat_function(fun=dchisq, args=list(df=3)) + xlim(0,30)
+
+chi1 <- ggplot() + stat_function(fun=dchisq, args=list(df=2)) + xlim(0,50)
+chi2 <- ggplot() + stat_function(fun=dchisq, args=list(df=10)) + xlim(0,50)
+chi3 <- ggplot() + stat_function(fun=dchisq, args=list(df=20)) + xlim(0,50)
+grid.arrange(chi1,chi2,chi3)
+
+# p-value calculation:
+pchisq( q=28.95154, df=3 )
+chisq.test( x=vote.cleaned$ease.vote, y=vote.cleaned$race )
+chisq.test( x=vote.cleaned$require.vote, y=vote.cleaned$race )
 
 # Hypothesis testing
 #####################
