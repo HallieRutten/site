@@ -38,3 +38,6 @@ title: "Lectures"
   - [Brennan Center: Voting Laws Roundup, October 2021](https://www.brennancenter.org/our-work/research-reports/voting-laws-roundup-october-2021)
   - [Pew Research Center: Public Supports Aim of Making It ‘Easy’ for All Citizens to Vote](https://www.pewresearch.org/politics/2017/06/28/public-supports-aim-of-making-it-easy-for-all-citizens-to-vote/)
   - scripts from class: &nbsp; [Section C](lectures/chap5C.R) &nbsp; [Section D](lectures/chap5D.R)
+- Chapter 6
+  - [NHANES](https://www.cdc.gov/nchs/nhanes/index.htm)
+  - scripts from class: &nbsp; [Section C](lectures/chap6C.R) &nbsp; [Section D](lectures/chap6D.R)
