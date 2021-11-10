@@ -73,6 +73,28 @@ ggplot() +
 # built-in t.test
 t.test(x = nhanes.2016$BPXSY1, mu = 120)
 
+# what happens with small samples? 
+
+bp <- nhanes.2016 %>% drop_na(BPXSY1) %>% select(BPXSY1)
+samples.2000 <- bind_rows(replicate(n = 2000, 
+                                    bp %>% sample_n(size = 5, replace = FALSE), 
+                                    simplify = FALSE), 
+                          .id = "sample_num")
+
+# get the t-score for each sample
+
+stats.2000 <- samples.2000 %>%
+  group_by(sample_num) %>%
+  summarize(x.bar = mean(BPXSY1),
+            s = sd(BPXSY1),
+            SE = s/sqrt(5),
+            t.score = (x.bar-120)/SE )
+
+ggplot( stats.2000, aes(x=t.score)) + 
+ geom_histogram( aes(y=..density..)) + 
+  stat_function( fun=dt, args=list(df=49), color="red" ) + 
+  stat_function( fun=dnorm, color="blue" ) + xlim(-4,4)
+
 #6.5.5 Achievement 2
 #create a subset of the data frame of people 65+ years old
 nhanes.2016.65plus <- nhanes.2016 %>%
