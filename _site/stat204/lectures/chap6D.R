@@ -88,6 +88,32 @@ nhanes.2016 %>%
   group_by(RIAGENDR) %>%
   summarize(m.sbp = mean(x = BPXSY1))
 
+# what happens with small samples?
+
+bp <- nhanes.2016 %>% drop_na(BPXSY1) %>% select(BPXSY1)
+samples.2000 <- bind_rows(replicate(n = 2000, 
+                                    bp %>% sample_n(size = 5, replace = FALSE),
+                                    simplify = FALSE), .id = "sample_num")
+
+# get the t-score for each sample
+
+stats.2000 <- samples.2000 %>%
+  group_by(sample_num) %>%
+  summarize( x.bar = mean(BPXSY1),
+             s = sd(BPXSY1), 
+             SE = s/sqrt(5),
+             t.score = (x.bar-120)/SE )
+             
+ggplot( stats.2000, aes(x=t.score)) +
+  geom_histogram( aes(y=..density..), binwidth=.25) + 
+  stat_function( fun=dt, args=list(df=4), color="limegreen") +
+  stat_function( fun=dnorm, color="blue")
+
+ggplot() +
+  stat_function( fun=dt, args=list(df=400), color="limegreen") +
+  stat_function( fun=dnorm, color="blue") +
+  xlim(-4,4)
+
 # add labels to sex and rename variables
 nhanes.2016.cleaned <- nhanes.2016 %>%
   mutate(RIAGENDR = recode_factor(.x = RIAGENDR,

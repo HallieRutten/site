@@ -41,3 +41,6 @@ title: "Lectures"
 - Chapter 6
   - [NHANES](https://www.cdc.gov/nchs/nhanes/index.htm)
   - scripts from class: &nbsp; [Section C](lectures/chap6C.R) &nbsp; [Section D](lectures/chap6D.R)
+- Chapter 7
+  - [The General Social Survey](https://gss.norc.org/)
+  - scripts from class: &nbsp; [Section C](lectures/chap7C.R) &nbsp; [Section D](lectures/chap7D.R)
