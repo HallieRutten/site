@@ -102,6 +102,6 @@ Using RStudio <em>and</em> Google sheets,
 
 - conduct a 1-sample t-test using [this data](http://www.lock5stat.com/datasets3e/ToenailArsenic.csv): could these measurements come from a population with an average arsenic concentration of 0.20 ppm? 
 - conduct a 2-sample t-test to compare [calcium levels in diet cola and water](http://www.lock5stat.com/datasets3e/ColaCalcium.csv).
-- conduct the one-way ANOVA test and (if appropriate) follow-up pairwise t-tests to analyze [this data on ants and sandwiches](http://www.lock5stat.com/datasets3e/SandwichAnts2.csv). 
+- conduct the one-way ANOVA test and (if appropriate) follow-up pairwise t-tests to analyze [this data on ants and sandwiches](http://www.lock5stat.com/datasets3e/SandwichAnts.csv). 
 
 </details>
