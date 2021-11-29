@@ -46,4 +46,4 @@ title: "Lectures"
   - scripts from class: &nbsp; [Section C](lectures/chap7C.R) &nbsp; [Section D](lectures/chap7D.R)
 - Regression
   - [Overview](lectures/Regression.html)
-
+  - [Pearson's famous heights dataset](lectures/heights.csv)
