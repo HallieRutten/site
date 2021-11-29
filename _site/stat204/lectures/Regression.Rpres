@@ -1,7 +1,7 @@
 Relationships between quantitative variables
 ========================================================
 author: Matthew Rudd
-date: 3/2/21
+date: 11/30/20
 transition: none
 
 Motivation
@@ -33,7 +33,8 @@ Heights of mothers and daughters:
 ***
 
 ```{r echo=FALSE }
-library( alr4 ) ;
+library( alr4 ) 
+# library(tidyverse)
 # average and SD of x-values:
 m.avg <- mean( Heights$mheight ) ;
 m.sd <- sd( Heights$mheight ) ;
@@ -630,8 +631,7 @@ incremental: true
 
 * The slope of the regression line has the same sign as the correlation; the slope shows 
 how the response changes when  changes.
-* The _**coefficient of determination**_ measures the predictive power of the regression equation versus the overall 
-average 
+* The _**coefficient of determination**_, _R^2_, measures the reduction in variability due to the explanatory variable; use it for assessment.
 * Plotting residuals is another useful assessment; there should be no discernible pattern.
 
 Caveats

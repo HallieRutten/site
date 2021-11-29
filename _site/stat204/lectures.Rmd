@@ -44,3 +44,6 @@ title: "Lectures"
 - Chapter 7
   - [The General Social Survey](https://gss.norc.org/)
   - scripts from class: &nbsp; [Section C](lectures/chap7C.R) &nbsp; [Section D](lectures/chap7D.R)
+- Regression
+  - [Overview](lectures/Regression.html)
+
