@@ -3,67 +3,81 @@ library(tidyverse)
 # load GSS data -- check your working directory!
 load(file = "gss2018.rda")
 
-# assign GSS to gss.2018 (as done in class)
+# rename as in class:
 gss.2018 <- GSS
 rm(GSS)
 
-# check out the data
+# examine the variables
 summary(object = gss.2018)
 
-# clean the data of interest:
+# clean data for marital status, sex, use tech
 gss.2018.cleaned <- gss.2018 %>%
-  select(HAPPY, SEX, DEGREE, USETECH, AGE) %>%
+  select(SEX, USETECH, MARITAL) %>%
   mutate(USETECH = na_if(x = USETECH, y = -1)) %>%
   mutate(USETECH = na_if(x = USETECH, y = 999)) %>%
   mutate(USETECH = na_if(x = USETECH, y = 998)) %>%
-  mutate(AGE = na_if(x = AGE, y = 98)) %>%
-  mutate(AGE = na_if(x = AGE, y = 99)) %>%
-  mutate(DEGREE = na_if(x = DEGREE, y = 8)) %>%
-  mutate(DEGREE = na_if(x = DEGREE, y = 9)) %>%
-  mutate(HAPPY = na_if(x = HAPPY, y = 8)) %>%
-  mutate(HAPPY = na_if(x = HAPPY, y = 9)) %>%
-  mutate(HAPPY = na_if(x = HAPPY, y = 0)) %>%
   mutate(SEX = factor(x = SEX, labels = c("male","female"))) %>%
-  mutate(DEGREE = factor(x = DEGREE, labels = c("< high school",
-                                                "high school", "junior college",
-                                                "bachelor", "graduate"))) %>%
-  mutate(HAPPY = factor(x = HAPPY, labels = c("very happy",
-                                              "pretty happy",
-                                              "not too happy")))
+  mutate(MARITAL = na_if(x = MARITAL, y = 9)) %>% 
+  mutate(MARITAL = factor(x = MARITAL, labels = c("Married",
+                                              "Widowed",
+                                              "Divorced",
+                                              "Separated",
+                                              "Never married")))
 # check recoding
 summary(object = gss.2018.cleaned)
 
-# mean and sd of age by group
-use.stats <- gss.2018.cleaned %>%
-  drop_na(USETECH) %>%
-  group_by(DEGREE) %>%
-  summarize(m.techuse = mean(x = USETECH),
-            sd.techuse = sd(x = USETECH))
-use.stats
-
-# graph usetech (Figure 7.4)
+# descriptive stats for usetech
 gss.2018.cleaned %>%
-  drop_na(USETECH) %>%
-  ggplot(aes(y = USETECH, x = DEGREE)) +
-  geom_jitter(aes(color = DEGREE), alpha = .6) +
-  geom_boxplot(aes(fill = DEGREE), alpha = .4) +
-  scale_fill_brewer(palette = "Dark2", guide = "none") +
-  scale_color_brewer(palette = "Dark2", guide = "none") +
-  theme_minimal() +
-  labs(x = "Highest educational attainment", y = "Percent of time spent using technology")
+  drop_na(USETECH) %>% 
+  summarize(m.tech = mean(USETECH),
+            sd.tech = sd(USETECH))
 
-# mean tech use percent by degree groups
-techuse.by.deg <- oneway.test(formula = USETECH ~ DEGREE,
-                              data = gss.2018.cleaned,
-                              var.equal = TRUE)
-techuse.by.deg
+# graph for usetech
+gss.2018.cleaned %>%
+  ggplot(aes(x = USETECH)) +
+  geom_histogram()
 
-bonf.tech.by.deg <- pairwise.t.test(x = gss.2018.cleaned$USETECH,
-                                    g = gss.2018.cleaned$DEGREE,
-                                    p.adjust.method = "bonferroni")
-bonf.tech.by.deg
+# usetech by sex
+gss.2018.cleaned %>%
+  drop_na(USETECH, SEX) %>% 
+  group_by(SEX) %>%
+  summarize(m.tech = mean(USETECH),
+            sd.tech = sd(USETECH))
 
-# Tukey's post hoc test for tech.by.deg
-tukey.tech.by.deg <- TukeyHSD(x = aov(formula = USETECH ~ DEGREE,
-                                      data = gss.2018.cleaned))
-tukey.tech.by.deg
+# usetech by marital
+gss.2018.cleaned %>%
+  drop_na(USETECH, MARITAL) %>% 
+  group_by(MARITAL) %>%
+  summarize(m.tech = mean(USETECH),
+            sd.tech = sd(USETECH))
+
+# graph usetech by marital status
+gss.2018.cleaned %>%
+  drop_na(USETECH, MARITAL) %>% 
+  ggplot(aes(y = USETECH, x = MARITAL)) +
+  geom_boxplot() +
+  labs(x = "Marital status category", 
+       y = "Percent of work time spent using technology") +
+  ylim(0, 100)
+
+# usetech by sex & marital status
+gss.2018.cleaned %>%
+  drop_na(USETECH, MARITAL, SEX) %>% 
+  group_by(SEX, MARITAL) %>%
+  summarize(m.tech = mean(USETECH),
+            sd.tech = sd(USETECH))
+
+# mean tech use percent by marital status groups
+oneway.test(formula = USETECH ~ MARITAL,
+            data = gss.2018.cleaned,
+            var.equal = TRUE)
+
+# find differences in mean tech use by marital status groups
+pairwise.t.test(x = gss.2018.cleaned$USETECH,
+                g = gss.2018.cleaned$MARITAL,
+                pool.sd = FALSE,
+                p.adjust.method = "bonferroni")
+
+# Divorced and never married people had statistically significantly different 
+# mean time using tech at work compared to married people based on Bonferroni
+# post-hoc tests. 
