@@ -50,4 +50,5 @@ title: "Lectures"
   - [Overview](lectures/Regression.html)
   - [Pearson's famous heights dataset](lectures/heights.csv)
   - [United Nations data](lectures/UN11.csv)
-  - [script from class](lectures/regression.R)
+  - [basic regression script from class](lectures/regression.R)
+  - [abbreviated Chapter 9 script](lectures/chap9.R)
