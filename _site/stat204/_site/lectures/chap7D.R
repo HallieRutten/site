@@ -42,19 +42,25 @@ use.stats <- gss.2018.cleaned %>%
   drop_na(USETECH) %>%
   group_by(DEGREE) %>%
   summarize(m.techuse = mean(x = USETECH),
-            sd.techuse = sd(x = USETECH))
+            sd.techuse = sd(x = USETECH),
+            sample.size = n())
 use.stats
 
 # graph USETECH (Figure 7.4)
 gss.2018.cleaned %>%
   drop_na(USETECH) %>%
   ggplot(aes(y = USETECH, x = DEGREE)) +
-  geom_jitter(aes(color = DEGREE), alpha = .6) +
   geom_boxplot(aes(fill = DEGREE), alpha = .4) +
-  scale_fill_brewer(palette = "Spectral", guide = FALSE) +
-  scale_color_brewer(palette = "Spectral", guide = FALSE) +
+  geom_jitter(aes(color = DEGREE), alpha = .6) +
+  scale_fill_brewer(palette = "Dark2", guide = FALSE) +
+  scale_color_brewer(palette = "Dark2", guide = FALSE) +
   theme_minimal() +
   labs(x = "Highest educational attainment", y = "Percent of time spent using technology")
+
+gss.2018.cleaned %>%
+  ggplot(aes(USETECH))+
+  geom_histogram() +
+  facet_wrap(~DEGREE)
 
 # ONE-WAY ANOVA
 ################
@@ -65,13 +71,18 @@ techuse.by.deg <- oneway.test(formula = USETECH ~ DEGREE,
                               var.equal = TRUE)
 techuse.by.deg
 
+techuse.aov <- aov( formula = USETECH ~ DEGREE,
+                    data = gss.2018.cleaned )
+summary( techuse.aov )
+
 # POST HOC TESTS
 ################
 
 # find differences in mean tech use by degree groups
 bonf.tech.by.deg <- pairwise.t.test(x = gss.2018.cleaned$USETECH,
                                     g = gss.2018.cleaned$DEGREE,
-                                    p.adj = "bonf")
+                                    pool.sd = FALSE,
+                                    p.adjust.method = "bonferroni")
 bonf.tech.by.deg
 
 # mean age by groups
