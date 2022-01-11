@@ -1,0 +1,15 @@
+name: "Math 416"
+navbar:
+  title: "Math 416, Easter 2022"
+  type: inverse
+  left:
+    - text: "Syllabus"
+      href: index.html
+    - text: "Homework"
+      href: homework.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu/
+output:
+  html_document:
+    theme: readable

@@ -1,0 +1,17 @@
+name: "Stat 214"
+navbar:
+  title: "Stat 214, Easter 2022"
+  type: inverse
+  left:
+    - text: "Syllabus"
+      href: index.html
+    - text: "Lectures"
+      href: lectures.html
+    - text: "Datasets"
+      href: datasets.html
+  right:
+    - text: "Matthew Rudd"
+      href: http://mbrudd.sewanee.edu/
+output:
+  html_document:
+    theme: readable

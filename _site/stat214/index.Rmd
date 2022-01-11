@@ -1,0 +1,70 @@
+---
+title: "Syllabus"
+---
+
+<br>
+
+The goal of this course is to teach you to build and assess ***statistical models***, i.e., models built
+from real-world data that can be used to 
+
+- explain relationships between variables and/or 
+- enable predictions about future outcomes. 
+
+In particular, we will focus on the three fundamental regression paradigms:
+
+- Linear regression
+- Logistic regression
+- Regression for counts
+
+We'll start with simple regression models (one explanatory variable) and then go on to multiple regression models (more than one explanatory variable). Along the way, we'll talk about basic tools like simulation, cross validation, hypothesis tests, and ANOVA. After taking this course, you should be able to build statistical models for yourself to obtain meaningful insights and to make arguments that you can defend. 
+To get the most out of this experience and contribute your share, you must
+
+- stay caught up with the readings and projects,
+- work together within the parameters of the Honor Code, and
+- talk to me whenever you have questions.
+
+If you don't understand something, get help immediately!
+
+#### Textbook 
+
+- No official textbook -- more on this in class!
+
+#### Software 
+
+We will use [R](https://cran.r-project.org/) and [RStudio](https://www.rstudio.com/products/rstudio/download/) 
+to build regression models and to analyze and visualize data. As needed, we will use Zoom to share screens in 
+class and to accommodate anyone who needs to quarantine: 
+
+- [Zoom link](https://sewanee-edu.zoom.us/j/87370700567) 
+- meeting ID: 873 7070 0567 
+
+#### Times & location
+
+- Tuesdays and Thursdays, 11:00 a.m.-12:15 p.m. CST, duPont G31 (temporarily) and then Woods Labs 134 (eventually)
+
+#### Homework, exams, and grading
+
+TBD
+
+#### Honor Code
+
+As a Sewanee student, you have already sworn to uphold the Honor Code; I
+expect you to comport yourself accordingly. Work with your classmates to
+understand the course material, but submit work that is truly your own.
+You must not consult with other students when taking exams or quizzes.
+In addition to avoiding a guilty conscience, you'll learn more this way
+anyhow!
+
+#### Attendance
+
+Missing class seriously undermines the educational process, so be
+responsible and don't do it unless absolutely necessary.
+
+#### Special needs
+
+Please notify me immediately if you have any documented special needs
+that need to be accommodated. The University's official ADA statement may be helpful in this regard:
+
+_The University of the South is committed to fostering respect for the diversity of the University community and the individual rights of each member of that community. In this spirit, and in accordance with the provisions of Section 504 of the Rehabilitation Act of 1973 and the Americans with Disabilities Act (ADA), the University seeks to provide students with disabilities with the reasonable accommodations needed to ensure equal access to the programs and activities of the University._
+
+_Any student with a documented disability needing academic adjustments is requested to speak with Student Accessibility Services (SAS) as early in the semester as possible. If approved for accommodations, the student has the responsibility to present their instructors with a copy of the official letter of academic accommodations. Please note: Accommodation letters should be dated for the current term; accommodations will not be provided without a current accommodation letter; and accommodations cannot be applied retroactively. SAS is located in the Office of the Dean of Students (931.598.1229). Additional information about accommodations can be found [here](https://new.sewanee.edu/campus-life/playing/wellness-commons/university-wellness-center/student-accessibility-services/). Students who have questions about physical accessibility should inform their instructors so that we can ensure an accessible, safe, and effective environment._

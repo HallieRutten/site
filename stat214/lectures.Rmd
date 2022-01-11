@@ -1,0 +1,8 @@
+---
+title: "Lectures"
+---
+
+<br>
+
+- Simple linear regression
+  - [Introduction](lectures/Regression.html)
