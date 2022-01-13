@@ -7,8 +7,8 @@ navbar:
       href: index.html
     - text: "Lectures"
       href: lectures.html
-    - text: "Datasets"
-      href: datasets.html
+    - text: "Data and code"
+      href: data_code.html
   right:
     - text: "Matthew Rudd"
       href: http://mbrudd.sewanee.edu/

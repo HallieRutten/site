@@ -1,0 +1,25 @@
+---
+title: "Data and code"
+---
+
+<br>
+
+- Heights data 
+  - [heights.csv](data_code/heights.csv)
+  - [heights.R](data_code/heights.R)
+- [africa.csv](data_code/africa.csv)
+- [chondrichthyes.csv](data_code/chondrichthyes.csv)
+- [chronic.csv](data_code/chronic.csv)
+- [concrete.csv](data_code/concrete.csv)
+- [enrollment.csv](data_code/enrollment.csv)
+- [fish.csv](data_code/fish.csv)
+- [imr2011](data_code/imr2011.csv)
+- [iucn_chondrichthyes.csv](data_code/iucn_chondrichthyes.csv)
+- [namcs2009.tsv](data_code/namcs2009.tsv)
+- [NCHS_Births_Fertility.csv](data_code/NCHS_Births_Fertility.csv)
+- [sharks.csv](data_code/sharks.csv)
+- [tabn303.70.csv](data_code/tabn303.70.csv)
+- [throat.csv](data_code/throat.csv)
+- [UN11.csv](data_code/UN11.csv)
+- [v-pubescens.csv](data_code/v-pubescens.csv)
+- [violets.csv](data_code/violets.csv)
