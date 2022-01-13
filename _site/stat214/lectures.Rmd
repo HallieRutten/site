@@ -4,5 +4,10 @@ title: "Lectures"
 
 <br>
 
-- Simple linear regression
-  - [Introduction](lectures/Regression.html)
+- R, RStudio, and visualization resources:
+  - [Hands-on Programming with R](https://rstudio-education.github.io/hopr/)
+  - [R for Data Science](https://r4ds.had.co.nz/)
+  - [RStudio learning resources](https://education.rstudio.com/learn/)
+  - [K. Healy's Data Visualization book](https://socviz.co/)
+- [Introduction to Statistical Learning](https://www.statlearning.com/)
+- [Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/)
