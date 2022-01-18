@@ -4,10 +4,12 @@ title: "Data and code"
 
 <br>
 
-- Heights data 
+- Pearson's height data (fathers and sons)
   - [heights.csv](data_code/heights.csv)
   - [heights.R](data_code/heights.R)
-- [africa.csv](data_code/africa.csv)
+- United Nations literacy and infant mortality data
+  - [africa.csv](data_code/africa.csv)
+  - [africa.R](data_code/africa.R)
 - [chondrichthyes.csv](data_code/chondrichthyes.csv)
 - [chronic.csv](data_code/chronic.csv)
 - [concrete.csv](data_code/concrete.csv)
