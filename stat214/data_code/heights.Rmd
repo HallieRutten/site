@@ -1,0 +1,244 @@
+---
+title: "The line of averages"
+author: "Matthew Rudd"
+date: "Stat 214, Easter 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+# Basic knitr options
+library(knitr)
+opts_chunk$set(
+  comment = NA,
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  cache = FALSE
+)
+options(scipen = '999')
+```
+
+We're going to start by exploring the heights of 1,078 fathers and their sons, data collected in the 1890s by the 
+British statistician Karl Pearson and his assistants. This will give us a chance to review summary statistics, 
+normal distributions, and tools from R's `tidyverse` as we discuss some statistical models.
+To get started, load the height data, display the first 10 rows, and create histograms of  
+each of the columns:
+
+```{r}
+library(tidyverse)
+(heights <- read_csv("heights.csv", col_types = cols()))
+
+ggplot(gather(heights), aes(value)) +
+  geom_histogram(binwidth = 1) +
+  facet_wrap( ~ key) +
+  xlab("Heights")
+```
+
+
+We can see that both of these quantitative variables have approximately symmetric and 
+bell-shaped distributions -- in fact, each one is roughly ***normally distributed***. Normally distributed variables
+show up all over the place in statistics, in real data and in theoretical work, so it's important to 
+get to know them well. A normal distribution is determined entirely by two values, 
+its ***average*** and its ***standard deviation***:
+
+* the average is the center of the distribution, and 
+* the standard deviation determines how wide the distribution is on either side of the average. 
+
+We'll have much more to say about standard deviations later, but for now let's go ahead and use R's 
+`mean` and `sd` functions to compute these two summary statistics for the columns of the `heights` dataset:
+
+```{r}
+
+gather(heights) %>%
+  group_by(key) %>%
+  summarize(Average = mean(value),
+            SD = sd(value))
+
+```
+
+We can now describe these two columns succinctly with some concise notation: 
+the fathers' heights follow $N(67.687, 2.745)$, the normal distribution with
+average 67.687 inches and standard deviation 2.745 inches, and the sons' heights 
+follow $N(68.684, 2.815)$, the normal distribution with
+average 68.684 inches and standard deviation 2.815 inches. Look at either of the histograms 
+above and observe that most of the heights are within 2 standard deviations of the average, and
+almost all of them are within 3 standard deviations of the average. As long as we're working
+with a roughly normal distribution, the standard deviation tells us where most of the observations 
+are relative to the average -- it measures the ***average deviation from the average***. In other
+words, the standard deviation measures the variability of the observations.
+
+This is a phenomenon that delighted the Victorians as they pored over the data they 
+collected -- many biological measurements, like these heights, turn out to be roughly normally distributed. 
+We can put this to good use and create a simple statistical model: to predict a man's height, we can just guess
+68.684 inches, the average height of the sons, and we'll likely be correct to within 2 standard deviations, 
+5.6 inches or so.  This is an example of a ***null model***, also known as a ***baseline model***, and the 
+question is: can we come up with something better? Of course we can, that's why we're here!
+
+This null model ignores the data on fathers' heights, so we should be able to create a better predictive model
+by incorporating that extra information. After all, tall men tend to have tall sons and short men tend to
+have short sons, right? We can check this easily enough by plotting the sons' heights against the fathers' 
+heights. 
+
+```{r}
+
+(heights.plot <- ggplot(heights, aes(Father, Son)) + 
+   geom_point())
+
+```
+
+Each point in this ***scatterplot*** corresponds to one father and his son; the point's horizontal position is the 
+father's height in inches, and the point's vertical position is the son's height in inches, with the axes labeled 
+accordingly. Scatterplots are essential for presenting quantitative data like this, so we'll use them extensively. 
+This particular scatterplot confirms what we expected to see: shorter fathers tend to have shorter sons, while 
+taller fathers tend to have taller sons. When the ***response variable*** -- the one on the vertical axis -- increases with 
+the ***predictor*** -- the variable on the horizontal axis -- we say that the variables are ***positively associated*** 
+or ***positively correlated***; they are ***negatively associated*** or ***negatively correlated*** if the response decreases 
+as the predictor increases. We'll have more to say about correlation in the next section.
+
+While the positive trend apparent in this scatterplot tells us something, _qualitative_ insight has no computational 
+power. We need to ***quantify*** the relationship shown so that we can do things like predict how tall a man's son will be 
+or describe generational variations in height numerically. With such goals in mind, let's dig into the data!
+First, we'll organize the data into groups by rounding the fathers' heights to the nearest inch, then we'll compute the 
+average and the standard deviation (SD) of the heights of the sons in each group:
+
+```{r}
+heights <- heights %>%
+  mutate(Group = round(Father))
+
+# get summary statistics by Group
+(son.means <- heights %>%
+    group_by(Group) %>%
+    summarize(
+      N = n(),
+      Mean = mean(Son),
+      SD = sd(Son)
+    ))
+```
+
+To visualize the information in the table, let's look at a couple of scatterplots that highlight certain groups: 
+the fathers who are 64 inches tall to the nearest inch, then the fathers who are 70 inches tall to the nearest inch.
+In each plot, we've added a red point indicating the average height of the sons for that group; note that this 
+red point does ***not*** belong to the original dataset. 
+
+```{r}
+
+ggplot() +
+  geom_point(data = heights %>% filter(Group != 64),
+             aes(Father, Son),
+             alpha = 0.2) +
+  geom_point(data = heights %>% filter(Group == 64), aes(Father, Son)) +
+  geom_point(aes(x = 64, y = son.means$Mean[son.means$Group == 64]),
+             color = "red",
+             size = 3)
+
+ggplot() +
+  geom_point(data = heights %>% filter(Group != 70),
+             aes(Father, Son),
+             alpha = 0.2) +
+  geom_point(data = heights %>% filter(Group == 70), aes(Father, Son)) +
+  geom_point(aes(x = 70, y = son.means$Mean[son.means$Group == 70]),
+             color = "red",
+             size = 3)
+
+```
+
+There are 60 father/son pairs in the first of these groups, and there are 115 father/son pairs in the second.
+For each of these groups, the sons' heights remain roughly normally distributed:
+
+```{r}
+
+ggplot(heights %>% filter(Group == 64 | Group == 70), aes(Son)) +
+  geom_histogram(binwidth = 1) +
+  facet_wrap(~ Group)
+
+```
+
+Here is what we see in these two histograms: 
+
+Rounded height of father | Range of sons' heights     | Distribution of sons' heights
+:-----------------------:|:--------------------------:|:-----------------------------:
+64 inches                | 58.5 inches to 71.4 inches | $N(66.7, 2.31)$
+70 inches                | 61.2 inches to 78.2 inches | $N(69.77, 2.49)$
+
+As we did with the null model above, we can use these normal distributions to make predictions -- better predictions,
+in fact, since they are better informed. If a man's father is 64 inches tall to the nearest inch, we predict
+his height to be 66.7 inches; this prediction is unlikely to be off by more than 4.6 inches or so. 
+On the other hand, if a man's father is 70 inches tall to the nearest inch, we predict
+his height to be 69.77  inches; this prediction is unlikely to be off by more than 4.98 inches or so. 
+These predictions are better than those of the null model in two important ways: 
+
+* the ***point estimate*** -- the single best guess for the son's height -- is more accurate for each group, and 
+* the ***margin of error*** is now smaller for each prediction, since the groups have smaller standard deviations than 
+all of the sons considered together.
+
+Getting improved predictions is great, but doing it this way is awfully tedious. 
+Fortunately, we are close to a much more streamlined method for making better predictions, for any 
+father's height, so let's keep going, adding a red point at the average height of the sons for each group of 
+fathers. Doing so reveals something absolutely remarkable: most of the red points are very close to being on the same 
+line! This is the ***line of averages***, shown below in blue.
+
+```{r}
+heights.plot +
+  geom_smooth(method = "lm", level = 0) +
+  geom_point(data = son.means,
+             aes(x = Group, y = Mean),
+             color = "red",
+             size = 2) 
+```
+
+We see, using the heights of real people, how the average of a response variable 
+can depend linearly on the predictor; when this happens, we say that there is a ***linear relationship*** 
+or a ***linear association*** between the variables. It turns out, as explained in the next section, that the 
+equation of this particular line of averages is 
+
+$$
+\text{Average height of sons} = 33.887 + .514*\text{Father's height} \ . 
+$$
+
+We can use this equation directly to estimate the average height of a group of sons, given the height 
+of the father, and we can use these estimates to make our predictions. For example, if we meet a man who 
+is 64 inches tall and want to predict his son's height, we just compute: 
+
+$$
+\text{Predicted height of son} = 33.887 + .514 * 64 = 66.783 \ \text{inches} . 
+$$
+
+Our best guess for his son's height is therefore the average, based on the observations available, of the heights of all 
+of the sons whose fathers are 64 inches tall. Since the line of averages synthesizes all of the data, 
+this predicted height differs slightly from the observed average of 66.7 given in the table above. We're no longer limited 
+to the rounded fathers' heights in the table, however; if a father is 70.5 inches tall, for instance, we predict his son's 
+height to be
+
+$$
+\text{Predicted height of son} = 33.887 + .514 * 70.5 = 70.124 \ \text{inches} . 
+$$
+
+Now we're getting somewhere! The line of averages is an efficient mechanism for estimation and prediction, and its slope
+quantifies the relationship between the heights of fathers and sons concisely.  The slope of .514 tells us, for
+example, that 
+
+* two fathers whose heights differ by 1 inch will have sons whose heights differ, on average, by .514 inches,
+* two fathers whose heights differ by 10 inches will have sons whose heights differ, on average, by 5.14 inches,
+* a father who is 1 inch above average in height is likely to have a son who is about half an inch above average 
+in height, and
+* a father who is 1 inch below average in height is likely to have a son who is about half an inch below average 
+in height.
+
+More generally, the equation shows that fathers who are above average in height typically have sons who are also 
+above average in height, but not by as much; fathers who are below average in height typically have sons who are 
+also below average in height, but not by as much. When Francis Galton, Karl Pearson's predecessor 
+and mentor, observed this same phenomenon in an earlier set of heights data, he called it "regression to mediocrity,"
+thereby introducing "regression" as a statistical term; we now summarize this ***regression effect*** more
+politely as "regression to the mean."
+
+The equation of the line of averages is certainly easier to use than computing averages for groups of
+sons one at a time, but the calculations we did earlier seem superior in one respect: the 
+standard deviations of the heights for each group quantified their variability and provided margins of 
+error for predictions. What we have done so far therefore raises some important questions: 
+
+* How can we determine whether there is a linear relationship between two quantitative variables?
+* If there is a linear association, how do we get the equation of the line of averages?
+* When we compute with the line of averages, how do we quantify the uncertainty in the resulting estimates and predictions?
+
+We'll answer all of these questions and more in due time!

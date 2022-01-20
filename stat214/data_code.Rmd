@@ -7,6 +7,7 @@ title: "Data and code"
 - Pearson's height data (fathers and sons)
   - [heights.csv](data_code/heights.csv)
   - [heights.R](data_code/heights.R)
+  - [heights.Rmd](data_code/heights.Rmd)
 - United Nations literacy and infant mortality data
   - [africa.csv](data_code/africa.csv)
   - [africa.R](data_code/africa.R)
