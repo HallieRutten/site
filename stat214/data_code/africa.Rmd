@@ -1,0 +1,633 @@
+---
+title: "Fitting a line to data"
+author: "Matthew Rudd"
+date: "Stat 214, Easter 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+# Basic knitr options
+library(knitr)
+opts_chunk$set(
+  comment = NA,
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  cache = FALSE
+)
+options(scipen = '999')
+```
+
+One of the great things about the heights dataset we just examined is its size -- there are enough observations 
+to group the data, compute averages for the groups, and witness first-hand the linear association between the 
+heights of fathers and sons. This last point is crucial: the heights example demonstrates that 
+***linear relationships do exist in real data***, so it's reasonable to look for them elsewhere; when we find 
+such relationships, we can use them to estimate averages and to make predictions. Linear regression methodology 
+provides tools for identifying and taking advantage of linear associations in data, without having to resort to 
+tedious grouping and averaging. This is fortunate, as there is often too little data for a brute force approach 
+to work.
+
+One potential problem with the heights dataset is the prominent role of normality, for both the sons' heights 
+and the fathers' heights. This simplifies the analysis and interpretation of the data, making for an excellent 
+introductory example, but it risks suggesting that normality is required for linear regression. It's not! Normality 
+of the response variable is certainly a nice property to have, as we'll see later, but it is absolutely not required. 
+Keep this in mind as we work through examples.
+
+To explain _simple linear regression_, a framework for modeling the relationship between a quantitative response 
+variable and one predictor, we're going to analyze data from the United Nations Children's Fund (UNICEF) 
+on young adult literacy and infant mortality. Let's start by loading and plotting the data: 
+
+```{r}
+library(tidyverse)
+library(pander)
+africa <- read_csv("africa.csv")
+names( africa )
+( africa.plot <- ggplot( africa, aes(Literacy,IMR)) + geom_point() )
+```
+
+There are 40 points in this scatterplot, each of which represents a country in Africa. A point's horizontal coordinate 
+is the percentage of literate young adults (15 to 24 years old) in the country, and the point's vertical coordinate is 
+the country's infant mortality rate, recorded as the number of infant deaths per 1000 live births. A negative linear 
+trend is apparent: as the percentage of literate young adults increases, the infant mortality rate decreases. Having 
+seen this, we would like to quantify the strength of the linear association between these variables. This is the job of 
+the ***correlation coefficient***, also known simply as the ***correlation***. Since understanding this summary 
+statistic is essential to understanding linear regression, we're going to spend some quality time with it before fitting 
+a line to the UNICEF data.  
+
+##  The correlation coefficient 
+
+To explain how to compute and interpret the correlation coefficient, we'll use the averages of the two variables 
+to separate the UNICEF data into quadrants. Here's the modified scatterplot:
+
+```{r}
+( x.bar <- mean(africa$Literacy) )
+( y.bar <- mean(africa$IMR) )
+africa.plot + 
+  geom_vline(xintercept=x.bar,linetype="dashed",color="blue") + 
+  geom_hline(yintercept=y.bar, linetype="dashed",color="blue")
+```
+
+If we compare the coordinates of each point with the corresponding averages, looking specifically at the _sign_ 
+of each deviation from the average, we get the following breakdown by quadrant:
+
+Quadrant | `Literacy` coordinate | `Literacy` deviation | `Deaths` coordinate | `Deaths` deviation | Product of deviations
+:-------:|:---------------------:|:--------------------:|:-------------------:|:------------------:|:--------------------:
+Upper right | Above average | Positive | Above average | Positive | Positive
+Upper left  | Below average | Negative | Above average | Positive | Negative 
+Lower left  | Below average | Negative | Below average | Negative | Positive 
+Lower right | Above average | Positive | Below average | Negative | Negative
+
+We see a negative association in the UNICEF data precisely because most of the points -- more than 2/3 of them -- 
+are in the upper left and lower right quadrants; most of the products of the deviations of their coordinates 
+from their respective averages are therefore negative. The signs of these products encode how the coordinates
+vary together -- positive products when they increase together, negative products when they change in opposite 
+ways. The correlation coefficient is an average of these products, normalized as shown below, so the correlation
+between `Literacy` and `IMR` is negative. To determine its precise value, use R's `cor()` function: 
+
+```{r}
+(africa.r <- cor(africa$Literacy, africa$IMR))
+```
+
+
+The correlation between `Literacy` and `IMR` is about -0.62, an indicator of a fairly strong
+linear relationship; for comparison, the correlation between the heights of fathers and sons is about 0.5. 
+Before getting into how to interpret these values, let's summarize the gross properties of the correlation 
+between two quantitative variables, using the quadrants determined by their averages for reference: 
+
+* If most of the points in a scatterplot are in the upper right and lower left quadrants, the correlation 
+coefficient will be positive. 
+* If most of the points in a scatterplot are in the upper left and lower right quadrants, the correlation 
+coefficient will be negative. 
+* If the points in a scatterplot are all over the place, the correlation will be close to zero.
+
+The sign of the correlation therefore corresponds to the linear trend -- positive, negative, or none -- shown 
+in the scatterplot of the data. As for its numerical value, here are the main things to know: 
+
+* The correlation coefficient is ***dimensionless***; unlike summary statistics like the average and 
+the standard deviation, it has no units. 
+* The correlation coefficient is _not_ a percentage -- don't ever report it as such!
+* The correlation coefficient is between -1 and +1.
+* The stronger the positive linear relationship is between two quantitative variables, the closer the 
+correlation coefficient is to +1. 
+* The stronger the negative linear relationship is between two quantitative variables, the closer the 
+correlation coefficient is to -1. 
+* The weaker the linear relationship is between two quantitative variables, the closer the correlation 
+coefficient is to 0.
+
+Genuine linear relationships in real data often yield correlations between .3 and .7 in absolute value, so don't 
+expect to see correlations really close to the extremes of +1 or -1. A correlation of +1 only happens 
+if all of the data lie on a line of positive slope; a correlation of -1 only happens if all of the data lie 
+on a line of negative slope. We will work through a real example below in which the correlation is very close to +1, 
+but that is highly unusual! Interpreting correlations gets easier with experience, but always remember that the 
+correlation coefficient measures the strength of a linear relationship -- using it for anything 
+else is just wrong.
+
+#### Computing the correlation coefficient
+
+First, don't compute the correlation by hand, not that you should ever be tempted to do so! It's good to know and
+understand the formula, but let your favorite implementation of it take care of the calculation. With that disclaimer 
+out of the way, here is the explicit formula for $r$, the correlation coefficient:
+
+$$
+r ~ = ~ \frac{1}{n-1} \, \sum_{x,y}{ \left( \frac{ x - \bar{x} }{s_{x}} \right) \left( \frac{ y - \bar{y} }{ s_{y} } \right) } \ .
+$$
+
+In this formula, the sum includes all of the data points $(x,y)$, 
+
+* $\bar{x}$ is the average of the predictor variable, 
+* $\bar{y}$ is the average of the response variable,
+* $s_{x}$ is the standard deviation of the predictor variable, and
+* $s_{y}$ is the standard deviation of the response variable.
+
+Observe how the correlation coefficient averages the product of the ***z-scores*** of the coordinates of all of 
+the data points -- this can be a handy way to remember and think about this formula.
+
+## The null model 
+
+We've taken care of the first two steps in the analysis of the UNICEF data: we observed a negative linear association 
+in the scatterplot, and we found that the correlation between `Literacy` and `IMR` is about -0.62, further evidence of 
+a linear relationship between these variables. Since the infant mortality rates for these countries seem to depend 
+roughly linearly on the proportions of literate young adults, a linear regression model is appropriate. We can't obtain 
+the line of averages as we did with the heights data, however, since there aren't enough observations to organize 
+countries into groups and then compute average infant mortality rates for the groups.  Instead, we have to fit a line 
+to the data so that estimates and predictions based on it are as accurate as possible.
+
+The simplest way to predict the infant mortality rate for one of these countries is just to guess the average of all 
+of the  observed values of `Deaths`, ignoring young adult literacy entirely. This constant prediction is 
+the ***null model***, a horizontal line that provides a baseline for judging other predictive models: 
+
+```{r}
+africa.plot + geom_hline( yintercept = y.bar, color = "blue", size = 1 )
+```
+
+Using one of our earlier calculations, the equation for this null model is
+$$
+\bar{y} = 58.525 \ .
+$$
+
+As mentioned above, $\bar{y}$ is the standard notation for the average of the response variable;  $\bar{x}$ 
+denotes the average of the predictor variable. These correspond to the notation for the values in the dataset: 
+$y$ denotes an observed value of the response variable, and $x$ denotes an observed value of the predictor variable. 
+If we need to keep track of the individual observations, we use subscripts: $x_{i}$ and $y_{i}$ represent
+the values of the predictor and the response, respectively, in the $i^{th}$ row of the dataset.  
+Notation like this can be a huge help, since we can use it to write things down compactly and efficiently, but
+don't let the notation obfuscate the main ideas.
+
+To quantify how well the null model fits this data, let's compare its constant prediction -- namely, 59.63 for 
+each country -- with the observed infant mortality rates. The difference between an observed value and a  
+predicted value is called an ***error*** or a ***residual***, and we'll soon see that regression is all about analyzing 
+residuals. Here are the residuals for the null model, along with the corresponding observed values and null prediction: 
+
+```{r}
+africa <- africa %>% 
+  mutate( Null = y.bar, 
+          Null.residual = IMR - y.bar )
+pander(africa)
+```
+
+It might seem useful to compute the average residual, but the sum of the residuals for the null model  
+is _zero_ -- this follows from the very definition of $\bar{y}$. To eliminate all of this cancellation and 
+obtain a better measure of the fit, we apply the standard statistical trick of squaring the deviations  
+before adding; this yields the ***total sum of squares (TSS)***, 
+$$
+\text{TSS} ~ = ~ \sum_{i}{ \left( y_{i} - \bar{y} \right)^2 } \ .
+$$
+
+For the infant mortality rates, the TSS is 
+```{r}
+(africa.tss <- sum( (africa$IMR - y.bar )^2 ))
+```
+
+The average of these squared residuals is the ***variance*** of the observed responses, 
+denoted $\text{Var}(y)$:
+$$
+\text{Var}(y) ~ = ~ \frac{1}{n-1} \sum_{i}{ \left( y_{i} - \bar{y} \right)^2 } \ , 
+$$
+where $n$ is the number of observations. At first sight, it might seem strange to compute the average squared deviation 
+by dividing by $(n-1)$ instead of $n$, so let's make sense of this before moving on. With $n$ observations,
+there are $n$ deviations from their average value $\bar{y}$; since the sum of these deviations is zero, as remarked 
+earlier, only $(n-1)$ of the deviations actually need to be computed -- the remaining one is just the amount needed to 
+make the sum zero. It's like figuring out the batting order for a softball team with 12 players: once you've written 
+down the first 11 names, you've also figured out who bats last. We say that there are $(n-1)$ ***degrees of freedom*** 
+among the deviations, and we divide by the number of degrees of freedom to compute the appropriate average. We'll learn 
+to work with degrees of freedom in several other contexts as we go. 
+
+To compute the variance of the infant mortality rates, use R's `var` function: 
+```{r}
+var(africa$IMR)
+46*var(africa$IMR)
+```
+The second calculation just illustrates the formula above: the variance of the infant mortality rates times 
+$(n-1) = 39$ is the TSS that we just computed. 
+
+The variance is a common and useful measure of variability, but it doesn't have the same units as the 
+original observations, complicating its interpretation. Taking the square root of the variance fixes this 
+problem easily and defines the ***standard deviation***, $s_{y}$, of the response variable:
+$$
+s_{y} ~ = ~ \sqrt{ \, \frac{1}{n-1} \sum_{i}{ \left( y_{i} - \bar{y} \right)^2 } } \ .
+$$
+The standard deviation $s_{x}$ of the predictor variable, which is unrelated to the null model but will
+be needed in the next section, is calculated similarly:
+$$
+s_{x} ~ = ~ \sqrt{ \, \frac{1}{n-1} \sum_{i}{ \left( x_{i} - \bar{x} \right)^2 } } \ .
+$$
+To compute these standard deviations, just use R's `sd` function:
+```{r}
+(s.x <- sd(africa$Literacy))
+(s.y <- sd(africa$Deaths))
+```
+You can check for yourself that these agree with the square roots of the variances of these variables.
+As mentioned earlier when we introduced the `heights` dataset, the standard deviation is a measure of 
+the ***average deviation from the average***. If we randomly select one of these African countries, for example, 
+its infant mortality rate will likely be within one standard deviation of the average, i.e., between
+$$
+\bar{y} - s_{y} = 58.525 - 28.312 = 30.213 \quad \text{and} \quad \bar{y} + s_{y} = 58.525 + 28.312 = 86.837 \ .
+$$
+Without knowing more about the specific distribution of infant mortality rates (e.g., normal or otherwise), we don't know the
+precise probability that a randomly chosen country's infant mortality rate will lie in this range. On the other hand,
+an interesting result known as ***Chebyshev's inequality***, guarantees that there is at least a 75% chance that it 
+will be within two standard deviations of the average, between
+$$
+\bar{y} - 2 \, s_{y} = 58.525 - (2 * 28.312) = 1.901 \quad \text{and} \quad \bar{y} + 2 \, s_{y} = 58.525 + (2 * 28.312) = 115.149 \ . 
+$$
+This range is admittedly less useful than the previous interval, but these inequalities show how the standard 
+deviation of the response variable quantifies the null model's predictive error. We should expect to do better by 
+incorporating information about the predictor, so let's see what happens when we do.
+
+## Fitting and assessing the regression line 
+
+If we try to _guess_ the equation of a line that fits the UNICEF data better than the null model by just eyeballing the 
+scatterplot, we might end up with something like this:
+
+```{r}
+(b <- -(s.y / s.x))
+(a <- y.bar - (b*x.bar))
+africa.plot + geom_abline(slope = b, intercept = a, color = "deeppink", size = 1)
+```
+
+For starters, we're trying the line 
+$$
+\text{Predicted Deaths} = 157.07 - 1.352 * \text{Literacy} \ ,
+$$
+which appears to fit the scatterplot just fine. This line passes through the ***point of averages*** 
+$ \, (\bar{x}, \bar{y}) = (72.875, 58.525) \, $, and the absolute value of its slope is the ratio of the 
+standard deviations of `IMR` and `Literacy`. As a tribute to Freedman et  
+al. footnote:[_Statistics_, 4th edition, by Freedman, Pisani, and Purves], we adopt their term and call this 
+the ***SD line***. While it appears to fit the data, we need -- as always! -- to quantify things and gauge the 
+fit objectively. As we did with the null model, we'll compare predictions based on this line with the actual 
+observations. Here are the corresponding predictions and residuals: 
+|===
+| Country | Literacy rate | SD line prediction | Infant mortality rate | Residual 
+
+| Namibia
+| latexmath:[x_{31} = 95] 
+| latexmath:[28.6]
+| latexmath:[y_{31} = 30] 
+| latexmath:[1.39]
+
+| Guinea 
+| latexmath:[x_{18} = 57] 
+| latexmath:[80.0]
+| latexmath:[y_{18} = 79]
+| latexmath:[-0.992]
+
+| Benin
+| latexmath:[x_{3} = 45] 
+| latexmath:[96.2]
+| latexmath:[y_{3} = 68] 
+| latexmath:[-28.2]
+
+| Cape Verde 
+| latexmath:[x_{8} = 99] 
+| latexmath:[23.2]
+| latexmath:[y_{8} = 18] 
+| latexmath:[-5.20]
+|===
+
+If we computed the residuals for all of the countries using this equation, we would get a pretty even mix of positive 
+and negative residuals -- this model overestimates the infant mortality rates for some countries and 
+underestimates them for others. To have a model that predicts infant mortality rates as accurately as possible, we need 
+these residuals to be as small as possible, and we should proceed sylatexmathatically rather than by trial and error. 
+Mathematics to the rescue! After setting up some more notation that we'll use from now on, we'll apply the 
+famous _method of least squares_ to solve this optimization problem and obtain a better predictive model.
+
+To find the line that minimizes the residuals, we have to find the optimal intercept and slope -- we need to use 
+the available data to compute two numbers. Letting latexmath:[a] and latexmath:[b] denote, respectively, the intercept and the slope  
+to be determined, we're going to use the equation 
+[latexmath]
+++++
+\widehat{y} = a + bx 
+++++
+to work abstractly with predictions and analyze residuals. latexmath:[x] denotes an 
+observed value of `Births`, as before, and latexmath:[\widehat{y}] ("y hat") denotes the corresponding predicted 
+value of `Deaths`; statisticians use this odd hat notation to indicate quantities that are computed from 
+observations. The residual for this prediction is  
+[latexmath]
+++++
+y - \widehat{y} = y - a - bx \ ,
+++++
+where latexmath:[y] is the observed value of `Deaths` corresponding to the value latexmath:[x] for the case at hand.
+As noted when we analyzed the fit of the null model, we can't just average these residuals directly; 
+cancellations between positive and negative residuals would give us a false sense of a small overall error.  
+To remedy this, we employ the same trick as before and square the deviations  
+before adding -- this yields the _residual sum of squares (RSS)_,
+
+[latexmath]
+++++
+\text{RSS} = \sum_{x,y}{ \left( y - \widehat{y} \right)^2 } = \sum_{x,y}{ \left( y - a - bx \right)^2} \ ,
+++++
+
+where the sum includes all of the observed data points.
+The RSS is a fundamental overall measure of the model's fit and is the quantity we're going to minimize. 
+It's important to realize that there are only two unknowns here, latexmath:[a] and latexmath:[b] ; the latexmath:[x] and latexmath:[y] 
+values are all known numbers. In the UNICEF data, for example, there are 40 latexmath:[(x,y)] pairs to use when computing 
+the RSS for given values of latexmath:[a] and latexmath:[b]. Moreover, the RSS is a _quadratic_ function of these two unknowns, 
+with positive coefficients on the squared terms. If you've worked with quadratic functions before, you know that
+this means that there is a unique combination of values of latexmath:[a] and latexmath:[b] for which the RSS achieves its 
+minimal value. In fact, there are nice explicit formulas for these coefficients! 
+
+.Coefficients for simple linear regression 
+****
+Determining the values of latexmath:[a] and latexmath:[b] that minimize the RSS is a straightforward calculus exercise: compute the 
+partial derivatives with respect to latexmath:[a] and latexmath:[b], set them equal to 0, and then solve the resulting linear equations. 
+Here's what we get:
+[latexmath]
+++++
+\frac{ \partial }{ \partial a}\left( \text{RSS} \right) ~ = ~ -2 \sum_{x,y}{ \left( y - a - bx  \right) } ~ = ~ 0 
+\quad \Longrightarrow \quad 
+a ~ = ~ \bar{y} - b \bar{x} 
+++++
+after dividing through by latexmath:[n] and solving for latexmath:[a]. In addition to providing a formula for latexmath:[a], which we'll use
+momentarily, this calculation shows that the _sum of the residuals is zero_,
+[latexmath]
+++++
+\sum_{x,y}{ \left( y - a - bx \right) } ~ = ~ \sum_{x,y}{ \left( y - \hat{y} \right) } ~ = ~ 0 \ .  
+++++
+Remember this important fact! Now determine latexmath:[b]:
+[latexmath]
+++++
+\frac{ \partial }{ \partial b}\left( \text{RSS} \right) ~ = ~ -2 \sum_{x,y}{ x \left( y - a - bx  \right) } ~ = ~ 0 
+\quad \Longrightarrow \quad 
+b ~ = ~ \frac{ \sum_{x,y}{ \left( x - \bar{x} \right) \left( y - \bar{y} \right) } }{ \ \sum_{x,y}{ \left( x - \bar{x} \right)^2 } \ } ~ = ~  
+r \left( \frac{s_{y}}{s_{x}} \right) . 
+++++
+Exercise 5.2.1 will guide you through the algebraic manipulations needed here. The preceding equation 
+guarantees that the _weighted sum of the residuals is zero_,
+[latexmath]
+++++
+\sum_{x,y}{ x \left( y - a - bx \right) } ~ = ~ \sum_{x,y}{ x \left( y - \hat{y} \right) } ~ = ~ 0 \ , 
+++++
+another important fact to file away for later use. Finally, since both latexmath:[\frac{\partial^2}{\partial a^2}\left( \text{RSS} \right)] and 
+latexmath:[\frac{\partial^2}{\partial b^2}\left( \text{RSS} \right)] are positive, we know that the RSS achieves its minimum at these critical values
+of latexmath:[a] and latexmath:[b].  
+****
+
+Applying these formulas for the optimal slope and intercept to the UNICEF data, we find that 
+
+// .Regression line coefficients
+----
+> (b <- africa.r*(s.y/s.x)) 
+[1] -0.84757
+> (a <- y.bar - b*x.bar)
+[1] 120.2917
+----
+
+so the equation of the _line of best fit_ is 
+
+[latexmath]
+++++
+\text{Predicted Deaths} = 120.2917 - .8476 * \text{Literacy} .
+++++
+
+This is the _regression line_, also known as the _least squares line_. To check the fit visually, here are the 
+UNICEF data and the regression line together: 
+
+.Adolescent births and infant mortality, with regression line
+image::../images/literacy_deaths_with_line.png[width="70%"]
+
+It would be difficult to determine just by looking that this line fits the data better than the SD line, but 
+now we know that the SD line is too steep and has too much error. By minimizing the sum of squared
+residuals, the regression line has the smallest possible overall error -- in the least squares sense -- and 
+therefore provides more accurate predictions, on average, than any other line. The actual value of the RSS is 
+important, as it provides a measure of the uncertainty of these predictions that is a key model diagnostic (see the RSE below). 
+To explore this without doing a bunch of unnecessary calculations, it's time to start using R's built-in methods 
+for constructing linear regression models -- while the formulas above for the coefficients are interesting and 
+instructive, no one uses them much in real life. Instead, we use R's `lm` function:
+// .Simple linear regression in R
+----
+> ( africa.fit <- lm( Deaths ~ Literacy, data = africa ) )
+
+Call:
+lm(formula = Deaths ~ Literacy, data = africa)
+
+Coefficients:
+(Intercept)     Literacy  
+   120.2917      -0.8476  
+----
+The syntax here corresponds to what we want: `lm( Deaths ~ Literacy )` tells R to fit a _linear model_ (`lm`) to the data, 
+with `Deaths` as a linear function of `Literacy`. The output tells us the intercept and the slope, which we already knew from the 
+formulas, but `lm` is better for several reasons: 
+
+- `lm` is faster and easier to use, 
+- `lm` can be used to construct regression models with multiple predictors, as we'll see later, and
+- the resulting model, stored in `africa.fit`, contains much more information than just the coefficients! 
+
+Before expanding on this last point, let's back up a bit and take another look at the null model. Its constant
+prediction is easy enough to compute by averaging the observed responses, but we can also use `lm` to get it. 
+After all, the null model is a line -- with a slope of 0 -- and `lm` fits lines to this kind of data. We just have 
+to tell `lm` to set the slope to 0 and fit the best constant, i.e., the best horizontal line:
+----
+> ( null.fit <- lm( Deaths ~ 1, data = africa ) )
+
+Call:
+lm(formula = Deaths ~ 1, data = africa)
+
+Coefficients:
+(Intercept)  
+      58.53 
+----
+There's the null model! You can decide which method you prefer. 
+
+Now let's see what else is contained in the model `africa.fit`. The residuals are easy to access and analyze; for example, 
+we can compute the RSS directly:
+// .RSS for the UNICEF regression line 
+----
+> ( africa.rss <- sum(africa.fit$residuals^2) )
+[1] 18980.37 
+----
+
+As mentioned earlier, squaring the residuals before adding them eliminates cancellations, which is good, but it 
+also squares the response variable's measurement units, making the RSS harder to interpret. To get a more useful 
+error metric with the same units as the original observations, we average the squared residuals and take the square root, 
+obtaining the _residual standard error (RSE)_:
+
+[latexmath]
+++++
+\text{RSE} ~ = ~ \sqrt{ \, \frac{1}{n-2} \, \text{RSS} } ~ = ~ \sqrt{ \, \frac{1}{n-2} \sum_{y}{ \left( y - \widehat{y} \right)^2 } } \ . 
+++++
+
+We divide by latexmath:[ \, (n-2) \, ] here because computing the 2 coefficients in the model sacrifices 2 degrees of 
+freedom. In general, when we use latexmath:[n] data points to compute latexmath:[ \, p \, ] coefficients in a regression model, 
+there are latexmath:[ \, (n-p) \, ] degrees of freedom -- the same thing happens with the variance and standard deviation, since we 
+use up 1 degree of freedom by calculating the average, leaving latexmath:[ \, (n-1) \, ] degrees of freedom. 
+
+For the UNICEF data, the RSE is  
+
+.Residual standard error for the UNICEF regression line
+----
+> ( africa.rse <-  sqrt( sum( africa.fit$residuals^2 ) / 38 ) )
+[1] 22.34912
+----
+
+Notice that the RSE is about 22.35, while the standard deviation of the response variable -- the analogous 
+quantity for the null model -- is about 28.31, as found above. This is one way to compare 
+these 2 models: infant mortality rate predictions based on the regression line will typically be off by about 22.35 
+deaths or so, but predictions with the null model will be off by about 28.31 deaths. That is definitely an improvement!
+
+Since the RSE is such a useful measure of the model's fit, it should come as no surprise that `lm` bundles the 
+RSE with the other information included in `africa.fit`. We can get it by either using R's built-in `sigma` function 
+or by looking at the `summary` of the model: 
+----
+> sigma( null.fit )
+[1] 28.31235
+> sigma( africa.fit )
+[1] 22.34912
+> summary( africa.fit )
+
+Call:
+lm(formula = Deaths ~ Literacy, data = africa)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-34.80 -18.50   2.98  10.96  42.77 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 120.2917    12.9478   9.291 2.53e-11 ***
+Literacy     -0.8476     0.1709  -4.959 1.51e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 22.35 on 38 degrees of freedom
+Multiple R-squared:  0.3929,	Adjusted R-squared:  0.3769 
+F-statistic: 24.59 on 1 and 38 DF,  p-value: 1.51e-05
+----
+
+There's the RSE, 22.35, near the bottom of the `summary`, with the degrees of freedom listed beside it. 
+Be aware that other people and other books might refer to the RSE by other names, such as 
+the _standard error of regression_; we're sticking with _residual standard error_ since that's the 
+terminology that `lm` uses. More important than the choice of lingo, though, is understanding what the 
+RSE does -- it quantifies the variability of the responses relative to the regression line. 
+
+The penultimate line of the `summary` provides another widely used -- and widely misinterpreted --
+regression diagnostic, the _coefficient of determination_, denoted latexmath:[R^2]. In the present context, its function 
+is to compare the simple linear regression model and the null model. To explain what the coefficient of determination is and how 
+it works, consider the following decomposition:
+[latexmath]
+++++
+y - \bar{y} ~ = ~ \left( y - \hat{y} \right) + \left( \hat{y} - \bar{y} \right) \ .
+++++
+This shows that the deviation between an observation latexmath:[y] and the average response latexmath:[\bar{y}] 
+is made up of two parts, the residual that we've been analyzing and the difference between the predictions of the two competing models.
+The coefficient of determination quantifies the relative sizes of these two terms. Specifically, we 
+do the usual thing and manipulate sums of squares as follows: 
+[latexmath]
+++++
+\sum{ \left(y - \bar{y} \right)^2 } ~ = ~ \sum{ \left\{ \left( y - \hat{y} \right) + \left( \hat{y} - \bar{y} \right) \right\}^2 } ~ = ~   
+\sum{ \left( y - \hat{y} \right)^2 }  - 2 \sum{ \left( y - \hat{y} \right) \left( \hat{y} - \bar{y} \right) } + 
+\sum{ \left( \hat{y} - \bar{y} \right)^2 } \ .
+++++
+It might look like we're making things messier and more complicated, but the mathematical forces of good are on our side -- 
+the middle term on the right vanishes:
+[latexmath]
+++++
+\sum{ \left( y - \hat{y} \right) \left( \hat{y} - \bar{y} \right) } ~ = ~  
+\sum{ \hat{y} \left( y - \hat{y} \right) } - \bar{y} \sum{ \left( y - \hat{y} \right) } ~ = ~ 0 \ .
+++++
+When we went through the derivation of the regression coefficients earlier, we pointed out that these sums 
+involving the residuals are both 0, two marvelous consequences of the least squares method. The payoff now is 
+that     
+[latexmath]
+++++
+\sum{ \left(y - \bar{y} \right)^2 } ~ = ~ \sum{ \left( y - \hat{y} \right)^2 } + \sum{ \left( \hat{y} - \bar{y} \right)^2 } \ , 
+\quad \text{so that} \quad 
+\sum{ \left( \hat{y} - \bar{y} \right)^2 } ~ = ~ \sum{ \left(y - \bar{y} \right)^2 } - \sum{ \left( y - \hat{y} \right)^2 } \ 
+~ = ~ \text{TSS} - \text{RSS} \ . 
+++++
+This last identity guarantees that incorporating the predictor into our model decreases variability, with an
+absolute reduction equal to latexmath:[\text{TSS} - \text{RSS}]; this quantity cannot be negative since it equals
+a sum of squares. To make this statistic easier to interpret, the coefficient of determination 
+expresses the reduction in variability as a relative proportion, namely: 
+[latexmath]
+++++
+R^2 ~ = ~ \frac{ \sum{ \left(y - \bar{y} \right)^2 } - \sum{ \left( y - \hat{y} \right)^2 } }{ \sum{ \left(y - \bar{y} \right)^2 } } 
+~ = ~ 1 - \frac{ \sum{ \left( y - \hat{y} \right)^2 } }{ \sum{ \left( y - \bar{y} \right)^2 } } 
+~ = ~ 1 - \frac{ \text{RSS} }{ \, \text{TSS} \, } \ .
+++++
+
+Having computed the relevant ingredients for the UNICEF data earlier, we can check that this formula 
+agrees with the `Multiple R-squared` value in the `summary` of the regression model:
+
+.Directly calculating the coefficient of determination
+----
+> 1 - ( africa.rss / africa.tss )
+[1] 0.3928609
+----
+We usually express the coefficient of determination as a percentage; in this case, we've found that 
+using young adult literacy rates instead of ignoring them reduces the variability of predicted infant mortality rates by 39.3%.
+We'll get to the other diagnostic information in this `summary` in a bit, after discussing the 
+abstract model underlying these calculations. 
+
+=== Using and interpreting the regression line
+
+We use linear regression equations to do three things:
+
+* estimate the _average response_ for a given value of the predictor,
+* predict the _individual response_ for a given value of the predictor, and
+* describe the relationship between the predictor variable and the response variable. 
+
+At this point, the first two of these applications seem identical: just plug the value of the predictor variable into
+the regression equation and compute the result. For example, if the United Nations collects new data on young adult literacy rates 
+for African countries, we can use them to predict the corresponding infant mortality rates. Specifically, suppose that 
+UNICEF finds out that the current literacy rate for Namibia is 85, lower than its earlier value of 95; using the 
+regression line we just found, we would predict Namibia's current infant mortality rate to be
+
+[latexmath]
+++++
+\text{Predicted Deaths} = 120.2917 - .8476*85 = 48.2457 \ .
+++++
+
+This would be our best prediction, based on the data used to fit the model, of the current value of `Deaths`. 
+As explained fully in the next section, this would also be our best estimate of the average infant mortality rate for 
+all African countries with a young adult literacy rate of 85. This second interpretation makes 
+less sense than the first one, though, as the number of African countries is small and fixed. With the heights 
+data, on the other hand, it is perfectly reasonable to interpret the predicted height of a man given his father's height 
+as the estimated average height of all sons of fathers of that same height: there are lots of fathers and sons!
+This illustrates the essential role of common sense in statistical modeling: _people_ need to consider and 
+respect the context of the data being analyzed when interpreting and using models. Results can often be interpreted
+in different ways, some more meaningful than others.
+
+For these first two applications of regression, the calculation of the _point estimate_ -- the number that serves 
+as our single best prediction or estimate -- is indeed the same. The margins of error that accompany these two point 
+estimates are different, however, since predicting an individual response is inherently less certain than estimating an
+average for a group. We will investigate this further in section 3.4, where we'll see how to obtain the relevant 
+_interval estimates_, namely _confidence intervals_ and _prediction intervals_. 
+
+Although we've talked a lot about predictions while analyzing the UNICEF data, the most useful application 
+of the regression line in this example is understanding the relationship 
+between literacy rates and infant mortality rates. The slope of the regression line is the key here, 
+as it tells us how the response variable changes, on average, with the predictor. Since the equation
+of the regression line is 
+
+[latexmath]
+++++
+\text{Predicted Deaths} = 120.2917 - .8476*\text{Literacy} \, ,
+++++
+
+the slope is latexmath:[ \, -.8476]. The first thing to notice is that the slope is negative, 
+so infant mortality rates decrease with young adult literacy rates. More precisely, since this coefficient has 
+units of `Deaths` per `Literacy`, its value tells us to expect, on average, 8.5 fewer infant deaths 
+for a 10% increase in young adult literacy. We must _not_ conclude any causal relationship from this, though! This 
+regression model quantifies the relationship between these variables but says absolutely nothing about _why_ 
+they are related in this way. This admonition applies to all regression models.
