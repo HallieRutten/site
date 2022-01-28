@@ -11,10 +11,17 @@ title: "Data and code"
 - United Nations literacy and infant mortality data
   - [africa.csv](data_code/africa.csv)
   - [africa.R](data_code/africa.R)
+  - [africa.Rmd](data_code/africa.Rmd)
+- Compressive strength of concrete
+  - [concrete.csv](data_code/concrete.csv)
+  - [concrete.R](data_code/concrete.R)
+- Undergraduate enrollment predictions
+  - [enrollment.csv](data_code/enrollment.csv)
+  - [enrollment.R](data_code/enrollment.R)
+- [National Health and Nutrition Examination Survey (NHANES)](https://www.cdc.gov/nchs/nhanes/index.htm)
+  - ***Assignment***: Explore the data and find an interesting pair of linearly related variables. (This is intentionally open-ended!) Build a simple linear regression model (a) by computing averages for groups and (b) by using `lm`. Report back on Tuesday!
 - [chondrichthyes.csv](data_code/chondrichthyes.csv)
 - [chronic.csv](data_code/chronic.csv)
-- [concrete.csv](data_code/concrete.csv)
-- [enrollment.csv](data_code/enrollment.csv)
 - [fish.csv](data_code/fish.csv)
 - [imr2011](data_code/imr2011.csv)
 - [iucn_chondrichthyes.csv](data_code/iucn_chondrichthyes.csv)
