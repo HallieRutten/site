@@ -5,8 +5,8 @@ navbar:
   left:
     - text: "Syllabus"
       href: index.html
-    - text: "Lectures"
-      href: lectures.html
+    - text: "Resources"
+      href: resources.html
     - text: "Data and code"
       href: data_code.html
   right:
