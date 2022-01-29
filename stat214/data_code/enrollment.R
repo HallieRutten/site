@@ -21,7 +21,7 @@ ggplot( trend, aes(EnrollmentYear, Enrollment)) +
   geom_point() +
   labs( x = "Year",
         y = "Enrollment (millions)",
-        title = "Enrollment trend, 1981 to 2018")
+        title = "Undergraduate enrollments, 1981 to 2018")
 
 train <- enroll %>%
   filter(BirthYear < 1999)
@@ -56,7 +56,7 @@ cor(train$Births, train$Enrollment)
 null.fit <- lm(Enrollment ~ 1, data = train)
 null.fit
 
-# note: this is just the average of the enrollments in the training set
+# note: the null model is just the average of the enrollments in the training set
 mean( train$Enrollment)
 
 enroll.fit <- lm(Enrollment ~ Births, data = train)
@@ -91,7 +91,7 @@ predictions <- data.frame(
 ggplot( train, aes(Births, Enrollment)) +
   geom_point() +
   geom_smooth( method="lm", level=0) + 
-  geom_point( data = predictions, aes( Births, Predictions), color="tomato", size=2) +
+  geom_point( data = predictions, aes( Births, Enrollment), color="tomato", size=2) +
   labs(x = "Births (millions)",
        y = "Enrollment (millions)")
 
