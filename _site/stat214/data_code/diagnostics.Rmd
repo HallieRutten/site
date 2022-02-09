@@ -1,0 +1,172 @@
+---
+title: "Residual diagnostics"
+author: "Matthew Rudd"
+date: "2/8/2022"
+output: html_document
+---
+
+# Compressive strength of concrete
+
+## What is concrete? 
+
+Concrete is a common building material. Its strength depends on how much water and cement are used to make it; specifically, the ratio of cement to water has a profound influence on its compressive strength.
+
+```{r echo=FALSE, message=FALSE}
+
+library(tidyverse)
+concrete <- read_csv("concrete.csv", show_col_types = FALSE)
+
+concrete <- concrete %>%
+  filter( Age == 28 ) %>% 
+  select( Cement, Water, Strength) 
+
+concrete <- concrete %>%
+  mutate( Ratio = Cement / Water )
+
+ggplot( concrete, aes(x=Ratio, y=Strength)) +
+  geom_point() +
+  labs( title = "Compressive strength versus cement:water ratio")
+
+```
+
+We can see a positive linear relationship here. The correlation coefficient corroborates this:
+
+```{r}
+cor( concrete$Ratio, concrete$Strength)
+```
+
+## Simple regression model
+
+### Fit the model 
+
+Having checked the scatterplot and the correlation coefficient, it seems reasonable to fit a 
+simple linear regression model to this data. Here it is:
+
+```{r}
+
+concrete.fit <- lm( Strength ~ Ratio, data = concrete )
+summary(concrete.fit) 
+
+```
+
+The fitted model is therefore 
+$$ 
+\text{Strength} ~ = ~ 12.5968 + 16.3158 \times \text{Ratio} \ ,
+$$
+where `Strength` has units of megapascals (MPa). 
+
+***If the error term in the theoretical model is normally distributed***, $\epsilon \sim N(0,\sigma)$,
+then we can combine the point estimates (the coefficients) with their given standard errors to get 
+confidence intervals for the parameters in the theoretical model; the function `confint` takes care of 
+the calculations.
+
+```{r}
+confint( concrete.fit )
+```
+
+If we trust the normality assumption, then we are 95% confident that 
+the "true slope" $\beta$ -- the slope in the theoretical model -- 
+is between 14.83506 and 17.79654. 
+
+***This approach to inferences relies on normality of the errors, which we have to check!!*** If the errors
+don't seem to be normally distributed, a resampling method (the _bootstrap_) can be used to draw
+inferences about the parameters in the theoretical model. In fact, bootstrapping should always be used
+for such inferences, even if the errors seem roughly normally distributed. We'll talk about that tool later.
+
+### Histogram and plot of residuals 
+
+The residuals for the fitted model are our best estimates of the errors, so we need to analyze the
+residuals to determine whether the errors seem to be roughly normally distributed. As a first check,
+just look at a histogram of the residuals:
+
+```{r warning=FALSE}
+
+concrete <- concrete %>%
+  mutate( Prediction = concrete.fit$fitted.values, 
+          Residual = concrete.fit$residuals )
+
+ggplot( concrete, aes(Residual)) +
+  geom_histogram( binwidth=2)
+
+```
+
+That doesn't seem horribly _non_normal -- the histogram seems roughly symmetric and bell-shaped. Next,
+let's plot the residuals versus the fitted values (predictions) to see if there are any noticeable patterns
+or trends:
+
+```{r}
+ggplot( concrete, aes(Prediction, Residual)) + 
+  geom_point() +
+  geom_hline( yintercept = c(-2,2)*sigma(concrete.fit), linetype="dashed")
+```
+
+The vast majority of the residuals are within 2 RSEs of 0, which provides more evidence of (a) no 
+serious departure from normality and (b) homoscedasticity. The 3 residuals at the top 
+(magnitude greater than 30) are a bit worrying, but not enough to throw in the towel. Note that  
+the residuals seem to be randomly distributed about 0, which is good.
+
+### Quantiles of residuals 
+
+To quantify some of this, let's compare the quantiles of the _standardized residuals_ 
+(residuals divided by the RSE) with those of the standard normal distribution. If the 
+residuals are roughly normally distributed, their quantiles ought to match fairly well with
+those of $N(0,1)$. 
+
+```{r}
+
+quantile( concrete.fit$residuals / sigma( concrete.fit ), probs=seq(0,1,by=.25))
+qnorm( c(.001, .25, .5, .75, .999 ) )
+```
+
+Instead of just looking at a few quantiles, let's compare more of them visually; we're looking
+to see if the plotted quantiles fall on the line shown:
+
+```{r}
+ggplot( concrete, aes(sample=Residual/sigma(concrete.fit))) + 
+  stat_qq() + 
+  stat_qq_line() +
+  labs( x = "Quantiles of standard normal",
+        y = "Quantiles of standardized residuals" )
+```
+
+There are some deviations in the extremes (not a surprise), but most of the quantiles line up nicely. 
+So far, so good!
+
+### Statistical tests for normality
+
+There are a gajillion tests for normality, including: 
+
+* Shapiro-Wilk test
+* Anderson-Darling test
+* Kolmogorov-Smirnov test
+* Lilliefors test
+
+As an example, let's apply the Shapiro-Wilk test, which is very commonly used:
+
+```{r}
+shapiro.test(concrete$Residual)
+```
+
+To interpret this output, first recall how every statistical test works:  assuming that some 
+hypothesis -- namely, the ***null hypothesis*** -- is true, 
+
+* compute the relevant test statistic, then
+* compute the probability of obtaining a test statistic this large or larger in magnitude.
+
+The probability thus obtained is the $p$-value; colloquially, the $p$-value is the 
+_chance of getting what you got_ ***if the null hypothesis is true***.
+
+In this particular example, the null hypothesis says that the residuals for our linear 
+regression model are normally distributed.  The value of the test statistic is  $W = 0.9848$, 
+and the $p$-value of 0.0001961 tells us that obtaining this value of $W$ is very unlikely
+if the null hypothesis is true. Hmmm. Does this mean that all the work we just did to check normality
+is useless? Absolutely not!! Our preceding visual analyses (histogram, plot of residuals versus fitted
+values, $qq$-plot) suggest that the residuals are indeed _roughly_ normally distributed, with 
+some deviations from normality in the extreme residuals; we didn't claim that the residuals 
+were _exactly_ normally distributed, as the null hypothesis asserts. Those deviations in the
+tails and the number of residuals together lead to this $W$-score, its small $p$-value, and the
+rejection of the null hypothesis via this test.
+
+The main point here is that statistical tests are just one part of our diagnostic 
+arsenal; we need to use a variety of complementary tools to draw 
+conclusions. In particular, don't make decisions based on $p$-values alone! 

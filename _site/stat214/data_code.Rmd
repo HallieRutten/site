@@ -8,10 +8,12 @@ title: "Data and code"
   - [heights.csv](data_code/heights.csv)
   - [heights.R](data_code/heights.R)
   - [heights.Rmd](data_code/heights.Rmd)
+  - [heights.html](data_code/heights.html)
 - United Nations literacy and infant mortality data
   - [africa.csv](data_code/africa.csv)
   - [africa.R](data_code/africa.R)
   - [africa.Rmd](data_code/africa.Rmd)
+  - [africa.html](data_code/africa.html)
 - Compressive strength of concrete
   - [concrete.csv](data_code/concrete.csv)
   - [concrete.R](data_code/concrete.R)
@@ -20,6 +22,9 @@ title: "Data and code"
   - [enrollment.R](data_code/enrollment.R)
 - [National Health and Nutrition Examination Survey (NHANES)](https://www.cdc.gov/nchs/nhanes/index.htm)
   - ***Assignment***: Explore the data and find an interesting pair of linearly related variables. (This is intentionally open-ended!) Build a simple linear regression model (a) by computing averages for groups and (b) by using `lm`. Report back on Tuesday!
+- Regression diagnostics (using the `concrete` dataset above)
+  - [diagnostics.Rmd](data_code/diagnostics.Rmd)
+  - [diagnostics.html](data_code/diagnostics.html)
 - [chondrichthyes.csv](data_code/chondrichthyes.csv)
 - [chronic.csv](data_code/chronic.csv)
 - [fish.csv](data_code/fish.csv)
