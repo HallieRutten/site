@@ -1,0 +1,174 @@
+---
+title: "Chronic conditions and logistic regression"
+author: "Matthew Rudd"
+date: "2/10/2022"
+output: html_document
+---
+
+# The 2009 NAMCS and chronic conditions
+
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+library(pander)
+library(flextable)
+chronic <- read_csv("chronic.csv")
+```
+
+## The null model
+
+```{r}
+chronic.null <- mean( chronic$Condition) 
+
+chronic %>% 
+  group_by(Condition)  %>% 
+  summarize( N=n(), Percentage = N/nrow(chronic))
+```
+
+## A useless plot 
+
+```{r}
+ggplot( chronic, aes(Age, Condition)) + geom_point()
+```
+
+## Some useful plots
+
+```{r}
+cohorts <- chronic %>% 
+  group_by(Age) %>% 
+  summarize( N=n(), Percentage = sum(Condition)/N )
+
+ggplot( cohorts, aes(Age, Percentage)) + geom_point() + ylim(0,1)
+
+chronic <- chronic %>%
+  mutate( Decade = 10*round(Age/10))
+
+decades <- chronic %>%
+  group_by( Decade ) %>%
+  summarize( N=n(), Percentage = sum(Condition)/N )
+
+# using knitr's kable function :
+# knitr::kable( decades )
+
+# using pander :
+# pander( decades )
+
+# using flextable's regulartable function :
+regulartable( decades ) %>% autofit()
+
+ggplot( cohorts, aes(Age, Percentage)) + 
+  geom_point() + 
+  geom_point( data=decades, aes(Decade, Percentage), color="tomato", size=3) + 
+  ylim(0,1)
+
+```
+
+## The curve of chance
+
+```{r} 
+z <- seq(-5, 5, len=1000)
+logistic <- data.frame( z=z, sigma = 1 / (1 + exp(-z)))
+ggplot( logistic, aes(z,sigma)) + 
+  geom_line( size=1 ) +
+  labs( title = "The logistic curve")
+```
+
+This is a plot of the ***logistic curve*** a.k.a. the ***logistic function*** a.k.a. the 
+***sigmoid function*** 
+
+$$
+\sigma( z ) ~ = ~ \frac{ 1 }{ 1 + e^{-z}} \ .
+$$ 
+
+# Fitting the logistic curve to our data
+
+```{r}
+chronic.fit <- glm( Condition ~ Age, data=chronic, family="binomial")
+chronic.fit 
+```
+
+The ***fitted logistic regression model*** is therefore 
+
+$$ 
+\text{Probability of condition} ~ = ~ \sigma( -2.03938 + 0.05182 \times \text{Age}) \ .
+$$ 
+
+To phrase this in terms of the odds of having a condition, recall the definition
+of the odds of something happening:
+
+$$
+\text{Odds of event} ~ = ~ \frac{ \text{Probability of event} }{  1 - \text{Probability of event} } \ .
+$$
+In terms of ***odds***, our logistic model is 
+
+$$
+\log{ ( \text{Odds of a condition} ) } ~ = ~ 2.03938 - 0.05182 \times \text{Age} \ .
+$$
+
+## The odds ratio
+
+One way to summarize this model is to report its ***odds ratio***, which is the logistic
+regression analogue of the slope in linear regression. To derive the expression for the 
+odds ratio, we first need to solve the equation
+
+$$
+y ~ = ~ \sigma(z) ~ = ~ \frac{ 1 }{ 1 + e^{-z}} 
+$$
+for $z$ ; doing the necessary manipulation yields
+
+$$
+z ~ = ~ \log{ \left( \frac{ y }{ 1 - y } \right) } \ .
+$$
+
+This inverse function of the logistic function is known as the ***logit*** : by definition, 
+
+$$
+\operatorname{logit}( y ) ~ = ~ \log{ \left( \frac{ y }{ 1 - y } \right) } \ .
+$$
+
+Putting this all together, a simple logistic model with predictor variable $x$ has two equivalent forms:
+
+$$ 
+\text{Probability of event} = \sigma( -a - bx ) \quad \iff \quad \log{(\text{Odds of event})} = a + bx \ .
+$$
+
+(Notice the annnoying factor of -1 inside $\sigma(\cdot)$. That's life.)  Exponentiating the second
+form yields yet another formulation:
+
+$$
+\text{Odds of event} ~ = ~ e^{a+bx} ~ = ~ e^{a} e^{bx} \ .
+$$
+Now we get to the odds ratio. Fix a value $x_{0}$ of the predictor and compare the odds when $x=x_{0}$
+to the odds when $x=x_{0}+1$:
+
+$$
+\text{Odds when} \left\{ x=x_{0}+1 \right\} ~ = ~ e^{a} e^{bx_{0}} e^{b} ~ = ~ e^{b} \times \text{Odds when} \left\{ x=x_{0} \right\} \ .
+$$
+
+The odds get multiplied by the factor $e^{b}$, which is, by definition, the model's ***odds ratio***.
+
+> The odds ratio tells us how the odds change when the predictor increases by 1 unit: *multiply* the odds by the odds ratio.
+
+For the logistic chronic condition model:
+
+```{r}
+chronic.or <- exp( chronic.fit$coefficients[2] )
+chronic.or
+```
+
+The odds ratio is 1.053181, so the odds of having a chronic condition increase by about 5% 
+with each 1 year increase in `Age`. A 10-year increase in `Age` therefore leads to 
+a multiplier of 
+
+```{r}
+chronic.or^10
+```
+
+i.e., a 68% increase in the odds of having a chronic condition. 
+A 50-year increase in `Age`  leads to a multiplier of 
+
+```{r}
+chronic.or^50
+```
+
+so the odds of a random 70-year-old having a chronic condition are more than 13 times the odds 
+of a random 20-year-old having a chronic condition.  Ah, the golden years after retirement!
