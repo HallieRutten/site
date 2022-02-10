@@ -2,7 +2,7 @@
 
 This is a great place to put your homework! Instructions:
 
-* fork or clone [the repo](https://github.com/mbrudd/site) 
+* fork [the repo](https://github.com/mbrudd/site) and clone it 
 * create a new branch to work on
 * create your own subdirectory of this `homework` directory
 * do some work 
