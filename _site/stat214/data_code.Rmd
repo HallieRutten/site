@@ -4,6 +4,8 @@ title: "Data and code"
 
 <br>
 
+### Linear regression
+
 - Pearson's height data (fathers and sons)
   - [heights.csv](data_code/heights.csv)
   - [heights.R](data_code/heights.R)
@@ -25,8 +27,17 @@ title: "Data and code"
 - Regression diagnostics (using the `concrete` dataset above)
   - [diagnostics.Rmd](data_code/diagnostics.Rmd)
   - [diagnostics.html](data_code/diagnostics.html)
+  
+### Logistic regression
+
+- Chronic conditions and simple logistic regression
+  - [chronic.csv](data_code/chronic.csv)
+  - [chronic.Rmd](data_code/chronic.Rmd)
+  - [chronic.html](data_code/chronic.html)
+
+### Datasets for later
+
 - [chondrichthyes.csv](data_code/chondrichthyes.csv)
-- [chronic.csv](data_code/chronic.csv)
 - [fish.csv](data_code/fish.csv)
 - [imr2011](data_code/imr2011.csv)
 - [iucn_chondrichthyes.csv](data_code/iucn_chondrichthyes.csv)
