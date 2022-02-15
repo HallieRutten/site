@@ -4,9 +4,8 @@
 # Setup and get data -----
 library(tidyverse)
 library(haven)
-setwd("/home/rileybarrettfg/214")
 
-blood <- read_xpt("datasets/nhanes_2017-20_blood.XPT")
+blood <- read_xpt("https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_CBC.XPT")
 
 # Examine and filter the dataset -----
 # Deciding what to analyze correlations of
