@@ -104,6 +104,22 @@ $$
 \log{ ( \text{Odds of a condition} ) } ~ = ~ -2.03938 + 0.05182 \times \text{Age} \ .
 $$
 
+```{r}
+ggplot( chronic, aes(Age, Condition)) + 
+  geom_smooth( method="glm", method.args=list(family="binomial")) +
+  geom_point( data=cohorts, aes(Age, Percentage))
+
+new <- data.frame( Age = seq(-70,150,by=1))
+extended <- predict( chronic.fit, new, type="response")
+extended <-data.frame( Age = new$Age, Probability = extended )
+
+ggplot( chronic, aes(Age,Condition)) +
+  geom_point( data=cohorts, aes(Age, Percentage)) +
+  geom_line( data = extended, aes(Age, Probability)) +
+  xlim(-70,150)
+
+```
+
 ## The odds ratio
 
 One way to summarize this model is to report its ***odds ratio***, which is the logistic
@@ -171,3 +187,65 @@ chronic.or^50
 
 so the odds of a random 70-year-old having a chronic condition are more than 13 times the odds 
 of a random 20-year-old having a chronic condition.  Ah, the golden years after retirement!
+
+# Binary classification
+
+## Confusion matrices for varying thresholds
+
+```{r}
+
+# decision boundary where probability = 50% (i.e., odds = 1) :
+(threshold <- ( -chronic.fit$coefficients[1] ) / ( chronic.fit$coefficients[2] ))
+
+chronic <- chronic %>%
+  mutate( Classifier = as.numeric( Age > threshold ))
+
+# confusion matrix for assessing classifier:
+class.table <- table( chronic$Condition, chronic$Classifier)
+rownames( class.table ) <- c("No condition", "Has a condition")
+colnames( class.table ) <- c("No condition predicted", "Condition predicted")
+class.table
+# overall accuracy rate
+mean( chronic$Condition == chronic$Classifier)
+# overall error rate 
+mean( chronic$Condition != chronic$Classifier)
+
+chronic <- chronic %>%
+  mutate( Classifier = as.numeric( Age >= 80 ))
+
+# confusion matrix for assessing classifier:
+class.table <- table( chronic$Condition, chronic$Classifier)
+rownames( class.table ) <- c("No condition", "Has a condition")
+colnames( class.table ) <- c("No condition predicted", "Condition predicted")
+class.table
+# overall accuracy rate
+mean( chronic$Condition == chronic$Classifier)
+# overall error rate 
+mean( chronic$Condition != chronic$Classifier)
+
+chronic <- chronic %>%
+  mutate( Classifier = as.numeric( Age >= 20 ))
+
+# confusion matrix for assessing classifier:
+class.table <- table( chronic$Condition, chronic$Classifier)
+rownames( class.table ) <- c("No condition", "Has a condition")
+colnames( class.table ) <- c("No condition predicted", "Condition predicted")
+class.table
+# overall accuracy rate
+mean( chronic$Condition == chronic$Classifier)
+# overall error rate 
+mean( chronic$Condition != chronic$Classifier)
+
+```
+
+### Receiver Operating Characteristic (ROC) curve
+
+```{r}
+
+# pROC and ROCR are the 2 standard R packages for computing/plotting ROC curves
+
+library(pROC)
+chronic <- chronic %>% mutate(Probability = chronic.fit$fitted.values )
+roc.obj <- roc(chronic$Condition,  chronic$Probability, plot=TRUE, print.auc=TRUE)
+
+```
