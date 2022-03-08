@@ -1,0 +1,143 @@
+---
+title: "Working with categorical predictors"
+author: "Matthew Rudd"
+date: "3/3/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The primary message in the first example is:
+
+> ***Categorical data is not quantitative!***
+
+# Logistic regression: violet data  
+
+Load the violet data and compute the bud formation rates for each plot:
+
+```{r message=FALSE} 
+library(tidyverse)
+violets <- read_csv("violets.csv")
+violets <- violets %>%
+  mutate(Bud = as.numeric( `Bud counts` > 0 ))
+
+(violet_plots <- violets %>%
+  group_by(Plot) %>% 
+  summarize( N = n(),
+             Rate = mean(Bud)) )
+```
+
+The different plots are numbered 1 through 10; by default, R therefore 
+considers `Plot` to be a numeric variable, which we can confirm by checking its
+type:
+
+```{r}
+class(violets$Plot)
+```
+
+What could go wrong?
+
+## Useless model when `Plot` is numeric
+
+If we fit a logistic model now, using `Plot` as a _quantitative_ variable, the results
+are terrible:
+
+```{r}
+violet.fit <- glm( Bud ~ Plot, data=violets, family="binomial")
+summary( violet.fit )
+
+violet_plots <- violet_plots %>%
+  mutate( Fit = predict( violet.fit, 
+                         newdata = data.frame(Plot = 1:10),
+                         type = "response"))
+
+violet_plots
+```
+
+The fitted values, which should correspond to the probabilities of bud formation
+in each plot, are not good estimates of the empirical rates.
+
+## Reasonable model when `Plot` is categorical
+
+Once we recognize that `Plot` is categorical and convert it into a factor, 
+the resulting logistic model works well:
+
+```{r}
+violets$Plot <- as.factor( violets$Plot )
+violet.fit <- glm( Bud ~ Plot, data=violets, family="binomial")
+summary( violet.fit )
+
+violet_plots <- violet_plots %>%
+  mutate( Fit = predict( violet.fit, 
+                         newdata = data.frame(Plot = levels(violets$Plot)),
+                         type = "response"))
+
+violet_plots
+```
+
+This is what happens when working with one categorical predictor:
+
+> ***the model predictions are the group averages.***
+
+In this case, the average for a group (a plot) is the empirical probability
+of bud formation, i.e., the percentage of days on which new buds were observed in 
+a given plot.
+
+# Linear regression: infant mortality rates by continent
+
+## Visualize the data and examine the summary stats
+
+```{r}
+imr <- read_csv("imr2011.csv")
+imr$Continent <- as.factor(imr$Continent)
+imr <- imr %>%
+  mutate( Continent = fct_reorder(Continent, -IMR))
+
+ggplot( imr, aes( x=IMR, y=Continent, color=Continent)) +
+  geom_boxplot() +
+  geom_point() +
+  theme( legend.position = "none")
+
+imr_means <- imr %>% 
+  group_by(Continent) %>%
+  summarize( Mean = mean(IMR)) 
+
+imr_means %>%
+  arrange(Mean)
+```
+
+### Linear regression model
+
+```{r}
+imr.fit <- lm( IMR ~ Continent, data = imr )
+summary(imr.fit)
+
+imr_means <- imr_means %>%
+  mutate( Fit = predict( imr.fit,
+                         newdata = data.frame(Continent = levels(imr$Continent))))
+imr_means %>% arrange(Mean)
+```
+
+# Linear regression with 2 predictors
+
+```{r}
+heights <- read_csv("all_heights.csv")
+
+ggplot( heights, aes(x=Parent, y=Child, color=Sex)) +
+  geom_point()
+
+ggplot( heights, aes(x=Parent, y=Child, color=Sex)) +
+  geom_point() +
+  geom_smooth( method="lm", level=0)
+
+# no interaction
+heights.fit <- lm( Child ~ Parent + Sex, data=heights)
+summary(heights.fit)
+
+#with interaction
+heights.fit <- lm( Child ~ Parent*Sex, data=heights)
+summary(heights.fit)
+
+```
