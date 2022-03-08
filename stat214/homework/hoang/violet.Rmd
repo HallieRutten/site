@@ -1,0 +1,98 @@
+---
+title: "violet"
+author: "Hoang Le"
+date: "2/22/2022"
+output: html_document
+---
+
+```{r echo=FALSE, message=FALSE}
+library(tidyverse)
+violet <- read_csv("https://raw.githubusercontent.com/mbrudd/site/master/stat214/data_code/violets.csv") %>% rename(Type = 'Bud type', Count = 'Bud counts')
+View(violet)
+```
+
+### Bud count - binary response variable for Chasmogamus
+
+```{r}
+chasmogamous <- violet %>%
+  filter(Type == 'Chasmogamous') %>%
+  select(Photoperiod, Count) %>%
+  mutate(Bud = as.integer(Count > 0) )
+
+View(chasmogamous)
+```
+
+```{r}
+cohorts <- chasmogamous %>%
+  group_by(Photoperiod) %>%
+  summarise(N = n(), 
+            Percentage = sum(Bud)/N)
+
+ View(cohorts)
+
+ggplot(chasmogamous, aes(Photoperiod, Bud)) + 
+  geom_smooth(method="glm", method.args = list(family="binomial")) +
+  geom_point(data=cohorts, aes(Photoperiod, Percentage))
+
+ggplot(chasmogamous, aes(Photoperiod, Bud)) + 
+  geom_smooth(method="glm", method.args = list(family="binomial")) +
+  geom_point()
+```
+```{r}
+bud.fit <- glm( Bud ~ Photoperiod, data=chasmogamous, family="binomial")
+bud.fit
+```
+```{r}
+# decision boundary where probability = 50%, (i.e. odd = 1):
+threshold <- -bud.fit$coefficients[1] / bud.fit$coefficients[2]
+threshold
+
+
+chasmogamous <- chasmogamous %>%
+  mutate( Classifier = as.numeric(Photoperiod < threshold))
+# confusion matrix 
+class.table <- table( chasmogamous$Bud, chasmogamous$Classifier)
+rownames(class.table) <- c("No bud", "Bud")
+colnames(class.table) <- c("No bud predicted", "Bud predicted")
+class.table
+```
+
+$$
+(\text{Wald statistic}) \\
+z = \frac{\text{observed} - \text{expected}}{\text{SE}} 
+$$
+### Likelihood ratio test, to test how much better is this model compared the null model
+
+$$
+\
+\text{null deviance} - \text{residual deviance} \\
+= -2\log(\text{null likelihood}) - (-2\log(\text{model likelihood})) \\
+= -2\log(\frac{\text{null likelihood}}{\text{model likelihood}}) = G^2
+$$
+```{r}
+g <- bud.fit$null.deviance - bud.fit$deviance
+g
+pchisq(g, 1, lower.tail = FALSE) # p value 
+```
+### Bud count - binary response variable for Chasmogamus
+### how bud formation relate to photo-period, use glm, plot stuff --> should get a nice fitting 
+
+### Linear regression
+$$
+R^2 = \frac{\sum(y_i - \bar{y})^2 - \sum(y_i - \hat{y})^2}{\sum(y_i - \bar{y})} = \frac{\sum(\hat{y_i} - \bar{y_i})^2}{\sum(y_i - \bar{y})^2}= 1 - \frac{\text{RSS}}{\text{TSS}}
+$$
+### McFadden's pseudo-R^2 --> generalize from the linear regression model
+$$
+R_M^2 = 1 - \frac{\text{deviance}}{\text{null deviance}}
+$$
+$$
+R_M^2 = 1 \rightarrow \text{logistic model no better then null model}
+$$
+$$
+0.2 < R_M^2 < 0.4 \rightarrow \text{good model}\\
+R_S^2 = \frac{\sum_i(\hat{\pi_i} - \hat{\pi})^2}{\sum_i(y_i - \hat{\pi})^2}
+$$
+### Tjur's coefficient of discrimination
+$$ 
+R_T^2 = \bar{\pi}_S - \bar{\pi}_F
+$$
