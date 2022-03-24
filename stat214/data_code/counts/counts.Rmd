@@ -1,7 +1,32 @@
+---
+title: "Count distributions"
+author: "Matthew Rudd"
+date: "Stat 214, Easter 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+# Basic knitr options
+library(knitr)
+opts_chunk$set(
+  comment = NA,
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  cache = FALSE
+)
+library(kableExtra)
 library(tidyverse)
 library(gridExtra)
+library(DT)
+options(scipen = '999')
+```
 
-# Crash data -----
+```{r}
+
+
+# Load the crash data -----
 
 crashes <- read_csv("TDOT.csv")
 crashes <- crashes %>%
@@ -16,14 +41,22 @@ county_pops <- county_pops %>%
   select(-Useless)
 
 crashes <- inner_join(crashes, county_pops, by="County")
+```
 
-# Meigs County and the Poisson distribution
+# Crashes in Meigs County, TN
+
+To get started, let's explore the crashes per month in Meigs County, TN.
+
+```{r}
 meigs <- crashes %>% 
   filter( County == "Meigs")
 
 observed.crashes <- ggplot( meigs, aes(Crashes)) + 
   geom_histogram( binwidth = 1) + 
-  xlim(0,36)
+  xlim(0,36) +
+  labs(title="Observed crashes in Meigs County, TN",
+       x="Crashes per month",
+       y="Number of months")
 
 (meigs.lambda <- mean( meigs$Crashes ))
 var( meigs$Crashes )
@@ -35,12 +68,20 @@ meigs <- meigs %>%
 
 simulated.crashes <- ggplot( meigs, aes(Simulation)) + 
   geom_histogram( binwidth = 1) +
-  xlim(0,36)
+  xlim(0,36) +
+  labs(title="Simulated crashes in Meigs County, TN (Poisson)",
+       x="Crashes per month",
+       y="Number of months")
 
 grid.arrange( observed.crashes, simulated.crashes, ncol=1 )
 
-# Other counties
+```
 
+# Crashes in other Tennessee counties
+
+## Stats for all counties 
+
+```{r}
 crash_stats <- crashes %>%
   group_by(County) %>% 
   summarize( Mean = mean(Crashes),
@@ -48,35 +89,46 @@ crash_stats <- crashes %>%
              Ratio = Mean/Var ) %>% 
   arrange( desc(Ratio) )
 
-# Sevier county crashes are NOT Poisson distributed!
+datatable( crash_stats, caption="Monthly crash statistics for Tennessee counties" )
+```
+
+## Sevier County, TN 
+
+```{r}
 sevier <- crashes %>% 
   filter( County == "Sevier" )
 
 observed.crashes <- ggplot( sevier, aes(Crashes)) + 
   geom_histogram( binwidth = 1) +
-  xlim(0, max(sevier$Crashes))
+  xlim(0, max(sevier$Crashes)) + 
+  labs(title="Observed crashes in Sevier County, TN",
+       x="Crashes per month",
+       y="Number of months")
 
 (sevier.lambda <- mean( sevier$Crashes ))
 var( sevier$Crashes )
 
-# simulate crashes from Sevier county
+# Sevier County crashes are NOT Poisson distributed!
 sevier.simulation <- rpois( nrow(sevier), sevier.lambda)
 sevier <- sevier %>% 
   mutate( Simulation = sevier.simulation )
 
 simulated.crashes <- ggplot( sevier, aes(Simulation)) + 
   geom_histogram( binwidth = 1) +
-  xlim(0,max(sevier$Crashes))
+  xlim(0,max(sevier$Crashes)) + 
+  labs(title="Badly simulated crashes in Sevier County, TN",
+       x="Crashes per month",
+       y="Number of months")
 
 grid.arrange( observed.crashes, simulated.crashes, ncol=1 )
 
-# instead of Poisson, crashes in Sevier county follow a negative binomial distribution:
+# instead, crashes in Sevier County follow a negative binomial distribution:
 
 (sevier.mu <- mean( sevier$Crashes ))
 (sevier.var <- var( sevier$Crashes ))
 (sevier.size <- (sevier.mu^2)/(sevier.var - sevier.mu) )
 
-# simulate crashes from Sevier county using NB( mu, size )
+# simulate crashes from Sevier County using NB( mu, size )
 sevier.simulation <- rnbinom( n=nrow(sevier), size=sevier.size, mu=sevier.mu)
 sevier <- sevier %>% 
   mutate( Simulation = sevier.simulation )
@@ -84,16 +136,25 @@ sevier <- sevier %>%
 observed.crashes <- ggplot( sevier, aes(Crashes)) + 
   geom_histogram( binwidth = 1) +
   xlim(0, max(sevier$Crashes)) + 
-  ylim(0,6)
+  ylim(0,6) + 
+  labs(title="Observed crashes in Sevier County, TN",
+       x="Crashes per month",
+       y="Number of months")
 
 simulated.crashes <- ggplot( sevier, aes(Simulation)) + 
   geom_histogram( binwidth = 1) +
   xlim(0,max(sevier$Crashes)) + 
-  ylim(0,6)
+  ylim(0,6) +
+  labs(title="Reasonably simulated crashes in Sevier County, TN",
+       x="Crashes per month",
+       y="Number of months")
 
 grid.arrange( observed.crashes, simulated.crashes, ncol=1 )
+```
 
-# Births data -----
+# Births data 
+
+```{r}
 
 births <- read_csv("births.csv")
 
@@ -104,13 +165,20 @@ births_by_county <- births %>%
              Ratio = Variance/Mean ) %>% 
   arrange( desc(Ratio))
 
+datatable( births_by_county, caption = "Monthly birth statistics for U.S. counties")
+```
+
+```{r}
 # births in Blount County, TN are Poisson distributed:
 blount <- births %>% filter(county == "Blount County, TN")
 
 blount.births <- ggplot( blount, aes(births)) + 
   geom_histogram( binwidth = 1) +
   xlim(0, max(blount$births)) +
-  ylim(0,8)
+  ylim(0,8) +
+  labs(title="Observed births in Blount County, TN",
+       x="Births per month",
+       y="Number of months")
 
 (blount.lambda <- mean( blount$births ))
 var( blount$births )
@@ -123,7 +191,10 @@ blount <- blount %>%
 simulated.births <- ggplot( blount, aes(Simulation)) + 
   geom_histogram( binwidth = 1)  +
   xlim(0, max(blount$births)) +
-  ylim(0,8)
+  ylim(0,8) + 
+  labs(title="Simulated births in Blount County, TN",
+       x="Births per month",
+       y="Number of months")
 
 grid.arrange( blount.births, simulated.births, ncol=1 )
 
@@ -138,7 +209,10 @@ kanawha <- births %>% filter(county == "Kanawha County, WV")
 
 kanawha.births <- ggplot( kanawha, aes(births)) + 
   geom_histogram( binwidth = 1) +
-  xlim(0, max(kanawha$births))
+  xlim(0, max(kanawha$births)) +
+  labs(title="Observed births in Kanawha County, WV",
+       x="Births per month",
+       y="Number of months")
 
 kanawha.simulation <- rpois( nrow(kanawha), kanawha.mu)
 kanawha <- kanawha %>% 
@@ -146,7 +220,10 @@ kanawha <- kanawha %>%
 
 simulated.births <- ggplot( kanawha, aes(Simulation)) + 
   geom_histogram( binwidth = 1)  +
-  xlim(0, max(kanawha$births))
+  xlim(0, max(kanawha$births)) + 
+  labs(title="Badly simulated births in Kanawha County, WV",
+       x="Births per month",
+       y="Number of months")
 
 grid.arrange( kanawha.births, simulated.births, ncol=1 )
 
@@ -159,17 +236,29 @@ kanawha <- kanawha %>%
 
 simulated.births <- ggplot( kanawha, aes(Simulation)) + 
   geom_histogram( binwidth = 1)  +
-  xlim(0, max(kanawha$births))
+  xlim(0, max(kanawha$births)) +
+  labs(title="Reasonably simulated crashes in Kanawha County, WV",
+       x="Crashes per month",
+       y="Number of months")
 
 grid.arrange( kanawha.births, simulated.births, ncol=1 )
 
-# Cough data -----
+```
 
+# Cough data 
+
+```{r}
 primera <- read_csv("primera.csv")
 
-ggplot( primera, aes(x=datetime, y=coughs)) + geom_line()
-ggplot( primera ) + geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs ))
-ggplot( primera, aes(x=coughs)) + geom_histogram()
+# could use a line plot:
+# ggplot( primera, aes(x=datetime, y=coughs)) + geom_line()
+# but a geom_segment plot is a bit nicer (imho)
+ggplot( primera ) + 
+  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs ))
+
+# Lots of hours with zero coughs!
+ggplot( primera, aes(x=coughs)) + 
+  geom_histogram() +
 
 (primera.mu <- mean(primera$coughs))
 (primera.var <- var(primera$coughs))
@@ -178,50 +267,50 @@ ggplot( primera, aes(x=coughs)) + geom_histogram()
 # coughs are not Poisson distributed... 
 
 observed.coughs <- ggplot( primera ) + 
-  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs )) 
+  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs )) +
+  labs( title = "Recorded coughs", 
+        x = "Hour",
+        y = "Number of coughs")
 
 primera.simulation <- rpois( nrow(primera), primera.mu )
 primera <- primera %>%
   mutate( Simulation = primera.simulation)
 
 simulated.coughs <- ggplot( primera ) + 
-  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=Simulation )) 
+  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=Simulation )) +
+  labs( title = "A horrible simulation of coughs", 
+        x = "Hour",
+        y = "Number of coughs")
 
 grid.arrange( observed.coughs, simulated.coughs, ncol=1 )
 
 # but they do follow the NB distribution! 
 
 observed.coughs <- ggplot( primera ) + 
-  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs )) 
+  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=coughs )) +
+  labs( title = "Recorded coughs", 
+        x = "Hour",
+        y = "Number of coughs") +
+  ylim(0,65)
+
 
 primera.simulation <- rnbinom( n=nrow(primera), size=primera.size, mu=primera.mu )
 primera <- primera %>%
   mutate( Simulation = primera.simulation)
 
 simulated.coughs <- ggplot( primera ) + 
-  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=Simulation )) 
+  geom_segment( aes(x=datetime, y=0, xend=datetime, yend=Simulation )) +
+  labs( title = "A more reasonable simulation of coughs", 
+        x = "Hour",
+        y = "Number of coughs") +
+  ylim(0,65)
 
 grid.arrange( observed.coughs, simulated.coughs, ncol=1 )
 
-# How to relate counts to a predictor? -----
+```
 
+# How can we relate counts to a predictor?
+
+```{r}
 # use crashes, not births!
-
-crashes <- read_csv("crashes.csv")
-ggplot( crashes, aes(x=pop2010, y=crashes)) +
-  geom_point()
-crashes$pop2010 <- crashes$pop2010 / 1000
-crashes <- crashes %>%
-  mutate(pop_group = 9*round(pop2010/9))
-ggplot( crashes, aes(x=pop2010, y=crashes)) +
-  geom_point()
-ggplot( crashes %>% filter(pop2010<90), aes(x=pop2010, y=crashes)) +
-  geom_point()
-crashes <- crashes %>% filter( pop2010 < 90 )
-(crash_means <- crashes %>% 
-  group_by( pop_group ) %>%
-  summarize( Mean = mean(crashes)))
-ggplot( crashes, aes(x=pop2010, y=crashes)) +
-  geom_point() + 
-  geom_point( data=crash_means, aes(x=pop_group, y=Mean),color="darkorchid",size=4) +
-  geom_line( data=crash_means, aes(x=pop_group, y=Mean),color="darkorchid", size=2)
+```
