@@ -118,8 +118,8 @@ new_data <- data.frame( Pop2010 = c(125,250))
 simulation <- rpois( n=20, lambda=predictions[1])
 hist( simulation )
 
-# compare observed and simulatedbirths in Paulding County, GA (good) and 
-# Dauphin County, PA (not so good)
+# compare observed and simulated births...
+# in Paulding County, GA (pretty good) :
 new_data <- data.frame( Pop2010 = c(142.324, 268.1))
 (lambda <-predict( dec19_fit, newdata=new_data, type="response" ))
 
@@ -133,6 +133,7 @@ ggplot( paulding %>% dplyr::select( births, simulation) %>% pivot_longer(births:
   facet_wrap(~name, ncol=1) +
   labs( title="Paulding County, GA")
 
+# and in Dauphin County, PA (not so good)
 dauphin <- poisson_births %>%
   filter( county == "Dauphin County, PA")
 dauphin <- dauphin %>%
