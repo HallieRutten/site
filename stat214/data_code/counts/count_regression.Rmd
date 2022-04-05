@@ -1,0 +1,159 @@
+---
+title: "Count regression"
+author: "Matthew Rudd"
+date: "Stat 214, Easter 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+# Basic knitr options
+library(knitr)
+opts_chunk$set(
+  comment = NA,
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  error = TRUE,
+  cache = FALSE
+)
+library(kableExtra)
+library(tidyverse)
+library(gridExtra)
+library(DT)
+library(MASS)
+options(scipen = '999')
+```
+
+# How can we relate parameters to predictors?
+
+```{r}
+crashes <- read_csv("crashes.csv")
+ggplot( crashes, aes(x=pop2010, y=crashes)) +
+  geom_point()
+crashes$pop2010 <- crashes$pop2010 / 1000
+crashes <- crashes %>%
+  mutate(pop_group = 9*round(pop2010/9))
+ggplot( crashes, aes(x=pop2010, y=crashes)) +
+  geom_point()
+ggplot( crashes %>% filter(pop2010<90), aes(x=pop2010, y=crashes)) +
+  geom_point()
+crashes <- crashes %>% filter( pop2010 < 90 )
+(crash_means <- crashes %>% 
+  group_by( pop_group ) %>%
+  summarize( Mean = mean(crashes)))
+ggplot( crashes, aes(x=pop2010, y=crashes)) +
+  geom_point() + 
+  geom_point( data=crash_means, aes(x=pop_group, y=Mean),color="darkorchid",size=4) +
+  geom_line( data=crash_means, aes(x=pop_group, y=Mean),color="darkorchid", size=2)
+```
+
+Based on this, it seems reasonable to fit a model of the form
+$$ \log( \mu ) ~ = ~ a + bx \ , $$
+where $\mu$ is the mean response and $x$ is the one and only (quantitative) predictor.
+An important consideration, though, is whether the response seems to follow the
+Poisson distribution or the negative binomial distribution -- i.e., are its conditional 
+mean and variance roughly the same or not?
+
+# Poisson regression
+
+```{r}
+births <- read_csv("births.csv")
+births$Pop2010 <- births$Pop2010 / 1000
+births_by_county <- births %>%
+  group_by(county) %>% 
+  summarize( Mean = mean(births),
+             Variance = var(births),
+             Ratio = Variance/Mean ) %>% 
+  arrange( desc(Ratio))
+
+datatable( births_by_county, caption = "Monthly birth statistics for U.S. counties")
+
+poisson_births <- births_by_county %>% 
+  filter( abs( Ratio - 1 ) < 0.1 ) %>%
+  pull( county )
+poisson_births <- births %>%
+  filter( county %in% poisson_births )
+
+ggplot( poisson_births, aes( x=Pop2010, y=births)) +
+  geom_point()
+
+# the best fitting smooth curve is not exponential!
+ggplot( poisson_births, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth() 
+
+# but the fitted Poisson regression curve is!!
+ggplot( poisson_births, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm", method.args=list(family="poisson")) 
+
+poisson_births <- poisson_births %>%
+  group_by(county) %>%
+  mutate( Mean = mean(births)) 
+
+ggplot( poisson_births, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm", method.args=list(family="poisson")) +
+  geom_point( aes(x=Pop2010, y=Mean), color="red", size=3)
+```
+
+```{r}
+# don't use repeated measurements!!!!
+dec19 <- poisson_births %>% 
+  filter( month=="December" & year==2019)
+dec19_null <- glm( births ~ 1, data=dec19, family="poisson")
+summary( dec19_null )
+dec19_fit <- glm( births ~ Pop2010, data=dec19, family="poisson")
+summary(dec19_fit)
+
+ggplot( dec19, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm", method.args=list(family="poisson"))
+  # geom_point( aes(x=Pop2010, y=Mean), color="red", size=3)
+
+new_data <- data.frame( Pop2010 = c(125,250))
+(predictions <-predict( dec19_fit, newdata=new_data, type="response" ))
+
+# how to sample from a Poisson distribution:
+simulation <- rpois( n=20, lambda=predictions[1])
+hist( simulation )
+
+# compare observed and simulated births...
+# in Paulding County, GA (pretty good) :
+new_data <- data.frame( Pop2010 = c(142.324, 268.1))
+(lambda <-predict( dec19_fit, newdata=new_data, type="response" ))
+
+paulding <- poisson_births %>%
+  filter( county == "Paulding County, GA")
+paulding <- paulding %>%
+  mutate( simulation = rpois( n=nrow(paulding), lambda=lambda[1]))
+ggplot( paulding %>% dplyr::select( births, simulation) %>% pivot_longer(births:simulation), 
+        aes(value)) +
+  geom_histogram() +
+  facet_wrap(~name, ncol=1) +
+  labs( title="Paulding County, GA")
+
+# and in Dauphin County, PA (not so good)
+dauphin <- poisson_births %>%
+  filter( county == "Dauphin County, PA")
+dauphin <- dauphin %>%
+  mutate( simulation = rpois( n=nrow(dauphin), lambda=lambda[2]))
+ggplot( dauphin %>% dplyr::select( births, simulation) %>% pivot_longer(births:simulation), 
+        aes(value)) +
+  geom_histogram() +
+  facet_wrap(~name, ncol=1) +
+  labs( title="Dauphin County, PA")
+```
+
+# Negative binomial regression 
+
+```{r}
+dec19_all <- births %>% 
+  filter( month=="December" & year==2019)
+ggplot( dec19_all, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm.nb" )
+
+dec19_all_fit <- glm.nb( births ~ Pop2010, data=dec19_all)
+summary( dec19_all_fit )
+```
