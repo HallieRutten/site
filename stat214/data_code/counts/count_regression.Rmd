@@ -147,6 +147,8 @@ ggplot( dauphin %>% dplyr::select( births, simulation) %>% pivot_longer(births:s
 
 # Negative binomial regression 
 
+## A bad model...
+
 ```{r}
 dec19_all <- births %>% 
   filter( month=="December" & year==2019)
@@ -156,4 +158,72 @@ ggplot( dec19_all, aes( x=Pop2010, y=births)) +
 
 dec19_all_fit <- glm.nb( births ~ Pop2010, data=dec19_all)
 summary( dec19_all_fit )
+
+jefferson <- births %>% 
+  filter( county == "Jefferson County, AL")
+new_data <- data.frame( Pop2010 = 658.466)
+mu <- predict( dec19_all_fit, newdata = new_data, type="response")
+jefferson <- jefferson %>% 
+  mutate( simulation = rnbinom( nrow(jefferson), mu=mu[1], size=dec19_all_fit$theta))
+
+ggplot( jefferson %>% dplyr::select( births, simulation) %>% pivot_longer(births:simulation), 
+        aes(value)) +
+  geom_histogram() +
+  facet_wrap(~name, ncol=1) +
+  labs( title="Jefferson County, AL")
+```
+
+## A possibly better model...
+
+```{r}
+dec19_all$Pop2010 <- log( dec19_all$Pop2010 )
+ggplot( dec19_all, aes( x=Pop2010, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm.nb" )
+
+dec19_all_fit <- glm.nb( births ~ Pop2010, data=dec19_all)
+summary( dec19_all_fit )
+
+jefferson <- births %>% 
+  filter( county == "Jefferson County, AL")
+new_data <- data.frame( Pop2010 = log(658.466))
+mu <- predict( dec19_all_fit, newdata = new_data, type="response")
+jefferson <- jefferson %>% 
+  mutate( simulation = rnbinom( nrow(jefferson), mu=mu[1], size=dec19_all_fit$theta))
+
+ggplot( jefferson %>% dplyr::select( births, simulation) %>% pivot_longer(births:simulation), 
+        aes(value)) +
+  geom_histogram() +
+  facet_wrap(~name, ncol=1) +
+  labs( title="Jefferson County, AL")
+
+```
+
+## Using a factor is not as good...
+
+```{r}
+dec19_all <- births %>% 
+  filter( month=="December" & year==2019)
+dec19_all <- dec19_all %>%
+  mutate( PopGroup = cut(Pop2010, breaks=12, labels=1:12 ))
+ggplot( dec19_all, aes( x=PopGroup, y=births)) +
+  geom_point() +
+  geom_smooth( method="glm.nb" )
+
+dec19_all_fit <- glm.nb( births ~ PopGroup, data=dec19_all)
+summary( dec19_all_fit )
+
+jefferson <- births %>% 
+  filter( county == "Jefferson County, AL")
+new_data <- data.frame( PopGroup = "1" )
+mu <- predict( dec19_all_fit, newdata = new_data, type="response")
+jefferson <- jefferson %>% 
+  mutate( simulation = rnbinom( nrow(jefferson), mu=mu[1], size=dec19_all_fit$theta))
+
+ggplot( jefferson %>% dplyr::select( births, simulation) %>% pivot_longer(births:simulation), 
+        aes(value)) +
+  geom_histogram() +
+  facet_wrap(~name, ncol=1) +
+  labs( title="Jefferson County, AL")
+
 ```
