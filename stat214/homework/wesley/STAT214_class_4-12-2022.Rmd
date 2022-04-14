@@ -1,0 +1,177 @@
+---
+title: "Class 4/12/2022 - Bootstrap practice"
+author: "Hallie Rutten"
+date: "4/12/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Exercise 1: chronic.csv
+# - create two random subsets of size 100 and 1000
+# - for each, bootstrap to get 95% CI's for LOGISTIC regression coeff's
+# - see how the subset coeff's relate to the whole dataset coeff's
+
+#Exercise 2: Riley's NHANES data
+# - create two random subsets of size 100 and 1000
+# - for each, bootstrap to get 95% CI's for LINEAR regression coeff's
+# - see how the subset coeff's relate to the whole dataset coeff's
+
+library(tidyverse)
+library(haven)
+
+chronic <- read.csv('https://raw.githubusercontent.com/HallieRutten/site/master/stat214/data_code/counts/chronic.csv')
+
+riley <- read_xpt("https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_CBC.XPT")
+riley <- riley %>%
+  filter(LBXWBCSI < 24) %>%
+  select(LBXWBCSI, LBDLYMNO) %>%
+  drop_na() %>%
+  rename(WBC = LBXWBCSI) %>%
+  rename(LCN = LBDLYMNO)
+
+```
+
+# Bootstrap practice
+
+```{r}
+# Functions:
+
+
+# bootstrap method function -----
+bootstrap <- function(predictor, observations, reps, type){
+  
+  data <- data.frame(predictor, observations)
+  
+  for(i in 1:reps){
+    idx <- sample( 1:nrow(data), nrow(data), replace=TRUE)
+    boot <- data[idx,]
+    
+    if(type == "logistic")
+      fit <- glm(observations~predictor, data=boot, family="binomial")
+    else if(type == "linear")
+      fit <- lm(observations~predictor, data=boot)
+    
+    if(i == 1)
+      coeff <- data.frame( Intercept = unname(fit$coefficients[1]),
+                           Slope     = unname(fit$coefficients[2]) )
+    else
+      coeff <- rbind( coeff, 
+                      data.frame( Intercept = unname(fit$coefficients[1]),
+                                  Slope     = unname(fit$coefficients[2]) ))
+  }
+  coeff
+}
+
+
+# confidence interval function -----
+CI = function( data, CL=0.95 ) {
+  z = abs( qnorm( (1-CL)/2 ) )
+  xb = mean( unlist(data) )
+  sd = sqrt( var(data)/length(data) )
+  c("lower"=(xb - z*sd), "upper"=(xb + z*sd) )
+}
+
+rep = 1000
+```
+
+
+## chronic.csv data: logistic regression
+
+```{r}
+# model for whole chronic dataset -----
+chronicFit <- glm(Condition~Age, data=chronic, family="binomial")
+```
+
+### subset size 100
+
+```{r, warning=FALSE, message=FALSE}
+# chronic subset size 100 -----
+chronicSub1 <- slice_sample(chronic, n=100)
+chronicSub1 <- chronicSub1[ sample.int( nrow(chronicSub1) ),]
+
+coeffCS1 <- bootstrap(chronicSub1$Age,chronicSub1$Condition,rep,"logistic")
+
+ggplot( coeffCS1 %>% pivot_longer(everything()), aes(value) ) +
+  geom_histogram() +
+  facet_wrap( ~name, scales="free")
+
+CI( coeffCS1[1] )
+CI( coeffCS1[2] )
+
+chronicFit$coefficients[1]
+chronicFit$coefficients[2]
+```
+
+### subset size 1000
+
+```{r, warning=FALSE, message=FALSE}
+# chronic subset size 1000 -----
+chronicSub2 <- slice_sample(chronic, n=1000)
+chronicSub2 <- chronicSub2[ sample.int( nrow(chronicSub2) ),]
+
+coeffCS2 <- bootstrap(chronicSub2$Age,chronicSub2$Condition,rep,"logistic")
+
+ggplot( coeffCS2 %>% pivot_longer(everything()), aes(value) ) +
+  geom_histogram() +
+  facet_wrap( ~name, scales="free")
+
+CI( coeffCS2[1] )
+CI( coeffCS2[2] )
+
+chronicFit$coefficients[1]
+chronicFit$coefficients[2]
+```
+
+
+
+## Riley's NHANES data: linear regression
+
+```{r}
+# model for whole NHANES dataset -----
+rileyFit <- lm(LCN~WBC, data=riley)
+```
+
+### subset size 100
+
+```{r, warning=FALSE, message=FALSE}
+# chronic subset size 100 -----
+rileySub1 <- slice_sample(riley, n=100)
+rileySub1 <- rileySub1[ sample.int( nrow(rileySub1) ),]
+
+# LCN ~ WBC
+coeffRS1 <- bootstrap(rileySub1$WBC, rileySub1$LCN, rep,"linear")
+
+ggplot( coeffRS1 %>% pivot_longer(everything()), aes(value) ) +
+  geom_histogram() +
+  facet_wrap( ~name, scales="free")
+
+CI( coeffRS1[1] )
+CI( coeffRS1[2] )
+
+rileyFit$coefficients[1]
+rileyFit$coefficients[2]
+```
+
+### subset size 1000
+
+```{r, warning=FALSE, message=FALSE}
+# chronic subset size 1000 -----
+rileySub2 <- slice_sample(riley, n=1000)
+rileySub2 <- rileySub2[ sample.int( nrow(rileySub2) ),]
+
+# LCN ~ WBC
+coeffRS2 <- bootstrap(rileySub2$WBC, rileySub2$LCN, rep,"linear")
+
+ggplot( coeffRS2 %>% pivot_longer(everything()), aes(value) ) +
+  geom_histogram() +
+  facet_wrap( ~name, scales="free")
+
+CI( coeffRS2[1] )
+CI( coeffRS2[2] )
+
+rileyFit$coefficients[1]
+rileyFit$coefficients[2]
+```
+
