@@ -2,6 +2,12 @@
 
 # Data was downloaded from the Georgia Department of Education 
 
+
+#### Maybe group by rural and urban if possible (not sure if data is available from GOSA)
+# In presentation, maybe mention there were data limitations
+# FRL
+# Bootstrapping but maybe add other variables (i.e., salary, FRL, both enrollment)
+
 library(tidyverse)
 
 library(haven)
