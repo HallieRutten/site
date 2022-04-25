@@ -1,0 +1,316 @@
+---
+title: "NHANES Data Exploration"
+author: "Hallie Rutten"
+date: "1/30/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(haven)
+
+data1 <- read_xpt('https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_DSQIDS.XPT')
+#data1 <- read_xpt('NHANES_DietarySupplementUse.XPT')
+data1 <- data1 %>% select( SEQN, DSD090, DSD103, DSD122Q, 
+  DSDACTSS, DSQICAFF, DSQICALC, DSQICARB, DSQICHL, DSQICHOL, DSQICOPP, 
+  DSQIFA, DSQIFDFE, DSQIFIBE, DSQIIRON, DSQIKCAL, DSQILYCO, DSQIMAGN, 
+  DSQIMFAT,  DSQINIAC, DSQIPFAT, DSQIPHOS, DSQIPOTA, DSQIPROT, DSQISELE, 
+  DSQISFAT, DSQISODI, DSQISUGR, DSQITFAT, DSQIVB1, DSQIVB12, DSQIVB2, DSQIVB6, 
+  DSQIVC, DSQIVD, DSQIVK, DSQIZINC)
+names(data1)[names(data1) == "DSD090"  ] <- "HowLongTaken"
+names(data1)[names(data1) == "DSD103"  ] <- "Past30DaysTaken"
+names(data1)[names(data1) == "DSD122Q" ] <- "DosesPerDay"
+names(data1)[names(data1) == "DSDACTSS"] <- "ServingSize"
+names(data1)[names(data1) == "DSQICAFF"] <- "Caffine" #(mg)
+names(data1)[names(data1) == "DSQICALC"] <- "Calcium" #(mg)
+names(data1)[names(data1) == "DSQICARB"] <- "Carbohydrate" #(gm)
+names(data1)[names(data1) == "DSQICHL" ] <- "Choline" #(mg)
+names(data1)[names(data1) == "DSQICHOL"] <- "Cholesterol" #(mg)
+names(data1)[names(data1) == "DSQICOPP"] <- "Copper" #(mg)
+names(data1)[names(data1) == "DSQIFA"  ] <- "FolicAcid" #(mcg)
+names(data1)[names(data1) == "DSQIFDFE"] <- "Folate" #(mcg)
+names(data1)[names(data1) == "DSQIFIBE"] <- "DietaryFiber" #(gm)
+names(data1)[names(data1) == "DSQIIRON"] <- "Iron" #(mg)
+names(data1)[names(data1) == "DSQIKCAL"] <- "Energy" #(kcal)
+names(data1)[names(data1) == "DSQILYCO"] <- "Lycopene" #(mcg)
+names(data1)[names(data1) == "DSQIMAGN"] <- "Magnesium" #(mg)
+names(data1)[names(data1) == "DSQIMFAT"] <- "MonoUnSatFattyAcids" #(gm)
+names(data1)[names(data1) == "DSQINIAC"] <- "Niacin" #(mg)
+names(data1)[names(data1) == "DSQIPFAT"] <- "PolyUnSatFattyAcids" #(gm)
+names(data1)[names(data1) == "DSQIPHOS"] <- "Phosphorus" #(mg)
+names(data1)[names(data1) == "DSQIPOTA"] <- "Potassium" #(mg)
+names(data1)[names(data1) == "DSQIPROT"] <- "Protein" #(gm)
+names(data1)[names(data1) == "DSQISELE"] <- "Selenium" #(mcg)
+names(data1)[names(data1) == "DSQISFAT"] <- "SatFattyAcids" #(gm)	
+names(data1)[names(data1) == "DSQISODI"] <- "Sodium" #(mg)
+names(data1)[names(data1) == "DSQISUGR"] <- "Sugars" #(gm)
+names(data1)[names(data1) == "DSQITFAT"] <- "Fat" #(gm)
+names(data1)[names(data1) == "DSQIVB1" ] <- "VitaminB1" #(mg)
+names(data1)[names(data1) == "DSQIVB12"] <- "VitaminB12" #(mcg)
+names(data1)[names(data1) == "DSQIVB2" ] <- "VitaminB2" #(mg)
+names(data1)[names(data1) == "DSQIVB6" ] <- "VitaminB6" #(mg)
+names(data1)[names(data1) == "DSQIVC"  ] <- "VitaminC" #(mg)
+names(data1)[names(data1) == "DSQIVD"  ] <- "VitaminD" #(mcg)
+names(data1)[names(data1) == "DSQIVK"  ] <- "VitaminK" #(mcg)
+names(data1)[names(data1) == "DSQIZINC"] <- "Zinc" #(mg)
+for(i in 6:37){
+  # change the measurements from amount per serving to amount per day
+  data1[i] = data1[i] * data1$DosesPerDay * data1$ServingSize
+}
+
+data2 <- read_xpt('https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/P_BMX.XPT')
+# data2 <- read_xpt('NHANES_BodyMeasures.XPT')
+data2 <- data2 %>% select(SEQN, BMXBMI, BMXHT, BMXWAIST, BMXWT)
+names(data2)[names(data2) == "BMXBMI"] <- "BMI"
+names(data2)[names(data2) == "BMXHT"] <- "Height"
+names(data2)[names(data2) == "BMXWAIST"] <- "Waist"
+names(data2)[names(data2) == "BMXWT"] <- "Weight"
+
+allData <- merge(data2,data1, by="SEQN")
+```
+
+## SOME PHYSICAL GRAPHS (2017-2020 data, pre-pandemic)
+
+Using [NHANES Body measures dataset](https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Examination&Cycle=2017-2020)
+
+```{r, warning = FALSE, message = FALSE}
+# just give dat = [whatever your dataset is]
+# just make sure they're all numerical, not categorical
+dat = data2
+
+# vector of the column indexes (start at 2 bc first column SEQN is irrelevant)
+columns = (2:length(dat))
+
+# all combinations of two columns
+idx = combn(columns,2)
+
+# make all the graphs
+for(i in 1:length(idx[1,])){
+  
+  # grab the columns and names we want 
+  # (could be done inside the plot functions, but it's more readable this way)
+  var1 = unlist(dat[ idx[1,i] ])
+  name1 = names(dat[ idx[1,i] ])
+  var2 = unlist(dat[ idx[2,i] ])
+  name2 = names(dat[ idx[2,i] ])
+  # the combn function creates a column for each combination
+  # but the references are row-major, which is why i comes second
+  # enter idx in the console if you want to look at it
+  
+  # create linear model (up here just so we can stick it on the graph)
+  mod <- lm(var2 ~ var1)
+  
+  # base R scatterplot, changing the labels to read better
+  plot(var2~var1, xlab=name1, ylab=name2, main=paste(name2," ~ ",name1) )
+  abline(v=mean( var1, na.rm=TRUE ), col="blue")
+  abline(h=mean( var2, na.rm=TRUE ), col="blue")
+  abline(mod, col="red")
+  
+  # with tidyverse
+  table <- data.frame(name1=var1, name2=var2)
+  
+  nGroups = 10
+  step <- max(table[1], na.rm=TRUE)/nGroups
+  
+  table <- table %>%
+  mutate( group = step*ceiling(name1/step) )
+  
+  grouped <- table %>%
+    group_by( group ) %>%
+    summarize( N=n(), Avg=mean(name2, na.rm=TRUE) )
+  
+  print(
+  ggplot(data=dat, aes(x=unlist(dat[idx[1,i]]), y=unlist(dat[idx[2,i]]) )) +
+    geom_point() +
+    geom_smooth() +
+    geom_point(data=grouped, 
+               aes(x=group, y=Avg, color="green", size=1), show.legend=FALSE) +
+    geom_smooth(method="lm", level=0, color="red") +
+    labs(x=name1, y=name2)
+  )
+  
+  print(paste("Summary of", name1, ":"))
+  print( summary(var1) )
+  cat("\n")
+  # give some summary stats
+  print(paste("Summary of", name2, ":"))
+  print( summary(var2) )
+  cat("\n")
+  # the group averages
+  print(paste("Grouped averages of", name2, ":"))
+  print(grouped)
+  cat("\n")
+  
+  # correlation
+  cat(name2,"~",name1,"correlation:",cor(var1,var2, use="complete.obs"),"\n\n")
+  
+  # and the linear model stuff
+  print(paste("Linear model:"))
+  print( summary(mod) )
+
+}# end graphing loop
+```
+
+
+## Physical graphs by supplements
+
+Body measures dataset vs [dietary supplements dataset](https://wwwn.cdc.gov/nchs/nhanes/search/datapage.aspx?Component=Dietary&Cycle=2017-2020):
+
+```{r}
+
+variable <- names(data1[6:37])
+vars = length(variable)
+BMI <- vector(length = vars)
+Height <- vector(length = vars)
+Waist <- vector(length = vars)
+Weight <- vector(length = vars)
+
+corTable <- data.frame(variable, BMI, Height, Waist, Weight)
+for(i in 1:vars){
+  c <- which(names(allData)==corTable$variable[i])
+  corTable$BMI[i] = cor(allData[2], allData[c], use="complete.obs")
+  corTable$Height[i] = cor(allData[3], allData[c], use="complete.obs")
+  corTable$Waist[i] = cor(allData[4], allData[c], use="complete.obs")
+  corTable$Weight[i] = cor(allData[5], allData[c], use="complete.obs")
+}
+
+corTable
+
+corTable[1,]
+
+```
+
+```{r, echo=FALSE}
+
+corBMI <- cor(allData$BMI, allData$Caffine, use="complete.obs")
+corHt <- cor(allData$Height, allData$Caffine, use="complete.obs")
+corWa <- cor(allData$Waist, allData$Caffine, use="complete.obs")
+corWt <- cor(allData$Weight, allData$Caffine, use="complete.obs")
+
+cat("BMI ~ Caffine correlation:", corBMI, "\n\n")
+cat("Height ~ Caffine correlation:", corHt, "\n\n")
+cat("Waist ~ Caffine correlation:", corWa, "\n\n")
+cat("Weight ~ Caffine correlation:", corWt, "\n\n")
+
+```
+
+```{r}
+
+modBMI1 <- lm(allData$BMI ~ allData$Caffine)
+modHt1 <- lm(allData$Height ~ allData$Caffine)
+modWa1 <- lm(allData$Waist ~ allData$Caffine)
+modWt1 <- lm(allData$Weight ~ allData$Caffine)
+
+```
+
+```{r}
+
+plot(allData$BMI ~ allData$Caffine, main="BMI ~ Caffine")
+abline(modBMI1, col="red")
+plot(allData$Height ~ allData$Caffine, main="Height ~ Caffine")
+abline(modHt1, col="red")
+plot(allData$Waist ~ allData$Caffine, main="Waist ~ Caffine")
+abline(modWa1, col="red")
+plot(allData$Weight ~ allData$Caffine, main="Weight ~ Caffine")
+abline(modWt1, col="red")
+
+out = which(allData$Caffine > 20000) #3246
+
+( caff <- allData$Caffine[out] )
+
+#cat("\nAn observation of",caff,"mg of caffine is the equivalent of"
+#    ,(caff/111),"Red Bulls, which is not a reasonable amount of caffine."
+#    ,"This is likely to be a mis-recording of data, so we will exclude it.")
+
+```
+
+An observation of `r caff` mg of caffeine is the equivalent of `r (caff/111)` Red Bulls, which is not a reasonable amount of caffeine. This is likely to be a mis-recording of data, so we will exclude it.
+
+```{r}
+
+modBMI2 <- lm(allData$BMI[-out] ~ allData$Caffine[-out])
+modHt2 <- lm(allData$Height[-out] ~ allData$Caffine[-out])
+modWa2 <- lm(allData$Waist[-out] ~ allData$Caffine[-out])
+modWt2 <- lm(allData$Weight[-out] ~ allData$Caffine[-out])
+
+```
+
+```{r}
+
+plot(allData$BMI[-out] ~ allData$Caffine[-out], main="BMI ~ Caffine")
+abline(modBMI1, col="red")
+abline(modBMI2, col="blue")
+plot(allData$Height[-out] ~ allData$Caffine[-out], main="Height ~ Caffine")
+abline(modHt1, col="red")
+abline(modHt2, col="blue")
+plot(allData$Waist[-out] ~ allData$Caffine[-out], main="Waist ~ Caffine")
+abline(modWa1, col="red")
+abline(modWa2, col="blue")
+plot(allData$Weight[-out] ~ allData$Caffine[-out], main="Weight ~ Caffine")
+abline(modWt1, col="red")
+abline(modWt2, col="blue")
+
+ix = which(allData$Caffine > 2000)
+
+allData$Caffine[ix]
+
+caff2 <- min(allData$Caffine[ix])
+
+#cat("\n",caff2,"mg of caffine, the smallest of these four extreme observations,"
+#    ,"is the equivalent of",(caff2/111),"Red Bulls."
+#    ,"This is not a reasonable amount of caffine. These values are likely to be"
+#    ,"either mis-recordings of data or outliers, so we will exclude them.")
+
+```
+
+`r caff2` mg of caffine, the smallest of these four extreme observations, is the equivalent of `r (caff2/111)` Red Bulls. This is not a reasonable amount of caffine. These values are likely to be either mis-recordings of data or outliers, so we will exclude them.
+
+```{r}
+
+modBMI3 <- lm(allData$BMI[-ix] ~ allData$Caffine[-ix])
+modHt3 <- lm(allData$Height[-ix] ~ allData$Caffine[-ix])
+modWa3 <- lm(allData$Waist[-ix] ~ allData$Caffine[-ix])
+modWt3 <- lm(allData$Weight[-ix] ~ allData$Caffine[-ix])
+
+```
+
+```{r}
+
+plot(allData$BMI[-ix] ~ allData$Caffine[-ix], main="BMI ~ Caffine")
+abline(modBMI1, col="red")
+abline(modBMI2, col="blue")
+abline(modBMI3, col="green")
+plot(allData$Height[-ix] ~ allData$Caffine[-ix], main="Height ~ Caffine")
+abline(modHt1, col="red")
+abline(modHt2, col="blue")
+abline(modHt3, col="green")
+plot(allData$Waist[-ix] ~ allData$Caffine[-ix], main="Waist ~ Caffine")
+abline(modWa1, col="red")
+abline(modWa2, col="blue")
+abline(modWa3, col="green")
+plot(allData$Weight[-ix] ~ allData$Caffine[-ix], main="Weight ~ Caffine")
+abline(modWt1, col="red")
+abline(modWt2, col="blue")
+abline(modWt3, col="green")
+
+```
+
+```{r, echo=FALSE}
+
+corBMI <- cor(allData$BMI[-ix], allData$Caffine[-ix], use="complete.obs")
+corHt <- cor(allData$Height[-ix], allData$Caffine[-ix], use="complete.obs")
+corWa <- cor(allData$Waist[-ix], allData$Caffine[-ix], use="complete.obs")
+corWt <- cor(allData$Weight[-ix], allData$Caffine[-ix], use="complete.obs")
+
+cat("BMI ~ Caffine adjusted correlation:", corBMI, "\n\n")
+cat("Height ~ Caffine adjusted correlation:", corHt, "\n\n")
+cat("Waist ~ Caffine adjusted correlation:", corWa, "\n\n")
+cat("Weight ~ Caffine adjusted correlation:", corWt, "\n\n")
+
+```
+
+Garbage!!
+
+### which is why looking at the plots to find outliers is important!

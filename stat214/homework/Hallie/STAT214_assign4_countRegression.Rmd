@@ -1,0 +1,147 @@
+---
+title: "Count Regression"
+author: "Hallie Rutten"
+date: "4/7/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+
+# ggplot2 data -----
+# included in tidyverse as a test data set
+gem <- diamonds %>%
+  select(carat,price) %>%
+  mutate( price1 = floor(price/1000),       # the price in thousands
+          priceH = floor(price/100),        # the price in hundreds
+          carat1 = as.numeric(carat >= 1) ) # whether the gem is >= 1 carat
+gemCount <- gem %>%
+  group_by( price1 ) %>%
+  summarize( total = length(carat1),
+             carat1 = sum(carat1),
+             prob = carat1/total,
+             avCar = mean(carat) )
+gemCountH <- gem %>%
+  group_by( priceH ) %>%
+  summarize( total = length(carat1),
+             carat1 = sum(carat1),
+             prob = carat1/total,
+             avCar = mean(carat) )
+
+# accuracy function -----
+accuracy <- function( obs, pre){
+  return (  length(which(obs==pre)) / length(obs)  )
+}
+```
+
+HW: 
+Find a dataset with a count variable, 
+build a regression model to fit, 
+then assess it
+
+## Plots
+
+### Counts of 1+ carat diamonds by price bracket:
+
+```{r}
+# counts by price bracket -----
+ggplot( gemCountH ) +
+  geom_col( aes(y=carat1,x=priceH) ) +
+  ggtitle("Price brackets by hundreds of dollars")
+
+ggplot( gemCount ) +
+  geom_col( aes(y=carat1,x=price1) ) +
+  ggtitle("Price brackets by thousands of dollars")
+```
+
+### Proportion of 1+ carat diamonds by price bracket:
+
+```{r}
+# counts by price bracket -----
+ggplot( gemCountH ) +
+  geom_col( aes(y=prob,x=priceH) ) +
+  ggtitle("Price brackets by hundreds of dollars")
+
+ggplot( gemCount ) +
+  geom_col( aes(y=prob,x=price1) ) +
+  ggtitle("Price brackets by thousands of dollars")
+```
+
+### Plots of diamond carats by price bracket:
+
+```{r}
+ggplot(gem, aes(x=price1, y=carat)) +
+  geom_point() + 
+  geom_point(data=gemCount,aes(x=price1,y=avCar),color="darkorchid",size=4) +
+  geom_line( data=gemCount,aes(x=price1,y=avCar),color="darkorchid",size=2) +
+  ggtitle("Carats by price bracket (thousands)")
+
+ggplot(gem, aes(x=price1, y=carat)) +
+  geom_point(position = "jitter") + 
+  geom_point(data=gemCount,aes(x=price1,y=avCar),color="darkorchid",size=4) +
+  geom_line( data=gemCount,aes(x=price1,y=avCar),color="darkorchid",size=2) +
+  ggtitle("Carats by price bracket (thousands)")
+```
+
+### Plots of 1+ carat diamonds by price bracket:
+
+```{r}
+ggplot(gem, aes(x=price1, y=carat1)) +
+  geom_point() + 
+  geom_point(data=gemCount,aes(x=price1,y=prob),color="darkorchid",size=4) +
+  geom_line( data=gemCount,aes(x=price1,y=prob),color="darkorchid",size=2) +
+  ggtitle("Proportion of diamonds 1 carat or above by price bracket (thousands)")
+
+ggplot(gem, aes(x=price1, y=carat1)) +
+  geom_point(position = "jitter") + 
+  geom_point(data=gemCount,aes(x=price1,y=prob),color="darkorchid",size=4) +
+  geom_line( data=gemCount,aes(x=price1,y=prob),color="darkorchid",size=2) +
+  ggtitle("Proportion of diamonds 1 carat or above by price bracket (thousands)")
+```
+
+## Overall Model
+
+```{r, warning=FALSE, message=FALSE}
+# model for whole dataset -----
+gemFit <- glm(carat1~price1, data=gem, family="binomial")
+summary(gemFit)
+```
+
+### Assess accuracy
+
+```{r, warning=FALSE, message=FALSE}
+# get a slice of the dataset -----
+gemSub <- slice_sample(gem, n=1000)
+
+# set n (number of folds) and prediction threshold -----
+n=100
+threshold = 0.5
+#threshold = mean(gem$carat1)
+
+# shuffle -----
+gemSub <- gemSub[ sample.int( nrow(gemSub) ),]
+
+# divide data into folds -----
+folds <- cut(1:nrow(gemSub), breaks=n, labels=1:n)
+gemSub <- gemSub %>%
+  mutate( fold = as.numeric(folds) )
+
+# train and test model in loop-----
+acc <- c()
+for(i in 1:n){
+  idx = which( gemSub$fold == i)
+  test <- gemSub[ idx, ]
+  train <- gemSub[ -idx,]
+  mod <- glm(carat1~price1, data=train, family="binomial")
+  #summary(mod)
+  testPre <- predict( mod, newdata=test, type="response")
+  test <- test %>%
+    mutate( prediction = as.numeric(testPre >= threshold) )
+  table( test$carat1, test$prediction)
+  acc <- c( acc, accuracy(test$carat1, test$prediction) )
+}
+#acc
+summary( acc )
+```
