@@ -64,17 +64,46 @@ pairs( imr %>% select( IMR:Literacy) )
 # it looks like C_section is useful, Breastfeeding is not...
 
 # check simple models ...
-imr_fit <- lm( IMR ~ C_Section, data = imr )
+imr_fit <- lm( IMR ~ C_Section, data = imr %>% drop_na(C_Section))
 summary( imr_fit )
+plot( imr$C_Section, imr$IMR )
+points( imr %>% drop_na(C_Section) %>% pull(C_Section), 
+        imr_fit$fitted.values, 
+        col="red", pch=4)
 
 imr_fit <- lm( IMR ~ Breastfeeding, data = imr )
 summary( imr_fit )
 
-# check multiple regression model...
-imr_fit <- lm( IMR ~ C_Section + Breastfeeding, data = imr )
+# improve the model that includes C_Section:
+imr_fit <- lm( IMR ~ poly(C_Section,3), data = imr %>% drop_na( C_Section) )
+summary( imr_fit )
+plot( imr$C_Section, imr$IMR )
+points( imr %>% drop_na(C_Section) %>% pull(C_Section), 
+        imr_fit$fitted.values, 
+        col="red", pch=4)
+
+# forward stepwise regression:
+imr <- imr %>% drop_na() 
+imr_fit <- lm( IMR ~ Fertility, data = imr )
 summary( imr_fit )
 
-# but we know we shouldn't inlude Breastfeeding here!
+imr_fit <- lm( IMR ~ Literacy, data = imr )
+summary( imr_fit )
+
+imr_fit <- lm( IMR ~ Urbanisation, data = imr )
+summary( imr_fit )
+
+# from these 3 predictors, choose Literacy (highest R^2, highest t-value)
+
+imr_fit <- lm( IMR ~ Literacy + Fertility, data = imr )
+summary( imr_fit )
+
+# we know we shouldn't include Breastfeeding, but just as an example:
+imr_fit <- lm( IMR ~ Literacy + Breastfeeding, data = imr )
+summary( imr_fit )
+
+imr_fit <- lm( IMR ~ Literacy + Fertility + poly(C_Section,2), data = imr )
+summary( imr_fit )
 
 cor( imr$IMR, imr$C_Section, use="complete.obs")
 cor( imr$IMR, imr$Breastfeeding, use="complete.obs")
