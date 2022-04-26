@@ -20,8 +20,46 @@ early_breastfeeding <- early_breastfeeding %>%
 imr <- imr %>%
   left_join( early_breastfeeding, by="Country")
 
+skilled_birth <- read_csv("skilled_birth.csv", show_col_types = FALSE)
+skilled_birth <- skilled_birth %>%
+  filter( Subgroup == "Total") %>%
+  rename( "Country" = `Country or Area`,
+          "Skilled_Birth" = Value ) %>%
+  select(Country, Skilled_Birth)
+
+imr <- imr %>%
+  left_join( skilled_birth, by="Country")
+
+fertility <- read_csv("fertility.csv", show_col_types = FALSE)
+fertility <- fertility %>%
+  filter( Year == 2011) %>%
+  rename( "Country" = `Country or Area`,
+          "Fertility" = Value ) %>%
+  select(Country, Fertility)
+
+imr <- imr %>%
+  left_join( fertility, by="Country")
+
+urbanisation <- read_csv("urbanisation.csv", show_col_types = FALSE)
+urbanisation <- urbanisation %>%
+  rename( "Country" = `Country or Area`,
+          "Urbanisation" = Value ) %>%
+  select(Country, Urbanisation)
+
+imr <- imr %>%
+  left_join( urbanisation, by="Country")
+
+literacy <- read_csv("adult_literacy.csv", show_col_types = FALSE)
+literacy <- literacy %>%
+  rename( "Country" = `Country or Area`,
+          "Literacy" = Value ) %>%
+  select(Country, Literacy)
+
+imr <- imr %>%
+  left_join( literacy, by="Country")
+
 # see all pairs of scatterplots 
-pairs( imr %>% select( IMR, C_Section, Breastfeeding) )
+pairs( imr %>% select( IMR:Literacy) )
 
 # it looks like C_section is useful, Breastfeeding is not...
 
